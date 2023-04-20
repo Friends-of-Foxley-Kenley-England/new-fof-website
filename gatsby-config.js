@@ -41,7 +41,7 @@ module.exports = {
         link: "/news",
       },
       {
-        name: "Volunteer",
+        name: "Work Days and Volunteering",
         link: "/work-days",
       },
       {
