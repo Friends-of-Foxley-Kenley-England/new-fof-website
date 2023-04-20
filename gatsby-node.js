@@ -105,6 +105,26 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Fields {
       slug: String
     }
+
+    type contentfulWorkDay{
+      createdAt: DateTime
+      dateOfWorkday: Date
+      id: String
+      meetingPointDescription: String
+      meetingTime: String
+      shortDescriptionOfWorkday: String
+      slug: String
+      title: String
+      workDayInformation: String
+    }
+
+    type contentfulNews{
+      createdAt: DateTime
+      id: String
+      slug: String
+      title: String
+      newsContent: String
+    }
   `);
 };
 
