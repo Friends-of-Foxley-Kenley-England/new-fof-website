@@ -9,13 +9,16 @@
 
 [![TODOs](https://img.shields.io/endpoint?url=https://todos.tickgit.com/badge?repo=github.com/Friends-of-Foxley-Kenley-England/new-fof-website)](https://todos.tickgit.com/browse?repo=github.com/Friends-of-Foxley-Kenley-England/new-fof-website)
 
+For user-friendly guides on how to manage workdays etc, go to the wiki: <https://github.com/Friends-of-Foxley-Kenley-England/new-fof-website/wiki>
+
 ## 🚀 Quick start
 
 1.  Start developing.
 
     - Copy the `.env` file `cp .env.example .env`
-    - Set the secrets.  Login to contentful and view the contentful api key values
+    - Set the secrets. Login to contentful and view the contentful api key values
     - Run the following:
+
     ```shell
     yarn install
     yarn start
