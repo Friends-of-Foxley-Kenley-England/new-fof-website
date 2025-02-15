@@ -3,6 +3,8 @@
 
 name: "[PR] Deploy to Firebase Hosting on push to PR (isolated test environment)"
 on: pull_request
+branches-ignore:
+  - "dependabot/**"
 
 jobs:
   build_and_preview:
