@@ -1,0 +1,24 @@
+name: "Pull Request Labeller"
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  label_the_pr:
+    name: Auto label PR
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Label the PR based on changes made
+      uses: actions/labeler@v5.0.0
+
+  auto-assign-author:
+    name: Auto assign PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto assign the PR to the author of the PR
+        uses: toshimaru/auto-author-assign@v2.1.1
