@@ -5974,15 +5974,15 @@ __metadata:
   linkType: hard
 
 "cross-spawn@npm:^6.0.0, cross-spawn@npm:^6.0.5":
-  version: 6.0.5
-  resolution: "cross-spawn@npm:6.0.5"
+  version: 6.0.6
+  resolution: "cross-spawn@npm:6.0.6"
   dependencies:
     nice-try: ^1.0.4
     path-key: ^2.0.1
     semver: ^5.5.0
     shebang-command: ^1.2.0
     which: ^1.2.9
-  checksum: f893bb0d96cd3d5751d04e67145bdddf25f99449531a72e82dcbbd42796bbc8268c1076c6b3ea51d4d455839902804b94bc45dfb37ecbb32ea8e54a6741c3ab9
+  checksum: a6e2e5b04a0e0f806c1df45f92cd079b65f95fbe5a7650ee1ab60318c33a6c156a8a2f8b6898f57764f7363ec599a0625e9855dfa78d52d2d73dbd32eb11c25e
   languageName: node
   linkType: hard
 
@@ -11904,14 +11904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.5":
-  version: 1.2.8
-  resolution: "minimist@npm:1.2.8"
-  checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
-  languageName: node
-  linkType: hard
-
-"minimist@npm:^1.2.6":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.5, minimist@npm:^1.2.6":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
