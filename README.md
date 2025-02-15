@@ -20,9 +20,12 @@ For user-friendly guides on how to manage workdays etc, go to the wiki: <https:/
     - Run the following:
 
     ```shell
+    corepack enable
     yarn install
     yarn start
     ```
+
+    See [Yarn installation docs for more info](https://yarnpkg.com/getting-started/install)
 
 1.  Open the source code and start editing!
 
