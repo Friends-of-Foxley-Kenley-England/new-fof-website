@@ -80,7 +80,7 @@ I haven't used contentful for everything, since a lot of the content on the webs
 Retrieve the content via graphQL.
 
     Assets = Images, and files
-    Entries = News articles and work days
+    Entries = News articles, work days, resources page
 
 [space_url]: https://app.contentful.com/spaces/jnd8s5ezvg4b/home
 [models_url]: https://app.contentful.com/spaces/jnd8s5ezvg4b/content_types
