@@ -30,16 +30,3 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
-
-      # - run: cat public/webpack.stats.json
-      #   #if: false # disabling whilst there are issues with BundleStats
-
-      # - name: BundleStats
-      #   #if: false # disabling whilst there are issues with BundleStats
-      #   # You may pin to the exact commit or the version.
-      #   # uses: vio/bundle-stats-action@6a98706a7aefa0fe25da5a1f48fa46e7b23bd653
-      #   uses: vio/bundle-stats-action@v1
-      #   with:
-      #     id: friends-of-foxley-app
-      #     webpack-stats-path: public/webpack.stats.json
-      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
