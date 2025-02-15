@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com" target="_blank" rel="noopener noreferrer">
-    <img alt="Gatsby" src="src\images\logo.png" width="60" />
+  <a href="https://www.friendsoffoxley.co.uk/" target="_blank" rel="noopener noreferrer">
+    <img alt="Friends of foxley logo" src="src\images\logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
