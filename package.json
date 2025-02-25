@@ -38,7 +38,7 @@
   "devDependencies": {
     "depcheck": "^1.4.7",
     "gatsby-plugin-bundle-stats": "^3.3.8",
-    "prettier": "3.4.1",
+    "prettier": "3.5.2",
     "webpack-stats-plugin": "^1.0.3"
   },
   "homepage": "https://www.friendsoffoxley.co.uk/",
