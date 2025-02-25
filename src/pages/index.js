@@ -56,3 +56,17 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export function Head() {
+  const reshepeApiKey = process.env.GATSBY_RESHEPE_PUBLIC_KEY;
+
+  if (reshepeApiKey) {
+    return (
+      <script
+        id="reshepe-webvitals"
+        async
+        data-api-key={reshepeApiKey}
+        src="https://cdn.jsdelivr.net/npm/@reshepe-web-vitals/js/dist/index.global.js"></script>
+    );
+  }
+}
