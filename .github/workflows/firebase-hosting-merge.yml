@@ -28,7 +28,7 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
-          GATSBY_RESHEPE_PUBLIC_KEY: "${{ variables.GATSBY_RESHEPE_PUBLIC_KEY }}"
+          GATSBY_RESHEPE_PUBLIC_KEY: "${{ vars.GATSBY_RESHEPE_PUBLIC_KEY }}"
 
       - name: Deploy to PROD site
         uses: FirebaseExtended/action-hosting-deploy@v0
