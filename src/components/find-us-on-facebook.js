@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const alt = "find us on facebook";
 const loading = "lazy";
 const objectFit = "contain";
-const placeholder = "tracedSVG";
+const placeholder = "dominantColor";
 
 const BlueFacebookImage = () => {
   return (

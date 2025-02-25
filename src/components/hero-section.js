@@ -12,7 +12,7 @@ const HeroSection = () => {
         loading="eager"
         objectFit="cover"
         layout="fullWidth"
-        placeholder="tracedSVG"
+        placeholder="dominantColor"
       />
       <h1 className={style.centered}>Friends of Foxley</h1>
     </section>
