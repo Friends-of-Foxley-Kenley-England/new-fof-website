@@ -12,6 +12,7 @@ jobs:
   build_and_deploy:
     name: Build and deploy to PROD
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v4
 
@@ -27,6 +28,7 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
+          GATSBY_RESHEPE_PUBLIC_KEY: "${{ variables.GATSBY_RESHEPE_PUBLIC_KEY }}"
 
       - name: Deploy to PROD site
         uses: FirebaseExtended/action-hosting-deploy@v0
@@ -39,6 +41,7 @@ jobs:
   deploy_preview_api:
     name: Build and deploy to Preview API
     runs-on: ubuntu-latest
+    environment: preview
     steps:
       - uses: actions/checkout@v4
 
