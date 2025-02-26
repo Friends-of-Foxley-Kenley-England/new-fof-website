@@ -1,14 +1,14 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
-import Seo from "../../components/seo";
+import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 
 const AncientBeechTreeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="ancient beech tree" />
+      <DeprecatedSeoComponent title="ancient beech tree" />
       <h1>Ancient Beech Tree Diversion</h1>
       <h2>
         Reasons for the path diversion and fencing around the Ancient Beech

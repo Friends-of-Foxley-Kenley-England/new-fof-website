@@ -1,14 +1,14 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 
 const HistoryIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="History" />
+      <DeprecatedSeoComponent title="History" />
       <h1>History of Foxley Wood</h1>
       <p>
         The ancient name FOXLE first appears in the Surrey Assize Rolls of 1279

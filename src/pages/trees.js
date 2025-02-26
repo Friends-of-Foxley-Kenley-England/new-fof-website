@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import ExternalLink from "../components/external-link";
 
 const TreesIndex = ({ data, location }) => {
@@ -9,12 +9,12 @@ const TreesIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Trees" />
+      <DeprecatedSeoComponent title="Trees" />
       <h1>Trees of Foxley Wood</h1>
 
       <p>
         Here are the most prominent trees that make Foxley Wood such a special
-        Local Nature Reserve. 
+        Local Nature Reserve.
       </p>
 
       <ul>
