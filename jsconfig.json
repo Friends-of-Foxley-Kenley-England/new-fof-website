@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "ESNext",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "src/*"
+            ]
+        }
+    },
+    "exclude": [
+        ".cache",
+        ".yarn",
+        "node_modules",
+        "build",
+        "dist",
+        "docs",
+        "public",
+    ]
+}
