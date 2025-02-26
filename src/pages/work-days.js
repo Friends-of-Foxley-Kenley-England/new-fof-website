@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./posts.module.css";
 
 const WorkDaysIndex = ({ data, location }) => {
@@ -12,7 +12,7 @@ const WorkDaysIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="Volunteer workdays" />
+        <DeprecatedSeoComponent title="Volunteer workdays" />
         <p>No news posts found. Add posts to contentful.</p>
       </Layout>
     );
@@ -20,7 +20,7 @@ const WorkDaysIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Work Days and Volunteering" />
+      <DeprecatedSeoComponent title="Work Days and Volunteering" />
 
       <h1>Work Days and Volunteering</h1>
 

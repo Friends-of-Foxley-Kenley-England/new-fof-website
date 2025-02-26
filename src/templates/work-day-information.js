@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import { What3wordsAddress } from "@what3words/react-components";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
@@ -21,7 +21,10 @@ const WorkDayTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={post.title} description={post.description || post.excerpt} />
+      <DeprecatedSeoComponent
+        title={post.title}
+        description={post.description || post.excerpt}
+      />
       <article
         className="blog-post"
         itemScope

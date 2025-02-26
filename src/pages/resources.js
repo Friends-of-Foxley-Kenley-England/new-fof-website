@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./resources.module.css";
 
 const ResourcesIndex = ({ data, location }) => {
@@ -11,7 +11,7 @@ const ResourcesIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Resources" />
+      <DeprecatedSeoComponent title="Resources" />
       <h1>{resourcesPageData.title}</h1>
 
       <p>{resourcesPageData?.subTitle}</p>

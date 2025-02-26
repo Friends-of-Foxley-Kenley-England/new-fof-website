@@ -10,19 +10,18 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Seo = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-          }
+/** @deprecated gatsby-plugin-react-helmet package is deprecated, this component needs to be re-written */
+const DeprecatedSeoComponent = ({ description, lang, meta, title }) => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
         }
       }
-    `,
-  );
+    }
+  `);
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
@@ -56,17 +55,17 @@ const Seo = ({ description, lang, meta, title }) => {
   );
 };
 
-Seo.defaultProps = {
+DeprecatedSeoComponent.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
 };
 
-Seo.propTypes = {
+DeprecatedSeoComponent.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 };
 
-export default React.memo(Seo);
+export default React.memo(DeprecatedSeoComponent);

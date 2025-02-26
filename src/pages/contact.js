@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./contact.module.css";
 import FindUsOnFacebook from "../components/find-us-on-facebook";
 
@@ -11,7 +11,7 @@ const ContactIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Contact" />
+      <DeprecatedSeoComponent title="Contact" />
       <h1>Contact us</h1>
       <div className={style.facebookSpacing}>
         <FindUsOnFacebook useWhiteGraphic={false} />

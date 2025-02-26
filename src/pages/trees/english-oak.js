@@ -1,14 +1,14 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
-import Seo from "../../components/seo";
+import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 
 const EnglishOakTreeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="English Oak Tree" />
+      <DeprecatedSeoComponent title="English Oak Tree" />
       <h1>English Oak Tree</h1>
       <h2>Other names - Common Oak, Pedunculate Oak, European Oak</h2>
       <p>

@@ -2,14 +2,14 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Wood Products" />
+      <DeprecatedSeoComponent title="Wood Products" />
       <h1>Wood Products</h1>
 
       <p>

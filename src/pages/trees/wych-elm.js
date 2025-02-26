@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
-import Seo from "../../components/seo";
+import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 import ExternalLink from "../../components/external-link";
 
 const Index = ({ data, location }) => {
@@ -9,7 +9,7 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Wych Elm Tree" />
+      <DeprecatedSeoComponent title="Wych Elm Tree" />
       <h1>Wych Elm Tree</h1>
       <h2>Other names - Ulmus glabra, Scots elm</h2>
       <p>
