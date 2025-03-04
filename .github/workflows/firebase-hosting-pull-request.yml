@@ -10,8 +10,17 @@ on:
       - "!dependabot/npm_and_yarn/**"
 
 jobs:
+  log_not_running:
+    runs-on: ubuntu-latest
+    name: "Doesn't trigger on dependabot PRs"
+    if: ${{ startsWith(github.head_ref, 'dependabot/') }}
+    steps:
+      - name: "Doesn't trigger on dependabot PRs"
+        run: exit
+
   build_and_preview:
     runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
     steps:
       - uses: actions/checkout@v4
 
