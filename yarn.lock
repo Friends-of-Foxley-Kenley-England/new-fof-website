@@ -4861,20 +4861,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-remove-graphql-queries@npm:^5.12.1":
-  version: 5.12.1
-  resolution: "babel-plugin-remove-graphql-queries@npm:5.12.1"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    "@babel/types": ^7.20.7
-    gatsby-core-utils: ^4.12.1
-  peerDependencies:
-    "@babel/core": ^7.0.0
-    gatsby: ^5.0.0-next
-  checksum: b0083bcbc8fb5e5c79a70d994abedec839d2f74e7f96751e257fda36515767f6a9fd2b4ebdfa0fbc4aa94377641ebb4a69a1f61c039bea5d26fc1a2a40ee4b44
-  languageName: node
-  linkType: hard
-
 "babel-plugin-remove-graphql-queries@npm:^5.14.0":
   version: 5.14.0
   resolution: "babel-plugin-remove-graphql-queries@npm:5.14.0"
@@ -8474,7 +8460,7 @@ __metadata:
     gatsby: 5.14.1
     gatsby-plugin-bundle-stats: ^3.3.8
     gatsby-plugin-gatsby-cloud: 5.14.0
-    gatsby-plugin-image: 3.12.3
+    gatsby-plugin-image: 3.14.0
     gatsby-plugin-manifest: 5.14.0
     gatsby-plugin-offline: 6.12.3
     gatsby-plugin-react-helmet: 6.12.0
@@ -8861,22 +8847,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-image@npm:3.12.3":
-  version: 3.12.3
-  resolution: "gatsby-plugin-image@npm:3.12.3"
+"gatsby-plugin-image@npm:3.14.0":
+  version: 3.14.0
+  resolution: "gatsby-plugin-image@npm:3.14.0"
   dependencies:
     "@babel/code-frame": ^7.18.6
     "@babel/parser": ^7.20.13
     "@babel/runtime": ^7.20.13
     "@babel/traverse": ^7.20.13
     babel-jsx-utils: ^1.1.0
-    babel-plugin-remove-graphql-queries: ^5.12.1
+    babel-plugin-remove-graphql-queries: ^5.14.0
     camelcase: ^6.3.0
     chokidar: ^3.5.3
     common-tags: ^1.8.2
-    fs-extra: ^11.1.1
-    gatsby-core-utils: ^4.12.1
-    gatsby-plugin-utils: ^4.12.3
+    fs-extra: ^11.2.0
+    gatsby-core-utils: ^4.14.0
+    gatsby-plugin-utils: ^4.14.0
     objectFitPolyfill: ^2.3.5
     prop-types: ^15.8.1
   peerDependencies:
@@ -8891,7 +8877,7 @@ __metadata:
       optional: true
     gatsby-source-filesystem:
       optional: true
-  checksum: 7e260c192155c8c53f61e7843a8a44831edf77a93f4084ac337b5514a6dfa98748bd36723a069f8afa9ef51572382c715175aefb6d3f7304f37d28d9a6111ce9
+  checksum: 48684a5118614e56f52f660a828609a84a0c0ec68f680ce19b9605538d3a03d3304db0b03633cf42fda45685b22d0229804453944964c60cdc4922814d520c89
   languageName: node
   linkType: hard
 
