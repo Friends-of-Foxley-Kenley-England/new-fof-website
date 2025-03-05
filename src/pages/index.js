@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Map from "../components/what-3-words-map";
 
 const HomeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -9,6 +10,8 @@ const HomeIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} showHeroSection>
       <DeprecatedSeoComponent title={siteTitle} />
+
+      <Map />
       <p>
         The Friends Of Foxley are a group of local people who work in
         partnership with Croydon Council to protect and manage the nature
