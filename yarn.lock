@@ -2024,6 +2024,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@googlemaps/js-api-loader@npm:1.14.3":
+  version: 1.14.3
+  resolution: "@googlemaps/js-api-loader@npm:1.14.3"
+  dependencies:
+    fast-deep-equal: ^3.1.3
+  checksum: 55ec4519c3bd99a489fc55715bfe5c12a617eff75101c16f237d2c8d56852f607bb74d50ca2204fe371d6b793741db57e4c487658f0d284a5d3bd2ecbcc2a15d
+  languageName: node
+  linkType: hard
+
 "@graphql-codegen/add@npm:^3.2.3":
   version: 3.2.3
   resolution: "@graphql-codegen/add@npm:3.2.3"
@@ -3277,15 +3286,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/core@npm:^2.13.0":
-  version: 2.14.2
-  resolution: "@stencil/core@npm:2.14.2"
-  bin:
-    stencil: bin/stencil
-  checksum: 9c6345da4d155096c685c2e3176cd3e6d67e46bd27cab4278c94ca69bdd66a46bb2d58c60f2c5529b69bc7ee0a70d10ebea9026b94efdbe8964352349c75843c
-  languageName: node
-  linkType: hard
-
 "@swc/helpers@npm:^0.4.12":
   version: 0.4.36
   resolution: "@swc/helpers@npm:0.4.36"
@@ -4026,37 +4026,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@what3words/api@npm:^3.3.6":
-  version: 3.3.6
-  resolution: "@what3words/api@npm:3.3.6"
-  dependencies:
-    axios: ^0.21.1
-  checksum: 9aee2bd1f8593d825045565846239cd6b675bff0e048d3e38c46f1f83a6f74d4a427b676768bbb71940dc3e89014ebec4f63764f2b53969560544a52d8a01b6c
-  languageName: node
-  linkType: hard
-
-"@what3words/javascript-components@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "@what3words/javascript-components@npm:4.0.5"
-  dependencies:
-    "@stencil/core": ^2.13.0
-    "@what3words/api": ^3.3.6
-    axios: ^0.21.1
-    querystring: ^0.2.1
-    uuid: ^8.3.2
-  checksum: b4fcff01d152c4d69b4d206af7250af086436234be9fa5a14a4d1c3864f3368f58785ae94e7e6a5a77d20219774a23474bb785d60951e963952b82185b284b57
-  languageName: node
-  linkType: hard
-
-"@what3words/react-components@npm:4.0.5":
-  version: 4.0.5
-  resolution: "@what3words/react-components@npm:4.0.5"
-  dependencies:
-    "@what3words/javascript-components": ^4.0.5
+"@what3words/api@npm:^5.2.1":
+  version: 5.4.0
+  resolution: "@what3words/api@npm:5.4.0"
   peerDependencies:
-    react: ^16.7.0
-    react-dom: ^16.7.0
-  checksum: d483b7c69b6aaaeaaf4211143d46c0f42861b38a1dce66e3a5daa180ce714bfcba1bd2fe18a57fc045a971bf1b54c1edb692be807ef6032ffbeb74d65ae4ae64
+    axios: ">=1"
+    cross-fetch: ">=3"
+  peerDependenciesMeta:
+    axios:
+      optional: true
+    cross-fetch:
+      optional: true
+  checksum: 2ce575ae58bce6a0967c59b87032b9ae059e83ae0d997f51f993a975a982da3e9655f933f62f1673dda19950dbd739810db43675ca3622e964137d2add1f3b4f
+  languageName: node
+  linkType: hard
+
+"@what3words/javascript-components@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@what3words/javascript-components@npm:5.0.0"
+  dependencies:
+    "@googlemaps/js-api-loader": 1.14.3
+    "@what3words/api": ^5.2.1
+    axios: ^1.7.4
+    cross-fetch: ^4.0.0
+    uuid: ^10.0.0
+  checksum: 9ba3b2d7413fcecfdb47f03c6903ec224ad0d8bc8c088acbe88c8fc4f2999c8162487a3f288fb99628a8c5d139c0f790bf90123c6f5a10b7dcadd15bbad0d81c
+  languageName: node
+  linkType: hard
+
+"@what3words/react-components@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@what3words/react-components@npm:5.0.0"
+  dependencies:
+    "@what3words/javascript-components": 5.0.0
+  checksum: fe2e4363236a3845483789765c37b3a093efb6b23f96a5d73e4cf3bbd836caad3ac2401b7791c454d876c9e6f067167075e14e0290b887e6dcd22ad99d00d0fd
   languageName: node
   linkType: hard
 
@@ -4723,15 +4726,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
-  version: 0.21.4
-  resolution: "axios@npm:0.21.4"
-  dependencies:
-    follow-redirects: ^1.14.0
-  checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
-  languageName: node
-  linkType: hard
-
 "axios@npm:^0.27.0":
   version: 0.27.2
   resolution: "axios@npm:0.27.2"
@@ -4742,7 +4736,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.4":
+"axios@npm:^1.6.4, axios@npm:^1.7.4":
   version: 1.8.1
   resolution: "axios@npm:1.8.1"
   dependencies:
@@ -6209,6 +6203,15 @@ __metadata:
   dependencies:
     node-fetch: ^2.6.12
   checksum: 78f993fa099eaaa041122ab037fe9503ecbbcb9daef234d1d2e0b9230a983f64d645d088c464e21a247b825a08dc444a6e7064adfa93536d3a9454b4745b3632
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "cross-fetch@npm:4.1.0"
+  dependencies:
+    node-fetch: ^2.7.0
+  checksum: c02fa85d59f83e50dbd769ee472c9cc984060c403ee5ec8654659f61a525c1a655eef1c7a35e365c1a107b4e72d76e786718b673d1cb3c97f61d4644cb0a9f9d
   languageName: node
   linkType: hard
 
@@ -8355,16 +8358,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0":
-  version: 1.14.9
-  resolution: "follow-redirects@npm:1.14.9"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: f5982e0eb481818642492d3ca35a86989c98af1128b8e1a62911a3410621bc15d2b079e8170b35b19d3bdee770b73ed431a257ed86195af773771145baa57845
-  languageName: node
-  linkType: hard
-
 "follow-redirects@npm:^1.14.9":
   version: 1.15.3
   resolution: "follow-redirects@npm:1.15.3"
@@ -8468,7 +8461,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "friends-of-foxley-website@workspace:."
   dependencies:
-    "@what3words/react-components": 4.0.5
+    "@what3words/react-components": 5.0.0
     depcheck: ^1.4.7
     dotenv: 16.0.0
     gatsby: 5.14.1
@@ -13030,7 +13023,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.11, node-fetch@npm:^2.6.12":
+"node-fetch@npm:^2.6.11, node-fetch@npm:^2.6.12, node-fetch@npm:^2.7.0":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
@@ -14679,13 +14672,6 @@ __metadata:
     split-on-first: ^1.0.0
     strict-uri-encode: ^2.0.0
   checksum: b227d1f588ae93f9f0ad078c6b811295fa151dc5a160a03bb2bac5fa0e6919cb1daa570aad1d288e77c8e89fde5362ba505b1014e6e793da9b1e885b59a690a6
-  languageName: node
-  linkType: hard
-
-"querystring@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "querystring@npm:0.2.1"
-  checksum: 7b83b45d641e75fd39cd6625ddfd44e7618e741c61e95281b57bbae8fde0afcc12cf851924559e5cc1ef9baa3b1e06e22b164ea1397d65dd94b801f678d9c8ce
   languageName: node
   linkType: hard
 
@@ -17700,6 +17686,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "uuid@npm:10.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 4b81611ade2885d2313ddd8dc865d93d8dccc13ddf901745edca8f86d99bc46d7a330d678e7532e7ebf93ce616679fb19b2e3568873ac0c14c999032acb25869
   languageName: node
   linkType: hard
 

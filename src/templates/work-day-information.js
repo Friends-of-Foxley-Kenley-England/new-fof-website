@@ -9,6 +9,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 import * as style from "./work-day-information.module.css";
 import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
+import Map from "../components/what-3-words-map";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
@@ -47,13 +48,17 @@ const WorkDayTemplate = ({ data, location }) => {
           <p className={style.description}>{meetingPointDescription}</p>
 
           {meetingPointWhatThreeWords && (
-            <What3wordsAddress
-              words={meetingPointWhatThreeWords}
-              icon-color="#0e4630"
-              text-color="#0e4630"
-              tooltip-location={meetingPointDescription}
-              rel="noopener noreferrer"
-            />
+            <>
+              <What3wordsAddress
+                words={meetingPointWhatThreeWords}
+                icon-color="#0e4630"
+                text-color="#0e4630"
+                tooltip-location={meetingPointDescription}
+                rel="noopener noreferrer"
+              />
+
+              <Map />
+            </>
           )}
         </section>
 
