@@ -25,6 +25,7 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
+  jsxRuntime: "automatic",
   trailingSlash: "never",
   siteMetadata: {
     title: `Friends Of Foxley`,

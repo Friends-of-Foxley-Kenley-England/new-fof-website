@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react";
+import { memo } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
@@ -68,4 +68,4 @@ DeprecatedSeoComponent.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default React.memo(DeprecatedSeoComponent);
+export default memo(DeprecatedSeoComponent);

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import * as style from "./hero-section.module.css";
 

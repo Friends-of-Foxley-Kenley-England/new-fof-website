@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import * as style from "./site-header.module.css";
@@ -34,4 +34,4 @@ SiteHeader.defaultProps = {
   siteTitle: ``,
 };
 
-export default React.memo(SiteHeader);
+export default memo(SiteHeader);

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import * as style from "./layout.module.css";
 import SiteHeader from "./site-header";

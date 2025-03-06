@@ -1,4 +1,4 @@
-import * as React from "react";
+import { memo } from "react";
 
 const ExternalLink = ({ href, children, ...rest }) => {
   return (
@@ -8,4 +8,4 @@ const ExternalLink = ({ href, children, ...rest }) => {
   );
 };
 
-export default React.memo(ExternalLink);
+export default memo(ExternalLink);

@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import * as style from "./site-footer.module.css";
 import ExternalLink from "./external-link";
 
@@ -27,4 +27,4 @@ const SiteFooter = () => (
   </footer>
 );
 
-export default React.memo(SiteFooter);
+export default memo(SiteFooter);

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import * as style from "./find-us-on-facebook.module.css";
 import ExternalLink from "./external-link";

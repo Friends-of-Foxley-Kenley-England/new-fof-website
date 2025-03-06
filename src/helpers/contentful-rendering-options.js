@@ -1,5 +1,4 @@
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as React from "react";
 
 export const contentfulRenderingOptions = (className = null) => {
   return {
