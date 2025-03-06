@@ -25,6 +25,7 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
+  trailingSlash: "never",
   siteMetadata: {
     title: `Friends Of Foxley`,
     description: `The Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
