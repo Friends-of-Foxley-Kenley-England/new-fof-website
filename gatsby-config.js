@@ -99,20 +99,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-bundle-stats",
-      options: {
-        stats: {
-          context: "./src",
-          assets: true,
-          modules: true,
-          entrypoints: true,
-          chunks: true,
-          builtAt: true,
-          hash: true,
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Friends of Foxley`,

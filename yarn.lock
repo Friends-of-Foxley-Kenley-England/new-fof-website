@@ -1864,62 +1864,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bundle-stats/cli-utils@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "@bundle-stats/cli-utils@npm:3.3.8"
-  dependencies:
-    "@bundle-stats/html-templates": ^3.3.8
-    "@bundle-stats/utils": ^3.3.8
-    core-js: ^3.21.0
-    find-cache-dir: ^3.1.0
-    fs-extra: ^10.0.1
-    lodash: ^4.17.0
-  checksum: c518833fb35a7ca027463ac3a944cd200e93b77c0a7336fc3b210093057807237b23e4d4d9a8200284adf9dcc589354d124550e3cfb671ce050a8adcb686b31d
-  languageName: node
-  linkType: hard
-
-"@bundle-stats/html-templates@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "@bundle-stats/html-templates@npm:3.3.8"
-  checksum: d9400dda34a8a0280546dc3604bb4343afb167c2ebfc328ea93add1ba3a9a184d910d985ba9a4f8ea0c24ed034823cc51f8d8987f3ae13bc2f2e1659d385c33d
-  languageName: node
-  linkType: hard
-
-"@bundle-stats/plugin-webpack-filter@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "@bundle-stats/plugin-webpack-filter@npm:3.3.8"
-  peerDependencies:
-    core-js: ^3.0.0
-    lodash: ^4.0.0
-  checksum: d24664984b2a2fbbec32278886be72ff29ebdd342340592779126242e3a45332d839b7b804b2feba08ce5e28b7fd8c7ff8fe1250472cdc900c4fc01d7dcd5af9
-  languageName: node
-  linkType: hard
-
-"@bundle-stats/plugin-webpack-validate@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "@bundle-stats/plugin-webpack-validate@npm:3.3.8"
-  dependencies:
-    superstruct: 0.8.3
-  checksum: 18e0b8eb96e6b118d6ffb75d6f258ba18cedd541c2558c586a990b815c842b8ef5d971f3a2d6a25194a8c6a573060dcf7c2c938ad665db91bea0fb74a499c217
-  languageName: node
-  linkType: hard
-
-"@bundle-stats/utils@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "@bundle-stats/utils@npm:3.3.8"
-  dependencies:
-    "@bundle-stats/plugin-webpack-filter": ^3.3.8
-    "@bundle-stats/plugin-webpack-validate": ^3.3.8
-    convert-units: 3.0.0-beta.4
-    query-string: ^7.1.0
-    serialize-query-params: ^1.3.0
-  peerDependencies:
-    core-js: ^3.0.0
-    lodash: ^4.0.0
-  checksum: 0b94dfdb83acb16335da2ff8ba2f29462d0ddc46fec4dabc7ae773192173378826d7fb87b9e15c58de86b6d4ccf7964560b55eaec59d8e24c685d3ccf1e6916c
-  languageName: node
-  linkType: hard
-
 "@contentful/rich-text-react-renderer@npm:^15.17.0":
   version: 15.19.0
   resolution: "@contentful/rich-text-react-renderer@npm:15.19.0"
@@ -5212,20 +5156,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bundle-stats-webpack-plugin@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "bundle-stats-webpack-plugin@npm:3.3.8"
-  dependencies:
-    "@bundle-stats/cli-utils": ^3.3.8
-    "@bundle-stats/utils": ^3.3.8
-    core-js: ^3.21.0
-    lodash: ^4.17.0
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: d826582254b6719a809b5c33f00b5c178456953db0ebfbb611183516a7258b5082a78176e5d2671893933bd3aca1accd8f7b7d68d13cf2cf6d8874f7cced8ead
-  languageName: node
-  linkType: hard
-
 "busboy@npm:^1.0.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
@@ -6048,13 +5978,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"convert-units@npm:3.0.0-beta.4":
-  version: 3.0.0-beta.4
-  resolution: "convert-units@npm:3.0.0-beta.4"
-  checksum: caa83a14bb46f99f5b4886e1713a7867fe8672adbb09a888a331e8f71b60d18770de6607e0161b6eb3e63f9b12e78aeecc8c841d3ce942f0409f2f43289e62e9
-  languageName: node
-  linkType: hard
-
 "cookie-signature@npm:1.0.6":
   version: 1.0.6
   resolution: "cookie-signature@npm:1.0.6"
@@ -6105,13 +6028,6 @@ __metadata:
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
   checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^3.21.0":
-  version: 3.22.5
-  resolution: "core-js@npm:3.22.5"
-  checksum: d3d7495d7cdde01cf9ac3debc5087afc3c8dd56baa4953d9ccbb46b1a80872c79d14c1e6343c664c9c0fade288ab44c70b54dd34f879a71e6eff6fffeab84e00
   languageName: node
   linkType: hard
 
@@ -8263,7 +8179,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^3.1.0, find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
+"find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:
@@ -8458,7 +8374,6 @@ __metadata:
     depcheck: ^1.4.7
     dotenv: 16.0.0
     gatsby: 5.14.1
-    gatsby-plugin-bundle-stats: ^3.3.8
     gatsby-plugin-gatsby-cloud: 5.14.0
     gatsby-plugin-image: 3.14.0
     gatsby-plugin-manifest: 5.14.0
@@ -8483,7 +8398,6 @@ __metadata:
     react-helmet: 6.1.0
     typeface-merriweather: 1.1.13
     typeface-montserrat: 1.1.13
-    webpack-stats-plugin: ^1.0.3
   languageName: unknown
   linkType: soft
 
@@ -8498,17 +8412,6 @@ __metadata:
   version: 1.0.0
   resolution: "fs-exists-cached@npm:1.0.0"
   checksum: c9376d912dd7c5ed85fec9e33d3151b7283bdb3bed2d345f4cd83b175552b13f911b003b2d8f4c3a3c87e57ef28ad02a242b20c96466c402e7b9de7c82aea406
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^10.0.1":
-  version: 10.1.0
-  resolution: "fs-extra@npm:10.1.0"
-  dependencies:
-    graceful-fs: ^4.2.0
-    jsonfile: ^6.0.1
-    universalify: ^2.0.0
-  checksum: dc94ab37096f813cc3ca12f0f1b5ad6744dfed9ed21e953d72530d103cea193c2f81584a39e9dee1bea36de5ee66805678c0dddc048e8af1427ac19c00fffc50
   languageName: node
   linkType: hard
 
@@ -8818,15 +8721,6 @@ __metadata:
   peerDependencies:
     "@parcel/core": ^2.0.0
   checksum: 4f38dc02c09e48fa73386164913c03e30c8b1d0ea224532a59ed0cdee4b3dcc4f894127026948b3e8e3e9f53ff0867420fb58928660fae6a2a7f9a3b1c07e0ba
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-bundle-stats@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "gatsby-plugin-bundle-stats@npm:3.3.8"
-  dependencies:
-    bundle-stats-webpack-plugin: ^3.3.8
-  checksum: 8dab6834964eb1dc05060e1e15f523017b5f1191423677c985bc7eb6f513671eae407cfc377e12aefc685c60f264ea9d29218160c80189f72d8a4062e4906d70
   languageName: node
   linkType: hard
 
@@ -12059,7 +11953,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.0, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:~4.17.0":
+"lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:~4.17.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -14656,18 +14550,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"query-string@npm:^7.1.0":
-  version: 7.1.1
-  resolution: "query-string@npm:7.1.1"
-  dependencies:
-    decode-uri-component: ^0.2.0
-    filter-obj: ^1.1.0
-    split-on-first: ^1.0.0
-    strict-uri-encode: ^2.0.0
-  checksum: b227d1f588ae93f9f0ad078c6b811295fa151dc5a160a03bb2bac5fa0e6919cb1daa570aad1d288e77c8e89fde5362ba505b1014e6e793da9b1e885b59a690a6
-  languageName: node
-  linkType: hard
-
 "querystring@npm:^0.2.1":
   version: 0.2.1
   resolution: "querystring@npm:0.2.1"
@@ -15788,15 +15670,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serialize-query-params@npm:^1.3.0":
-  version: 1.3.6
-  resolution: "serialize-query-params@npm:1.3.6"
-  peerDependencies:
-    query-string: ">=5.1.1"
-  checksum: 72b496836c8cd16b8bd4f7b86ed6d3b003576e3c0cda1c0f7718b4573d51fce77d177cb30f0b47f7d3a21cba7f9e933d82f0d19f6711bf5760089d43107eacf5
-  languageName: node
-  linkType: hard
-
 "serve-static@npm:1.15.0":
   version: 1.15.0
   resolution: "serve-static@npm:1.15.0"
@@ -16702,16 +16575,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"superstruct@npm:0.8.3":
-  version: 0.8.3
-  resolution: "superstruct@npm:0.8.3"
-  dependencies:
-    kind-of: ^6.0.2
-    tiny-invariant: ^1.0.6
-  checksum: 03699d3d860aa2b506a247c31d623ee8b4d5403fff097a49b1a166821b1cdef4da6fda65b501c4cc6d7cbcc9e6d47bd3490b0c336a0b1f93e812aa97ce83d2bb
-  languageName: node
-  linkType: hard
-
 "supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -16945,13 +16808,6 @@ __metadata:
   version: 0.3.0
   resolution: "timsort@npm:0.3.0"
   checksum: 1a66cb897dacabd7dd7c91b7e2301498ca9e224de2edb9e42d19f5b17c4b6dc62a8d4cbc64f28be82aaf1541cb5a78ab49aa818f42a2989ebe049a64af731e2a
-  languageName: node
-  linkType: hard
-
-"tiny-invariant@npm:^1.0.6":
-  version: 1.2.0
-  resolution: "tiny-invariant@npm:1.2.0"
-  checksum: e09a718a7c4a499ba592cdac61f015d87427a0867ca07f50c11fd9b623f90cdba18937b515d4a5e4f43dac92370498d7bdaee0d0e7a377a61095e02c4a92eade
   languageName: node
   linkType: hard
 
@@ -17843,13 +17699,6 @@ __metadata:
   version: 3.2.3
   resolution: "webpack-sources@npm:3.2.3"
   checksum: 989e401b9fe3536529e2a99dac8c1bdc50e3a0a2c8669cbafad31271eadd994bc9405f88a3039cd2e29db5e6d9d0926ceb7a1a4e7409ece021fe79c37d9c4607
-  languageName: node
-  linkType: hard
-
-"webpack-stats-plugin@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "webpack-stats-plugin@npm:1.0.3"
-  checksum: c6f400b945091b19f34fbd463a1ba6f000b9cac06f8021757f90bad2cd30803e53d6f24ac4eb042593baa2da055a0696e85f430a47315de7c44d9b5bb7e66f05
   languageName: node
   linkType: hard
 
