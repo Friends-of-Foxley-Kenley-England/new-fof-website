@@ -13,12 +13,13 @@ For user-friendly guides on how to manage workdays etc, go to the wiki: <https:/
 
 ## 🚀 Quick start
 
-1.  Start developing.
+1.  Initial setup
 
     - Copy the `.env` file `cp .env.example .env`
-    - Set the secrets. Login to contentful and view the contentful api key values
+    - Set the missing config values in the`.env` file. 
+      - Login to contentful and view the contentful api key values
+      - You'lll find the space ID for the project on logging in
     - Run the following:
-
     ```shell
     corepack enable
     yarn install
