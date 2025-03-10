@@ -7,6 +7,31 @@
   "bugs": {
     "url": "https://github.com/Friends-of-Foxley-Kenley-England/poc-new-website/issues"
   },
+  "homepage": "https://www.friendsoffoxley.co.uk/",
+  "keywords": [
+    "volunteer",
+    "woods"
+  ],
+  "license": "0BSD",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Friends-of-Foxley-Kenley-England/poc-new-website"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "yarn develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "find-unused-deps": "depcheck"
+  },
+  "packageManager": "yarn@3.2.0",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@what3words/react-components": "4.0.5",
     "dotenv": "16.0.0",
@@ -40,30 +65,5 @@
     "gatsby-plugin-bundle-stats": "^3.3.8",
     "prettier": "3.5.2",
     "webpack-stats-plugin": "^1.0.3"
-  },
-  "homepage": "https://www.friendsoffoxley.co.uk/",
-  "keywords": [
-    "volunteer",
-    "woods"
-  ],
-  "license": "0BSD",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Friends-of-Foxley-Kenley-England/poc-new-website"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "yarn develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "find-unused-deps": "depcheck"
-  },
-  "packageManager": "yarn@3.2.0",
-  "engines": {
-    "node": "18.x"
   }
 }
