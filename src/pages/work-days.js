@@ -5,12 +5,11 @@ import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./posts.module.css";
 
 const WorkDaysIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const posts = data.allContentfulWorkDay.nodes;
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location}>
         <DeprecatedSeoComponent title="Volunteer workdays" />
         <p>No news posts found. Add posts to contentful.</p>
       </Layout>
@@ -18,7 +17,7 @@ const WorkDaysIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="Work Days and Volunteering" />
 
       <h1>Work Days and Volunteering</h1>
@@ -77,11 +76,6 @@ export default WorkDaysIndex;
 
 export const pageQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulWorkDay(sort: { dateOfWorkday: DESC }, limit: 15) {
       nodes {
         slug

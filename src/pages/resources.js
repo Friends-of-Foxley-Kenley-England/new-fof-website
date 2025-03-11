@@ -4,12 +4,10 @@ import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./resources.module.css";
 
 const ResourcesIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
   const resourcesPageData = data.allContentfulResourcesPage?.nodes?.[0] || {};
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="Resources" />
       <h1>{resourcesPageData.title}</h1>
 
@@ -41,11 +39,6 @@ export default ResourcesIndex;
 
 export const pageQuery = graphql`
   query ResourcesPageQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulResourcesPage {
       nodes {
         title

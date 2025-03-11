@@ -6,12 +6,11 @@ import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./posts.module.css";
 
 const NewsIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const posts = data.allContentfulNews.nodes;
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location}>
         <DeprecatedSeoComponent title="News" />
         <Bio />
         <p>No news posts found. Add posts to contentful.</p>
@@ -20,7 +19,7 @@ const NewsIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="News" />
       <h1>Latest news</h1>
 
@@ -60,11 +59,6 @@ export default NewsIndex;
 
 export const pageQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulNews(sort: { createdAt: DESC }) {
       nodes {
         id

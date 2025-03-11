@@ -11,7 +11,6 @@ import { contentfulRenderingOptions } from "../helpers/contentful-rendering-opti
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
   const meetingPoint = parseMeetingPoint(post.meetingPointWhat3words);
 
@@ -19,7 +18,7 @@ const WorkDayTemplate = ({ data, location }) => {
   const meetingPointDescription = meetingPoint?.meetingPointDescription;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent
         title={post.title}
         description={post.description || post.excerpt}
@@ -98,11 +97,6 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     contentfulWorkDay(id: { eq: $id }) {
       id
       title

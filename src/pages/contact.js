@@ -5,11 +5,10 @@ import * as style from "./contact.module.css";
 import FindUsOnFacebook from "../components/find-us-on-facebook";
 
 const ContactIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const contactDetails = data?.allContentfulContactDetails?.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="Contact" />
       <h1>Contact us</h1>
       <div className={style.facebookSpacing}>
@@ -52,11 +51,6 @@ export default ContactIndex;
 
 export const pageQuery = graphql`
   query ContactDetails {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulContactDetails(sort: { displayOrder: ASC }) {
       edges {
         node {

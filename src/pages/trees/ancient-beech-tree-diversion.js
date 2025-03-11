@@ -1,12 +1,9 @@
-import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 
 const AncientBeechTreeIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="ancient beech tree" />
       <h1>Ancient Beech Tree Diversion</h1>
       <h2>
@@ -124,13 +121,3 @@ const AncientBeechTreeIndex = ({ data, location }) => {
 };
 
 export default AncientBeechTreeIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

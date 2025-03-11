@@ -1,12 +1,9 @@
-import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 
 const HistoryIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="History" />
       <h1>History of Foxley Wood</h1>
       <p>
@@ -49,13 +46,3 @@ const HistoryIndex = ({ data, location }) => {
 };
 
 export default HistoryIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
