@@ -2,7 +2,7 @@ import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Seo from "../components/seo";
 import * as style from "./posts.module.css";
 
 const NewsIndex = ({ data, location }) => {
@@ -11,7 +11,6 @@ const NewsIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location}>
-        <DeprecatedSeoComponent title="News" />
         <Bio />
         <p>No news posts found. Add posts to contentful.</p>
       </Layout>
@@ -20,7 +19,6 @@ const NewsIndex = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="News" />
       <h1>Latest news</h1>
 
       {posts.map(post => {
@@ -74,3 +72,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export function Head() {
+  return <Seo title="News" />;
+}

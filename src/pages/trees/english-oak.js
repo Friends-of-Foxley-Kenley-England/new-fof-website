@@ -1,10 +1,9 @@
 import Layout from "../../components/layout";
-import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
+import Seo from "../../components/seo";
 
 const EnglishOakTreeIndex = ({ location }) => {
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="English Oak Tree" />
       <h1>English Oak Tree</h1>
       <h2>Other names - Common Oak, Pedunculate Oak, European Oak</h2>
       <p>
@@ -83,3 +82,7 @@ const EnglishOakTreeIndex = ({ location }) => {
 };
 
 export default EnglishOakTreeIndex;
+
+export function Head() {
+  return <Seo title="English Oak Tree" noIndex />;
+}

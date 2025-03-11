@@ -1,15 +1,14 @@
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./contact.module.css";
 import FindUsOnFacebook from "../components/find-us-on-facebook";
+import Seo from "../components/seo";
 
 const ContactIndex = ({ data, location }) => {
   const contactDetails = data?.allContentfulContactDetails?.edges;
 
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="Contact" />
       <h1>Contact us</h1>
       <div className={style.facebookSpacing}>
         <FindUsOnFacebook useWhiteGraphic={false} />
@@ -65,3 +64,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export function Head() {
+  return <Seo title="Contact" />;
+}

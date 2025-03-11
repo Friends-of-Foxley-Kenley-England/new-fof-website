@@ -1,5 +1,14 @@
 import { graphql } from "gatsby";
 import * as page from "../trees/ancient-beech-tree-diversion";
+import Seo from "../../components/seo";
+
+/*
+
+    This page exists to preserve a URL from the old website.
+
+    A few leaflets, a QR code and other content may have this url
+
+*/
 
 export const pageQuery = graphql`
   query {
@@ -13,10 +22,6 @@ export const pageQuery = graphql`
 
 export default page.default;
 
-/*
-
-    This page exists to preserve a URL from the old website.
-
-    A few leaflets, a QR code and other content may have this url
-
-*/
+export function Head() {
+  return <Seo title="Ancient Beech Tree diversion" noIndex />;
+}

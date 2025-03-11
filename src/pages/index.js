@@ -1,13 +1,10 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Seo from "../components/seo";
 
 const HomeIndex = ({ data, location }) => {
   return (
     <Layout location={location} showHeroSection>
-      <DeprecatedSeoComponent
-        title={data.site.siteMetadata?.title || `Title`}
-      />
       <p>
         The Friends Of Foxley are a group of local people who work in
         partnership with Croydon Council to protect and manage the nature
@@ -46,26 +43,22 @@ const HomeIndex = ({ data, location }) => {
 
 export default HomeIndex;
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
-
 export function Head() {
   const reshepeApiKey = process.env.GATSBY_RESHEPE_PUBLIC_KEY;
 
   if (reshepeApiKey) {
     return (
-      <script
-        id="reshepe-webvitals"
-        async
-        data-api-key={reshepeApiKey}
-        src="https://cdn.jsdelivr.net/npm/@reshepe-web-vitals/js/dist/index.global.js"></script>
+      <>
+        <script
+          id="reshepe-webvitals"
+          async
+          data-api-key={reshepeApiKey}
+          src="https://cdn.jsdelivr.net/npm/@reshepe-web-vitals/js/dist/index.global.js"></script>
+
+        <Seo />
+      </>
     );
+  } else {
+    return <Seo />;
   }
 }

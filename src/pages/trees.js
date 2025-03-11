@@ -1,12 +1,11 @@
 import { Link } from "gatsby";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import ExternalLink from "../components/external-link";
+import Seo from "../components/seo";
 
 const TreesIndex = ({ location }) => {
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="Trees" />
       <h1>Trees of Foxley Wood</h1>
 
       <p>
@@ -77,3 +76,7 @@ const TreesIndex = ({ location }) => {
 };
 
 export default TreesIndex;
+
+export function Head() {
+  return <Seo title="Trees in Foxley Woods" noIndex />;
+}

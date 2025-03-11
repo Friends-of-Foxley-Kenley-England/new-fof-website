@@ -2,7 +2,7 @@ import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Seo from "../components/seo";
 import { What3wordsAddress } from "@what3words/react-components";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
@@ -19,10 +19,6 @@ const WorkDayTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent
-        title={post.title}
-        description={post.description || post.excerpt}
-      />
       <article
         className="blog-post"
         itemScope
@@ -126,3 +122,15 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const post = data?.contentfulWorkDay;
+
+  return (
+    <Seo
+      title={post?.title}
+      description={post?.description || post?.excerpt}
+      noIndex
+    />
+  );
+}

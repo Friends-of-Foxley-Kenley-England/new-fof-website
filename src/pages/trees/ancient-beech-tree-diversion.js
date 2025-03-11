@@ -1,10 +1,9 @@
 import Layout from "../../components/layout";
-import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
+import Seo from "../../components/seo";
 
-const AncientBeechTreeIndex = ({ data, location }) => {
+const AncientBeechTreeIndex = ({ location }) => {
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="ancient beech tree" />
       <h1>Ancient Beech Tree Diversion</h1>
       <h2>
         Reasons for the path diversion and fencing around the Ancient Beech
@@ -121,3 +120,7 @@ const AncientBeechTreeIndex = ({ data, location }) => {
 };
 
 export default AncientBeechTreeIndex;
+
+export function Head() {
+  return <Seo title="Ancient Beech Tree diversion" noIndex />;
+}
