@@ -94,8 +94,18 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   createTypes(`
     type SiteSiteMetadata {
+      description: String
+      locale: String
+      menuLinks: [MenuLink]
+      organisationName: String
       siteUrl: String
       social: Social
+      title: String
+    }
+
+    type MenuLink {
+      name: String
+      link: String
     }
 
     type Social {
