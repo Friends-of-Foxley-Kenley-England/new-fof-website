@@ -28,12 +28,14 @@ module.exports = {
   jsxRuntime: "automatic",
   trailingSlash: "never",
   siteMetadata: {
-    title: `Friends Of Foxley`,
     description: `The Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
+    locale: "en_GB",
+    organisationName: `Friends of Foxley`,
     siteUrl: `https://www.friendsoffoxley.co.uk`,
     social: {
       facebook: `https://www.facebook.com/pages/Friends-of-Foxley-Wood/151238351586387`,
     },
+    title: `Friends Of Foxley`,
     menuLinks: [
       {
         name: "Home",
