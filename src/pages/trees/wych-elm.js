@@ -1,11 +1,10 @@
 import Layout from "../../components/layout";
-import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 import ExternalLink from "../../components/external-link";
+import Seo from "../../components/seo";
 
 const Index = ({ location }) => {
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="Wych Elm Tree" />
       <h1>Wych Elm Tree</h1>
       <h2>Other names - Ulmus glabra, Scots elm</h2>
       <p>
@@ -51,3 +50,7 @@ const Index = ({ location }) => {
 };
 
 export default Index;
+
+export function Head() {
+  return <Seo title="Wych Elm Tree" noIndex />;
+}

@@ -1,10 +1,9 @@
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Seo from "../components/seo";
 
 const HistoryIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="History" />
       <h1>History of Foxley Wood</h1>
       <p>
         The ancient name FOXLE first appears in the Surrey Assize Rolls of 1279
@@ -46,3 +45,7 @@ const HistoryIndex = ({ data, location }) => {
 };
 
 export default HistoryIndex;
+
+export function Head() {
+  return <Seo title="History of Foxley Woods" />;
+}

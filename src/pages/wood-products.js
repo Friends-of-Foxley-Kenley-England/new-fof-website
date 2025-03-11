@@ -1,12 +1,11 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Seo from "../components/seo";
 
 const Index = ({ location }) => {
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="Wood Products" />
       <h1>Wood Products</h1>
 
       <p>
@@ -35,3 +34,7 @@ const Index = ({ location }) => {
 };
 
 export default Index;
+
+export function Head() {
+  return <Seo title="Wood Products" noIndex />;
+}

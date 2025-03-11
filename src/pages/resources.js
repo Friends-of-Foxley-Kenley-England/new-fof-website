@@ -1,14 +1,13 @@
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import * as style from "./resources.module.css";
+import Seo from "../components/seo";
 
 const ResourcesIndex = ({ data, location }) => {
   const resourcesPageData = data.allContentfulResourcesPage?.nodes?.[0] || {};
 
   return (
     <Layout location={location}>
-      <DeprecatedSeoComponent title="Resources" />
       <h1>{resourcesPageData.title}</h1>
 
       <p>{resourcesPageData?.subTitle}</p>
@@ -58,3 +57,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export function Head() {
+  return <Seo title="Resources" />;
+}

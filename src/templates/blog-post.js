@@ -2,7 +2,7 @@ import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import DeprecatedSeoComponent from "../components/deprecated-seo-component";
+import Seo from "../components/seo";
 import * as style from "./blog-post.module.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
@@ -14,10 +14,6 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
     <Layout location={location}>
-      <DeprecatedSeoComponent
-        title={post.title}
-        // description={post.newsContent.raw || post.excerpt}
-      />
       <article
         className="blog-post"
         itemScope
@@ -99,3 +95,8 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const post = data?.contentfulNews;
+  return <Seo title={post?.title} noIndex />;
+}
