@@ -3,11 +3,11 @@ import Layout from "../components/layout";
 import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 
 const HomeIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
   return (
-    <Layout location={location} title={siteTitle} showHeroSection>
-      <DeprecatedSeoComponent title={siteTitle} />
+    <Layout location={location} showHeroSection>
+      <DeprecatedSeoComponent
+        title={data.site.siteMetadata?.title || `Title`}
+      />
       <p>
         The Friends Of Foxley are a group of local people who work in
         partnership with Croydon Council to protect and manage the nature

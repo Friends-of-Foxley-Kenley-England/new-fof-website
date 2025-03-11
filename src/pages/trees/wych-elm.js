@@ -1,13 +1,10 @@
-import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 import ExternalLink from "../../components/external-link";
 
-const Index = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
+const Index = ({ location }) => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="Wych Elm Tree" />
       <h1>Wych Elm Tree</h1>
       <h2>Other names - Ulmus glabra, Scots elm</h2>
@@ -54,13 +51,3 @@ const Index = ({ data, location }) => {
 };
 
 export default Index;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

@@ -1,13 +1,11 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import DeprecatedSeoComponent from "../components/deprecated-seo-component";
 import ExternalLink from "../components/external-link";
 
-const TreesIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
+const TreesIndex = ({ location }) => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="Trees" />
       <h1>Trees of Foxley Wood</h1>
 
@@ -79,13 +77,3 @@ const TreesIndex = ({ data, location }) => {
 };
 
 export default TreesIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

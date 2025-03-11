@@ -4,7 +4,7 @@ import SiteHeader from "./site-header";
 import SiteFooter from "./site-footer";
 import HeroSection from "../components/hero-section";
 
-const Layout = ({ location, title, children, showHeroSection = false }) => {
+const Layout = ({ location, title: deprecatedTitle, children, showHeroSection = false }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,15 +26,15 @@ const Layout = ({ location, title, children, showHeroSection = false }) => {
   if (isRootPath) {
     siteHeader = (
       <SiteHeader
-        menuLinks={data.site.siteMetadata.menuLinks}
-        siteTitle={title}
+        menuLinks={data?.site?.siteMetadata?.menuLinks}
+        siteTitle={data?.site?.siteMetadata?.title}
       />
     );
   } else {
     siteHeader = (
       <SiteHeader
-        menuLinks={data.site.siteMetadata.menuLinks}
-        siteTitle={title}
+        menuLinks={data?.site?.siteMetadata?.menuLinks}
+        siteTitle={data?.site?.siteMetadata?.title}
       />
     );
   }
@@ -43,7 +43,7 @@ const Layout = ({ location, title, children, showHeroSection = false }) => {
     <div className={style.layout}>
       <header>{siteHeader}</header>
 
-      {showHeroSection && <HeroSection title={title} />}
+      {showHeroSection && <HeroSection title={data?.site?.siteMetadata?.title} />}
 
       <div className={style.globalWrapper} data-is-root-path={isRootPath}>
         <main>{children}</main>

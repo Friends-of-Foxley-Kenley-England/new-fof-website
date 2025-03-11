@@ -1,12 +1,9 @@
-import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import DeprecatedSeoComponent from "../../components/deprecated-seo-component";
 
-const EnglishOakTreeIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
+const EnglishOakTreeIndex = ({ location }) => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent title="English Oak Tree" />
       <h1>English Oak Tree</h1>
       <h2>Other names - Common Oak, Pedunculate Oak, European Oak</h2>
@@ -86,13 +83,3 @@ const EnglishOakTreeIndex = ({ data, location }) => {
 };
 
 export default EnglishOakTreeIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

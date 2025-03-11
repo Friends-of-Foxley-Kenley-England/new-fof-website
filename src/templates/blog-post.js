@@ -9,12 +9,11 @@ import { contentfulRenderingOptions } from "../helpers/contentful-rendering-opti
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.contentfulNews;
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
 
   return (
     // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <DeprecatedSeoComponent
         title={post.title}
         // description={post.newsContent.raw || post.excerpt}
@@ -73,11 +72,6 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     contentfulNews(id: { eq: $id }) {
       id
       title
