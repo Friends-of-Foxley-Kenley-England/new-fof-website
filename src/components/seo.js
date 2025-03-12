@@ -41,7 +41,7 @@ const Seo = ({ title, pathname: canonical, description, noIndex = false }) => {
 
       <link rel="canonical" href={seo.url} />
       <meta property="og:url" content={seo.url} />
-      <meta property="og:site_name" content={seo.title} />
+      <meta property="og:site_name" content={seo.organisationName} />
     </>
   );
 };
