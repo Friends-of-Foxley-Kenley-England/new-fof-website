@@ -97,10 +97,15 @@ export const pageQuery = graphql`
   }
 `;
 
-export function Head({ data }) {
+export function Head({ data, location }) {
   const post = data?.contentfulNews;
 
   return (
-    <Seo title={post?.title} description={post?.shortDescription} noIndex />
+    <Seo
+      title={post?.title}
+      description={post?.shortDescription}
+      pathname={location?.pathname}
+      noIndex
+    />
   );
 }

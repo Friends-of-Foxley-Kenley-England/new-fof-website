@@ -77,6 +77,8 @@ const TreesIndex = ({ location }) => {
 
 export default TreesIndex;
 
-export function Head() {
-  return <Seo title="Trees in Foxley Woods" noIndex />;
+export function Head({ location }) {
+  return (
+    <Seo title="Trees in Foxley Woods" pathname={location?.pathname} noIndex />
+  );
 }

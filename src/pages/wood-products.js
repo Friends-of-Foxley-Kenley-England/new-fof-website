@@ -35,6 +35,6 @@ const Index = ({ location }) => {
 
 export default Index;
 
-export function Head() {
-  return <Seo title="Wood Products" noIndex />;
+export function Head({ location }) {
+  return <Seo title="Wood Products" pathname={location?.pathname} noIndex />;
 }

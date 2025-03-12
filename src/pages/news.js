@@ -73,6 +73,6 @@ export const pageQuery = graphql`
   }
 `;
 
-export function Head() {
-  return <Seo title="News" />;
+export function Head({ location }) {
+  return <Seo title="News" pathname={location?.pathname} />;
 }

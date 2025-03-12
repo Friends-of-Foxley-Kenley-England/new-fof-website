@@ -22,6 +22,12 @@ export const pageQuery = graphql`
 
 export default page.default;
 
-export function Head() {
-  return <Seo title="Ancient Beech Tree diversion" noIndex />;
+export function Head({ location }) {
+  return (
+    <Seo
+      title="Ancient Beech Tree diversion"
+      pathname={location?.pathname}
+      noIndex
+    />
+  );
 }

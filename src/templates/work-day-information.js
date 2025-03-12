@@ -123,13 +123,14 @@ export const pageQuery = graphql`
   }
 `;
 
-export function Head({ data }) {
+export function Head({ data, location }) {
   const post = data?.contentfulWorkDay;
 
   return (
     <Seo
       title={post?.title}
       description={`Volunteer work day: ${post?.shortDescriptionOfWorkday}`}
+      pathname={location?.pathname}
       noIndex
     />
   );
