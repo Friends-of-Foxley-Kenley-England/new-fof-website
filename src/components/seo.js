@@ -38,10 +38,14 @@ const Seo = ({ title, pathname: canonical, description, noIndex = false }) => {
         content="friends of foxley, foxley woods purley, kenley woods, purley woods, higher drive recreation ground purley"
       />
       <meta name="author" content={seo.organisationName} />
-
-      <link rel="canonical" href={seo.url} />
-      <meta property="og:url" content={seo.url} />
       <meta property="og:site_name" content={seo.organisationName} />
+
+      {seo?.url && (
+        <>
+          <link rel="canonical" href={seo.url} />
+          <meta property="og:url" content={seo.url} />
+        </>
+      )}
     </>
   );
 };
