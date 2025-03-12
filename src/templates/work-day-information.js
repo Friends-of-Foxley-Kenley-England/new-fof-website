@@ -129,7 +129,7 @@ export function Head({ data }) {
   return (
     <Seo
       title={post?.title}
-      description={post?.description || post?.excerpt}
+      description={`Volunteer work day: ${post?.shortDescriptionOfWorkday}`}
       noIndex
     />
   );
