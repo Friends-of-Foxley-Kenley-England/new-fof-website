@@ -38,7 +38,7 @@ const Seo = ({ title, pathname, description, noIndex = false }) => {
         content="friends of foxley, foxley woods purley, kenley woods, purley woods, higher drive recreation ground purley"
       />
       <meta name="author" content={seo.organisationName} />
-      <meta property="og:url" content={seo.siteUrl} />
+      <meta property="og:url" content={seo.url} />
       <meta property="og:site_name" content={seo.title} />
     </>
   );
