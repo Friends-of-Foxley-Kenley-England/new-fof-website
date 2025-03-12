@@ -128,7 +128,7 @@ export function Head({ data, location }) {
 
   return (
     <Seo
-      title={post?.title}
+      title={`Volunteer work day ${post?.title}`}
       description={`Volunteer work day: ${post?.shortDescriptionOfWorkday}`}
       pathname={location?.pathname}
       noIndex
