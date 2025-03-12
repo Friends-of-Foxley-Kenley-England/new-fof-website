@@ -1,7 +1,7 @@
 import logo from "../images/logo.png";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 
-const Seo = ({ title, pathname, description, noIndex = false }) => {
+const Seo = ({ title, pathname: canonical, description, noIndex = false }) => {
   const {
     description: defaultDescription,
     locale,
@@ -15,7 +15,7 @@ const Seo = ({ title, pathname, description, noIndex = false }) => {
     locale,
     organisationName,
     title: !!title ? `${title} | ${organisationName}` : defaultTitle,
-    url: `${siteUrl}${pathname || ``}`,
+    url: `${siteUrl}${canonical || ``}`,
   };
 
   return (
@@ -38,6 +38,8 @@ const Seo = ({ title, pathname, description, noIndex = false }) => {
         content="friends of foxley, foxley woods purley, kenley woods, purley woods, higher drive recreation ground purley"
       />
       <meta name="author" content={seo.organisationName} />
+
+      <link rel="canonical" href={seo.url} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:site_name" content={seo.title} />
     </>
