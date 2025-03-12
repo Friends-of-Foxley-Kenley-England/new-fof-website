@@ -58,6 +58,6 @@ export const pageQuery = graphql`
   }
 `;
 
-export function Head() {
-  return <Seo title="Resources" />;
+export function Head({ location }) {
+  return <Seo title="Resources" pathname={location?.pathname} />;
 }

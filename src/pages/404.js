@@ -13,6 +13,6 @@ const NotFoundPage = ({ location }) => {
 
 export default NotFoundPage;
 
-export function Head() {
-  return <Seo title="404: Not Found" />;
+export function Head({ location }) {
+  return <Seo title="404: Not Found" pathname={location?.pathname} />;
 }

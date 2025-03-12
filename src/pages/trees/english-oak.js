@@ -83,6 +83,6 @@ const EnglishOakTreeIndex = ({ location }) => {
 
 export default EnglishOakTreeIndex;
 
-export function Head() {
-  return <Seo title="English Oak Tree" noIndex />;
+export function Head({ location }) {
+  return <Seo title="English Oak Tree" pathname={location?.pathname} noIndex />;
 }

@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-const HistoryIndex = ({ data, location }) => {
+const HistoryIndex = ({ location }) => {
   return (
     <Layout location={location}>
       <h1>History of Foxley Wood</h1>
@@ -46,6 +46,6 @@ const HistoryIndex = ({ data, location }) => {
 
 export default HistoryIndex;
 
-export function Head() {
-  return <Seo title="History of Foxley Woods" />;
+export function Head({ location }) {
+  return <Seo title="History of Foxley Woods" pathname={location?.pathname} />;
 }

@@ -121,6 +121,12 @@ const AncientBeechTreeIndex = ({ location }) => {
 
 export default AncientBeechTreeIndex;
 
-export function Head() {
-  return <Seo title="Ancient Beech Tree diversion" noIndex />;
+export function Head({ location }) {
+  return (
+    <Seo
+      title="Ancient Beech Tree diversion"
+      pathname={location?.pathname}
+      noIndex
+    />
+  );
 }

@@ -85,6 +85,8 @@ export const pageQuery = graphql`
   }
 `;
 
-export function Head() {
-  return <Seo title="Work Days and Volunteering" />;
+export function Head({ location }) {
+  return (
+    <Seo title="Work Days and Volunteering" pathname={location?.pathname} />
+  );
 }

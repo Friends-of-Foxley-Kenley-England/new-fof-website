@@ -51,6 +51,6 @@ const Index = ({ location }) => {
 
 export default Index;
 
-export function Head() {
-  return <Seo title="Wych Elm Tree" noIndex />;
+export function Head({ location }) {
+  return <Seo title="Wych Elm Tree" pathname={location?.pathname} noIndex />;
 }
