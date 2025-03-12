@@ -84,6 +84,7 @@ export const pageQuery = graphql`
           title
         }
       }
+      shortDescription
     }
     previous: contentfulNews(id: { eq: $previousPostId }) {
       slug
@@ -98,5 +99,8 @@ export const pageQuery = graphql`
 
 export function Head({ data }) {
   const post = data?.contentfulNews;
-  return <Seo title={post?.title} noIndex />;
+
+  return (
+    <Seo title={post?.title} description={post?.shortDescription} noIndex />
+  );
 }
