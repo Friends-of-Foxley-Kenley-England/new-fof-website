@@ -1,9 +1,10 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as style from "./hero-section.module.css";
+import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className={style.container}>
+    <section className={style.container} data-qa="hero-section">
       <StaticImage
         src="../images/hero-image.png"
         alt="tree canopy in Foxley woods"
