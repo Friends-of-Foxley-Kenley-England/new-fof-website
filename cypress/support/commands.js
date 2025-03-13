@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+// Configure how to handle CSS modules
+Cypress.on("test:before:run", () => {
+  // This ensures CSS modules are processed correctly
+  if (window.Cypress) {
+    window.appReady = true;
+  }
+});

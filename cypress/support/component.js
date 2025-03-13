@@ -13,6 +13,14 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+// Import global styles
+// import "typeface-montserrat";
+// import "typeface-merriweather";
+import "../../src/normalize.css";
+import "../../src/style.variables.css";
+import "../../src/style.css";
+import "prismjs/themes/prism.css";
+
 // Import commands.js using ES2015 syntax:
 import "./commands";
 

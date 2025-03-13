@@ -145,7 +145,6 @@ module.exports = {
         precachePages: [`/`, `/history`, `/contact`, `/work-days/*`],
       },
     },
-
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,

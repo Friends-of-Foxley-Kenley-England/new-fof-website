@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 import React from "react";
 import HeroSection from "./hero-section";
-import "./hero-section.module.css";
+// import "../../src/components/hero-section.module.css";
 
 describe("HeroSection Component", () => {
   beforeEach(() => {
