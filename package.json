@@ -65,10 +65,12 @@
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.26.0",
+    "babel-preset-gatsby": "^3.14.0",
+    "css-loader": "^7.1.2",
     "cypress": "^14.2.0",
     "depcheck": "^1.4.7",
     "html-webpack-plugin": "^5.6.3",
-    "prettier": "3.5.2"
+    "prettier": "3.5.2",
+    "style-loader": "^4.0.0"
   }
 }

@@ -1,6 +1,3 @@
-// cypress/webpack.config.js
-const path = require("path");
-
 module.exports = {
   mode: "development",
   resolve: {
@@ -14,7 +11,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+            presets: ["@babel/preset-env", "babel-preset-gatsby"],
           },
         },
       },
@@ -25,22 +22,19 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
+              importLoaders: 1,
               modules: {
-                exportLocalsConvention: "camelCase",
                 localIdentName: "[name]__[local]__[hash:base64:5]",
               },
             },
           },
         ],
+        include: /\.module\.css$/,
       },
       {
         test: /\.css$/,
-        exclude: /\.module\.css$/,
         use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        type: "asset/resource",
+        exclude: /\.module\.css$/,
       },
     ],
   },
