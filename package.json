@@ -26,6 +26,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint .",
     "find-unused-deps": "depcheck"
   },
   "packageManager": "yarn@3.2.0",
@@ -61,7 +62,9 @@
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
     "depcheck": "^1.4.7",
-    "prettier": "3.5.2"
+    "prettier": "3.5.2",
+    "qunit": "^2.24.1"
   }
 }
