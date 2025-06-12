@@ -25,22 +25,6 @@ const AncientBeechTreeIndex = ({ location }) => {
         rather than fell them.
       </p>
       <p>
-        The decay may have been caused by the pruning of a large limb, the
-        cavity shows fruiting bodies [brackets] of Ganoderma australe [Southern
-        Bracket] and has in the past also had both forms of Kretzschmaria deusta
-        [Brittle Cinder Fungus]. That the latter has not been seen fruiting for
-        several years may be a hopeful sign that resources available to the
-        fungus may have been used up and the decay compartmentalised [reference:
-        CODIT]. Both of these fungi degrade the lignin in wood which provides
-        structural rigidity. The tree can sense the increase in flexing and can
-        respond by growing compensatory wood, of greater strength and density
-        than normal wood. This can be seen in the arch of new wood around the
-        cavity, which may actually be stronger than the original wood structure
-        of the trunk. However, it is not known how far any decay may have
-        extended up into the main branches, which could break out from the
-        pollard union.
-      </p>
-      <p>
         The tree was reduced in height by pruning several years ago to bring the
         crown below those of surrounding trees and reduce the potentially
         destructive effect of wind loading. Beech, especially over-mature
@@ -75,7 +59,7 @@ const AncientBeechTreeIndex = ({ location }) => {
         The decay may have been caused by the pruning of a large limb, the
         cavity shows fruiting bodies [brackets] of Ganoderma australe [Southern
         Bracket] and has in the past also had both forms of Kretzschmaria deusta
-        [Brittle Cinder Fungus] That the latter has not been seen fruiting for
+        [Brittle Cinder Fungus]. That the latter has not been seen fruiting for
         several years may be a hopeful sign that resources available to the
         fungus may have been used up and the decay compartmentalised [reference:
         CODIT]. Both of these fungi degrade the lignin in wood which provides
@@ -85,7 +69,7 @@ const AncientBeechTreeIndex = ({ location }) => {
         cavity, which may actually be stronger than the original wood structure
         of the trunk. However, it is not known how far any decay may have
         extended up into the main branches, which could break out from the
-        pollard union.In clearing the proposed route for the diversion, three
+        pollard union. In clearing the proposed route for the diversion, three
         badger holes were found adjacent to, and one directly in the route.
         Monitoring of these holes over several months, including with trail
         cameras, showed that only one is active and this is concealed behind a
