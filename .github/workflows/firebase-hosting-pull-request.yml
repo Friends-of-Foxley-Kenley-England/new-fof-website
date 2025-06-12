@@ -42,3 +42,4 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FRIENDS_OF_FOXLEY_PROD }}"
           projectId: friends-of-foxley-prod
+          expires: 1d
