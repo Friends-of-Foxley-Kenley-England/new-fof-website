@@ -6,9 +6,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   // Define a template for blog post
-  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.jsx`);
   const workDayPostTemplate = path.resolve(
-    `./src/templates/work-day-information.js`,
+    `./src/templates/work-day-information.jsx`,
   );
 
   //  sorted by date

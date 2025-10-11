@@ -1,50 +1,50 @@
 [
   {
     "fromPath": "pages/history.html",
-    "componentPath": "./src/pages/history.js"
+    "componentPath": "./src/pages/history.jsx"
   },
   {
     "fromPath": "pages/the_trees_of_foxley_wood.html",
-    "componentPath": "./src/pages/trees.js"
+    "componentPath": "./src/pages/trees.jsx"
   },
   {
     "fromPath": "pages/english_oak.html",
-    "componentPath": "./src/pages/trees/english-oak.js"
+    "componentPath": "./src/pages/trees/english-oak.jsx"
   },
   {
     "fromPath": "pages/contact.html",
-    "componentPath": "./src/pages/contact.js"
+    "componentPath": "./src/pages/contact.jsx"
   },
   {
     "fromPath": "pages/latest_news.html",
-    "componentPath": "./src/pages/news.js"
+    "componentPath": "./src/pages/news.jsx"
   },
   {
     "fromPath": "pages/news.html",
-    "componentPath": "./src/pages/news.js"
+    "componentPath": "./src/pages/news.jsx"
   },
   {
     "fromPath": "pages/work_days.html",
-    "componentPath": "./src/pages/work-days.js"
+    "componentPath": "./src/pages/work-days.jsx"
   },
   {
     "fromPath": "pages/management_plan.html",
-    "componentPath": "./src/pages/resources.js"
+    "componentPath": "./src/pages/resources.jsx"
   },
   {
     "fromPath": "images/content/Membership-Application.pdf",
-    "componentPath": "./src/pages/resources.js"
+    "componentPath": "./src/pages/resources.jsx"
   },
   {
     "fromPath": "pages/surveys.html",
-    "componentPath": "./src/pages/resources.js"
+    "componentPath": "./src/pages/resources.jsx"
   },
   {
     "fromPath": "pages/wood-products.html",
-    "componentPath": "./src/pages/wood-products.js"
+    "componentPath": "./src/pages/wood-products.jsx"
   },
   {
     "fromPath": "pages/ancient_beech_tree.html",
-    "componentPath": "./src/pages/trees/ancient-beech-tree-diversion.js"
+    "componentPath": "./src/pages/trees/ancient-beech-tree-diversion.jsx"
   }
 ]
