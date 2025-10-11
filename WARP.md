@@ -121,6 +121,14 @@ Deployment triggers:
 - Progressive Web App capabilities with offline support for key pages
 - Sitemap generation with legacy URL exclusions
 
+## Additional Documentation
+
+The `docs/` folder contains supplementary documentation for specific topics:
+- `adding-contentful-content.md` - Guide for managing Contentful content and media assets
+- `deployment.md` - Detailed deployment information for Firebase and Netlify hosting
+- `development-frameworks.md` - In-depth information about Gatsby, Contentful, and other frameworks used
+- `web-vitals.md` - Web performance monitoring setup with Reshepe integration
+
 ## Content Management
 
 For content editors, refer to the project wiki: https://github.com/Friends-of-Foxley-Kenley-England/new-fof-website/wiki
