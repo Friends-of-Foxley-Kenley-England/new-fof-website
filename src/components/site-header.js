@@ -10,8 +10,10 @@ const isActive = ({ isCurrent }) => {
 const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header>
     <nav id="navbar" className={style.navigationBar}>
-      <label htmlFor="hamburger" aria-label="Toggle navigation menu">&#9776;</label>
-      <input type="checkbox" id="hamburger" aria-controls="navlinks" aria-expanded="false" />
+      <label htmlFor="hamburger" aria-label="Toggle navigation menu">
+        &#9776;
+      </label>
+      <input type="checkbox" id="hamburger" aria-controls="navlinks" />
 
       <div id="navlinks" className={style.navigationLinks}>
         {menuLinks.map(link => (
