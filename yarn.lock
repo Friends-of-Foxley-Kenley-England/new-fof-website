@@ -8398,6 +8398,7 @@ __metadata:
     react-helmet: 6.1.0
     typeface-merriweather: 1.1.13
     typeface-montserrat: 1.1.13
+    webpack-stats-plugin: ^1.1.3
   languageName: unknown
   linkType: soft
 
