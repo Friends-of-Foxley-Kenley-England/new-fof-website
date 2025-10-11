@@ -106,7 +106,9 @@ const AncientBeechTreeIndex = ({ data, location }) => {
           foxleygcproject@gmail.com
         </a>
         , this website <a href="/">www.friendsoffoxley.co.uk</a> , or our{" "}
-        <ExternalLink href={facebookLink}>
+        <ExternalLink
+          href={facebookLink}
+          aria-label="Visit Friends of Foxley Wood Facebook page">
           Facebook page [Friends of Foxley Wood]
         </ExternalLink>
         .

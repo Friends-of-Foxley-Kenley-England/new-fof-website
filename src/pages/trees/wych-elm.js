@@ -41,7 +41,9 @@ const Index = ({ location }) => {
 
       <p>
         Read more about the Wych Elm{" "}
-        <ExternalLink href="https://en.wikipedia.org/wiki/Ulmus_glabra">
+        <ExternalLink
+          href="https://en.wikipedia.org/wiki/Ulmus_glabra"
+          aria-label="Visit Wych Elm tree Wikipedia page">
           here
         </ExternalLink>
       </p>

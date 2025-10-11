@@ -56,7 +56,9 @@ const FindUsOnFacebook = ({ useWhiteGraphic }) => {
   );
 
   return (
-    <ExternalLink href={facebookLink}>{FindeUsOnFacebookImage}</ExternalLink>
+    <ExternalLink href={facebookLink} aria-label="Visit our Facebook page">
+      {FindeUsOnFacebookImage}
+    </ExternalLink>
   );
 };
 
