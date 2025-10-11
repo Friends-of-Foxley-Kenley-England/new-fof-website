@@ -4,12 +4,7 @@ import SiteHeader from "./site-header";
 import SiteFooter from "./site-footer";
 import HeroSection from "../components/hero-section";
 
-const Layout = ({
-  location,
-  title: deprecatedTitle,
-  children,
-  showHeroSection = false,
-}) => {
+const Layout = ({ location, children, showHeroSection = false }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
