@@ -102,14 +102,6 @@ export const pageQuery = graphql`
       shortDescriptionOfWorkday
       workDayInformation {
         raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            __typename
-            gatsbyImageData
-          }
-          title
-        }
       }
     }
     previous: contentfulWorkDay(id: { eq: $previousPostId }) {
