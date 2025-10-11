@@ -1,5 +1,5 @@
-import logo from "../images/logo.png";
-import { useSiteMetadata } from "../hooks/use-site-metadata";
+import logo from "../../images/logo.png";
+import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
 const Seo = ({ title, pathname: canonical, description, noIndex = false }) => {
   const {

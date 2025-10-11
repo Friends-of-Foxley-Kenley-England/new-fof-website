@@ -1,8 +1,8 @@
 import { useStaticQuery, graphql } from "gatsby";
 import * as style from "./layout.module.css";
-import SiteHeader from "./site-header";
-import SiteFooter from "./site-footer";
-import HeroSection from "../components/hero-section";
+import SiteHeader from "../site-header";
+import SiteFooter from "../site-footer";
+import HeroSection from "../hero-section";
 
 const Layout = ({ location, children, showHeroSection = false }) => {
   const data = useStaticQuery(graphql`

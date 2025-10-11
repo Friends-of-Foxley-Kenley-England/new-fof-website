@@ -1,8 +1,8 @@
 import { memo } from "react";
 import * as style from "./site-footer.module.css";
-import ExternalLink from "./external-link";
+import ExternalLink from "../external-link";
 
-import FindUsOnFacebook from "./find-us-on-facebook";
+import FindUsOnFacebook from "../find-us-on-facebook";
 
 const SiteFooter = () => (
   <footer className={style.siteFooter}>

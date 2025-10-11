@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 import * as style from "./find-us-on-facebook.module.css";
-import ExternalLink from "./external-link";
+import ExternalLink from "../external-link";
 import { StaticImage } from "gatsby-plugin-image";
 
 const alt = "find us on facebook";
@@ -11,7 +11,7 @@ const placeholder = "dominantColor";
 const BlueFacebookImage = () => {
   return (
     <StaticImage
-      src="../images/facebook/FindUs-FB-RGB.svg"
+      src="../../images/facebook/FindUs-FB-RGB.svg"
       alt={alt}
       className={style.facebookImage}
       loading={loading}
@@ -24,7 +24,7 @@ const BlueFacebookImage = () => {
 const WhiteFacebookImage = () => {
   return (
     <StaticImage
-      src="../images/facebook/FindUs-FB-RGB-Wht.svg"
+      src="../../images/facebook/FindUs-FB-RGB-Wht.svg"
       alt={alt}
       className={style.facebookImage}
       loading={loading}
