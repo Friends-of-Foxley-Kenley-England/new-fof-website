@@ -36,7 +36,6 @@
     "@what3words/react-components": "4.0.5",
     "dotenv": "16.0.0",
     "gatsby": "5.14.1",
-    "gatsby-plugin-gatsby-cloud": "5.14.0",
     "gatsby-plugin-image": "3.14.0",
     "gatsby-plugin-manifest": "5.14.0",
     "gatsby-plugin-offline": "6.12.3",
