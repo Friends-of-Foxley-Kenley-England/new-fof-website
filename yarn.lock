@@ -8383,7 +8383,7 @@ __metadata:
     gatsby-plugin-sitemap: 6.12.3
     gatsby-remark-copy-linked-files: 6.12.0
     gatsby-remark-images: 7.12.3
-    gatsby-remark-prismjs: 7.12.0
+    gatsby-remark-prismjs: 7.15.0
     gatsby-remark-responsive-iframe: 6.12.0
     gatsby-remark-smartypants: 6.12.0
     gatsby-source-contentful: 8.12.4
@@ -8391,7 +8391,7 @@ __metadata:
     gatsby-transformer-remark: 6.12.3
     gatsby-transformer-sharp: 5.14.0
     prettier: 3.5.2
-    prismjs: 1.29.0
+    prismjs: 1.30.0
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
@@ -8990,9 +8990,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-prismjs@npm:7.12.0":
-  version: 7.12.0
-  resolution: "gatsby-remark-prismjs@npm:7.12.0"
+"gatsby-remark-prismjs@npm:7.15.0":
+  version: 7.15.0
+  resolution: "gatsby-remark-prismjs@npm:7.15.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     parse-numeric-range: ^1.3.0
@@ -9000,7 +9000,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     prismjs: ^1.15.0
-  checksum: fb6d6ebb309e5ab91ce2d9e4cd76e9dc7afe80c23354bc84160d773e35439b6ac6ef6be7a12d29c30155de3f4c700d9b201a20061a14c5614a72fd87106f3a2d
+  checksum: cb2ecac29a78d1f88a6a08526f5b34729f92022bb51ed61d908d364ea6117e34805e57da87f0d867e6d2498da45540b267e8e3764b46a4cf402c8bb7200b2b6e
   languageName: node
   linkType: hard
 
@@ -14330,10 +14330,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:1.29.0":
-  version: 1.29.0
-  resolution: "prismjs@npm:1.29.0"
-  checksum: 007a8869d4456ff8049dc59404e32d5666a07d99c3b0e30a18bd3b7676dfa07d1daae9d0f407f20983865fd8da56de91d09cb08e6aa61f5bc420a27c0beeaf93
+"prismjs@npm:1.30.0":
+  version: 1.30.0
+  resolution: "prismjs@npm:1.30.0"
+  checksum: a68eddd4c5f1c506badb5434b0b28a7cc2479ed1df91bc4218e6833c7971ef40c50ec481ea49749ac964256acb78d8b66a6bd11554938e8998e46c18b5f9a580
   languageName: node
   linkType: hard
 
