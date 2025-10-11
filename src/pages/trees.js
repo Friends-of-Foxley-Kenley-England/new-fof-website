@@ -21,47 +21,65 @@ const TreesIndex = ({ location }) => {
           <Link to="wych-elm">Wych Elm</Link>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Beech">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Beech"
+            aria-label="Visit Beech Wikipedia page">
             Beech
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Fraxinus">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Fraxinus"
+            aria-label="Visit Ash Wikipedia page">
             Ash
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Sycamore">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Sycamore"
+            aria-label="Visit Sycamore tree Wikipedia page">
             Sycamore
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Juniper">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Juniper"
+            aria-label="Visit Juniper tree Wikipedia page">
             Juniper
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Hazel">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Hazel"
+            aria-label="Visit Hazel tree Wikipedia page">
             Hazel
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Yew">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Yew"
+            aria-label="Visit Yew tree Wikipedia page">
             Yew
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Hornbeam">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Hornbeam"
+            aria-label="Visit Hornbeam tree Wikipedia page">
             Hornbeam
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Whitebeam">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Whitebeam"
+            aria-label="Visit Whitebeam tree Wikipedia page">
             Whitebeam
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Holly">
+          <ExternalLink
+            href="https://en.wikipedia.org/wiki/Holly"
+            aria-label="Visit Holly tree Wikipedia page">
             Holly
           </ExternalLink>
         </li>

@@ -13,14 +13,16 @@ const SiteFooter = () => (
       {` `}
       <ExternalLink
         href="https://www.gatsbyjs.com"
-        className={style.footerLink}>
+        className={style.footerLink}
+        aria-label="Visit Gatsby website">
         Gatsby
       </ExternalLink>
       {` `}
       by{" "}
       <ExternalLink
         href="https://github.com/eloisetaylor5693"
-        className={style.footerLink}>
+        className={style.footerLink}
+        aria-label="Visit Eloise Taylor's GitHub profile">
         Eloise Taylor
       </ExternalLink>
     </span>
