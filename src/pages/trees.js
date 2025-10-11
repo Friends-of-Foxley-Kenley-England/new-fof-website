@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import Layout from "../components/layout";
-import ExternalLink from "../components/external-link";
+import ExternalLink from "../components/external-link.jsx";
 import Seo from "../components/seo";
 
 const TreesIndex = ({ location }) => {

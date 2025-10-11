@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 import * as style from "./find-us-on-facebook.module.css";
-import ExternalLink from "./external-link";
+import ExternalLink from "./external-link.jsx";
 import { StaticImage } from "gatsby-plugin-image";
 
 const alt = "find us on facebook";

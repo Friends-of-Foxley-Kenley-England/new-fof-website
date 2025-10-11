@@ -1,7 +1,7 @@
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { graphql } from "gatsby";
-import ExternalLink from "../../components/external-link";
+import ExternalLink from "../../components/external-link.jsx";
 
 const AncientBeechTreeIndex = ({ data, location }) => {
   const facebookLink = data?.site?.siteMetadata?.social?.facebook;
