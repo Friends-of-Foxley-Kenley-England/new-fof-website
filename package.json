@@ -30,7 +30,7 @@
   },
   "packageManager": "yarn@3.2.0",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "@what3words/react-components": "4.0.5",
