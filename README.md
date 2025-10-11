@@ -17,8 +17,8 @@ For user-friendly guides on how to manage workdays etc, go to the wiki: <https:/
 
     - Copy the `.env` file `cp .env.example .env`
     - Set the missing config values in the`.env` file. 
-      - Login to contentful and view the contentful api key values
-      - You'lll find the space ID for the project on logging in
+      - Login to contentful and create a new key
+            https://app.contentful.com/spaces/jnd8s5ezvg4b/api/keys
     - Run the following:
     ```shell
     corepack enable
