@@ -34,8 +34,8 @@ module.exports = {
               if (!loader.options.jsc.transform.react) {
                 loader.options.jsc.transform.react = {};
               }
-              // Set runtime to automatic while preserving other settings
-              loader.options.jsc.transform.react.runtime = "automatic";
+              // Set runtime to classic to ensure React is properly available
+              loader.options.jsc.transform.react.runtime = "classic";
             }
           }
         });
@@ -92,6 +92,7 @@ module.exports = {
       new webpack.ProvidePlugin({
         process: "process/browser",
         React: "react",
+        react: "react",
       }),
     );
 
