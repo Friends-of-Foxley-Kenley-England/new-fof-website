@@ -51,7 +51,8 @@ export const StaticImage = ({
   ...props
 }) => {
   // Convert Gatsby image path to static path served by Storybook
-  const staticSrc = src.replace(/^.*images/, "");
+  const basePath = process.env.NODE_ENV === "production" ? "/new-fof-website" : "";
+  const staticSrc = basePath + src.replace(/^.*images/, "");
 
   // Mimic Gatsby's wrapper structure
   const wrapperStyle = {
