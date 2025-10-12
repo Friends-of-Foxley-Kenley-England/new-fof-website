@@ -18,6 +18,7 @@ const config = {
   viteFinal: config => {
     return {
       ...config,
+      base: process.env.NODE_ENV === "production" ? "/new-fof-website/" : "/",
       define: {
         ...config.define,
         global: "globalThis",
