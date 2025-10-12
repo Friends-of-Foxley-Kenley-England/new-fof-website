@@ -3704,7 +3704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:9.1.10":
+"@storybook/react@npm:9.1.10, @storybook/react@npm:^9.1.10":
   version: 9.1.10
   resolution: "@storybook/react@npm:9.1.10"
   dependencies:
@@ -10427,6 +10427,7 @@ __metadata:
     "@storybook/addon-webpack5-compiler-swc": ^4.0.1
     "@storybook/builder-webpack5": ^9.1.10
     "@storybook/manager-webpack5": ^6.5.16
+    "@storybook/react": ^9.1.10
     "@storybook/react-webpack5": ^9.1.10
     "@what3words/react-components": 4.0.5
     depcheck: ^1.4.7
