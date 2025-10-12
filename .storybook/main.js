@@ -7,10 +7,6 @@ const config = {
   ],
   "addons": [
     "@storybook/addon-docs",
-    "@storybook/addon-controls",
-    "@storybook/addon-actions",
-    "@storybook/addon-viewport",
-    "@storybook/addon-backgrounds",
     "@storybook/addon-a11y",
     "@storybook/addon-vitest"
   ],
