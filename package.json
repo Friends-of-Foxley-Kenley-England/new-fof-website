@@ -26,7 +26,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "find-unused-deps": "depcheck"
+    "find-unused-deps": "depcheck",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "packageManager": "yarn@3.2.0",
   "engines": {
@@ -60,7 +62,12 @@
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^9.1.10",
+    "@storybook/addon-onboarding": "^9.1.10",
+    "@storybook/addon-webpack5-compiler-swc": "^4.0.1",
+    "@storybook/react-webpack5": "^9.1.10",
     "depcheck": "^1.4.7",
-    "prettier": "3.5.2"
+    "prettier": "3.5.2",
+    "storybook": "^9.1.10"
   }
 }
