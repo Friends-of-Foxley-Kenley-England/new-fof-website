@@ -10429,6 +10429,7 @@ __metadata:
     "@storybook/manager-webpack5": ^6.5.16
     "@storybook/react-webpack5": ^9.1.10
     "@what3words/react-components": 4.0.5
+    babel-plugin-remove-graphql-queries: ^5.15.0
     depcheck: ^1.4.7
     dotenv: 16.0.0
     gatsby: 5.14.1
