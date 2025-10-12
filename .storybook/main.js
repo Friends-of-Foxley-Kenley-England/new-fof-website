@@ -13,20 +13,57 @@ module.exports = {
     builder: "webpack5",
   },
   webpackFinal: async config => {
-    // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
-    config.module.rules[0].exclude = [
-      /node_modules\/(?!(gatsby|gatsby-script)\/)/,
-    ];
+    // Transpile Gatsby modules - modify the SWC loader to include gatsby packages
+    config.module.rules.forEach(rule => {
+      if (rule.use && Array.isArray(rule.use)) {
+        rule.use.forEach(loader => {
+          if (loader.loader && loader.loader.includes("swc-loader")) {
+            // Update exclude to allow gatsby packages
+            rule.exclude = [/node_modules\/(?!(gatsby|gatsby-script)\/).*/];
+          }
+        });
+      }
+    });
+
+    // Remove existing CSS rules and add custom ones with camelCase support
+    config.module.rules = config.module.rules.filter(rule => {
+      if (!rule.test) return true;
+      const testString = rule.test.toString();
+      // Remove CSS-related rules
+      return !testString.includes(".css");
+    });
+
+    // Add CSS module rule with camelCase (for .module.css files)
+    config.module.rules.push({
+      test: /\.module\.css$/,
+      use: [
+        "style-loader",
+        {
+          loader: "css-loader",
+          options: {
+            modules: {
+              auto: true,
+              exportLocalsConvention: "camelCase",
+              namedExport: false,
+            },
+            importLoaders: 1,
+          },
+        },
+      ],
+    });
+
+    // Add regular CSS rule (for non-module .css files)
+    config.module.rules.push({
+      test: /\.css$/,
+      exclude: /\.module\.css$/,
+      use: ["style-loader", "css-loader"],
+    });
+
     // Use correct react-dom depending on React version.
     if (parseInt(React.version) <= 18) {
       config.externals = ["react-dom/client"];
     }
-    // Remove core-js to prevent issues with Storybook
-    config.module.rules[0].exclude = [/core-js/];
-    // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-    config.module.rules[0].use[0].options.plugins.push(
-      require.resolve("babel-plugin-remove-graphql-queries"),
-    );
+
     config.resolve.mainFields = ["browser", "module", "main"];
     return config;
   },
