@@ -44,13 +44,5 @@ export const SmallerScreens = {
     viewport: {
       defaultViewport: "iphone5",
     },
-    docs: {
-      story: {
-        inline: false,
-        iframeHeight: 500,
-      },
-    },
   },
-
-  render: args => <SiteHeader {...args} />,
 };
