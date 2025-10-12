@@ -65,6 +65,8 @@
     "@storybook/addon-docs": "^9.1.10",
     "@storybook/addon-onboarding": "^9.1.10",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.1",
+    "@storybook/builder-webpack5": "^9.1.10",
+    "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react-webpack5": "^9.1.10",
     "depcheck": "^1.4.7",
     "prettier": "3.5.2",
