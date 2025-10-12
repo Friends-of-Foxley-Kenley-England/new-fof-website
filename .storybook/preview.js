@@ -10,8 +10,13 @@ import "../src/style.css";
 // Highlighting for code blocks
 import "prismjs/themes/prism.css";
 
+import { INITIAL_VIEWPORTS } from "storybook/viewport";
+
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
+  initialGlobals: {
+    viewport: { value: "ipad", isRotated: false },
+  },
   parameters: {
     controls: {
       matchers: {
@@ -39,29 +44,7 @@ const preview = {
       codePanel: true,
     },
     viewport: {
-      viewports: {
-        mobile: {
-          name: "Mobile",
-          styles: {
-            width: "375px",
-            height: "667px",
-          },
-        },
-        tablet: {
-          name: "Tablet",
-          styles: {
-            width: "768px",
-            height: "1024px",
-          },
-        },
-        desktop: {
-          name: "Desktop",
-          styles: {
-            width: "1200px",
-            height: "800px",
-          },
-        },
-      },
+      options: INITIAL_VIEWPORTS,
     },
     a11y: {
       // 'todo' - show a11y violations in the test UI only
