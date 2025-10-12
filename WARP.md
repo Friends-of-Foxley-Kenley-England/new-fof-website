@@ -8,7 +8,10 @@ This is the Friends of Foxley website - a Gatsby-based static site for a volunte
 
 ## Development Commands
 
+Project uses yarn not npm. You can use npx, but not npm.
+
 ### Initial Setup
+
 ```bash
 # Copy environment file and configure Contentful credentials
 cp .env.example .env
@@ -20,6 +23,7 @@ yarn install
 ```
 
 ### Core Development
+
 ```bash
 # Start development server (runs on http://localhost:8000)
 yarn start
@@ -36,6 +40,7 @@ yarn clean
 ```
 
 ### Code Quality
+
 ```bash
 # Format all code with Prettier
 yarn format
@@ -45,17 +50,21 @@ yarn find-unused-deps
 ```
 
 ### Development Tools
+
 - GraphQL playground: `http://localhost:8000/___graphql`
 - Node version specified in `.nvmrc` (v18.x)
 
 ## Architecture Overview
 
 ### Content Strategy
+
 The site uses a hybrid content approach:
+
 - **Static content**: Hardcoded pages for infrequently changing content (History, Trees, Contact, etc.)
 - **Dynamic content**: Contentful CMS for frequently updated content (News articles, Work days, Resources)
 
 ### Key Gatsby Configuration
+
 - **Data Sources**: Contentful CMS integration via `gatsby-source-contentful`
 - **Image Processing**: Gatsby Image with Sharp for optimized images
 - **SEO**: React Helmet for metadata management
@@ -63,6 +72,7 @@ The site uses a hybrid content approach:
 - **Markdown**: Remark transformer with syntax highlighting via Prism
 
 ### Source Structure
+
 ```
 src/
 ├── components/           # Reusable UI components
@@ -79,35 +89,44 @@ src/
 ```
 
 ### Page Generation (gatsby-node.js)
+
 - **Dynamic Pages**: Creates pages for Contentful entries (news, work days) with pagination context
 - **URL Structure**: `news/[slug]` and `work-days/[slug]`
 - **Redirects**: Handles legacy URL redirections from `redirects.json`
 
 ### Contentful Content Types
+
 Content is managed in Contentful with the following structure:
+
 - **News**: Articles for the `/news` section
 - **Work Days**: Volunteer work session information for `/work-days`
 - **Resources**: Resource page content
 - **Assets**: Images and files (tagged with `images` for organization)
 
 ### Environment Configuration
+
 Required environment variables in `.env`:
+
 - `CONTENTFUL_SPACE_ID`: Contentful space identifier
 - `CONTENTFUL_ENVIRONMENT`: Contentful environment (typically 'master')
 - `CONTENTFUL_DELIVERY_TOKEN`: API token for content delivery
 - Optional: `CONTENTFUL_HOST` and `CONTENTFUL_PREVIEW_ACCESS_TOKEN` for preview mode
 
 ### Deployment Architecture
+
 Dual hosting setup for reliability:
+
 - **Primary (Production)**: Firebase hosting → `friendsoffoxley.co.uk`
 - **Backup**: Netlify hosting → `friends-of-foxley.netlify.app`
 
 Deployment triggers:
+
 - PR opens → Firebase preview channel
 - Push to main → Firebase production + Netlify deployment
 - Firebase has 3 preview channel limit
 
 ### Third-Party Integrations
+
 - **What3Words**: Location display component (display-only, no API calls)
 - **Web Vitals**: Optional performance monitoring via Reshepe
 - **Social**: Facebook page integration
@@ -124,6 +143,7 @@ Deployment triggers:
 ## Additional Documentation
 
 The `docs/` folder contains supplementary documentation for specific topics:
+
 - `adding-contentful-content.md` - Guide for managing Contentful content and media assets
 - `deployment.md` - Detailed deployment information for Firebase and Netlify hosting
 - `development-frameworks.md` - In-depth information about Gatsby, Contentful, and other frameworks used
