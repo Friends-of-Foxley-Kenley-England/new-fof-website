@@ -35,6 +35,9 @@ const preview = {
         },
       ],
     },
+    docs: {
+      codePanel: true,
+    },
     viewport: {
       viewports: {
         mobile: {
