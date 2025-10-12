@@ -37,12 +37,55 @@ export const Link = ({ to, children, getProps, ...props }) => {
 };
 
 // Mock StaticImage component
-export const StaticImage = ({ src, alt, ...props }) => {
+export const StaticImage = ({ 
+  src, 
+  alt, 
+  className,
+  imgClassName,
+  layout = 'constrained',
+  objectFit = 'cover',
+  objectPosition = 'center',
+  loading = 'lazy',
+  placeholder,
+  ...props 
+}) => {
   // Convert Gatsby image path to static path served by Storybook
   const staticSrc = src.replace(/^.*images/, '');
   
+  // Mimic Gatsby's wrapper structure
+  const wrapperStyle = {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '1fr',
+    position: 'relative',
+    overflow: 'hidden',
+    ...(layout === 'fullWidth' && { width: '100%' }),
+    ...(layout === 'fixed' && { width: 'auto' }),
+  };
+
+  const imgStyle = {
+    gridArea: '1/1',
+    width: '100%',
+    height: '100%',
+    objectFit,
+    objectPosition,
+  };
+
   return (
-    <img src={staticSrc} alt={alt} {...props} />
+    <div 
+      className={className}
+      style={wrapperStyle}
+      data-gatsby-image-wrapper=""
+    >
+      <img 
+        src={staticSrc} 
+        alt={alt} 
+        className={imgClassName}
+        loading={loading}
+        style={imgStyle}
+        {...props} 
+      />
+    </div>
   );
 };
 
