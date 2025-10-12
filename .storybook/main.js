@@ -25,6 +25,7 @@ const config = {
       define: {
         ...config.define,
         global: 'globalThis',
+        __PATH_PREFIX__: JSON.stringify(''),
       },
       css: {
         ...config.css,
