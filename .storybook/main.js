@@ -26,6 +26,13 @@ const config = {
         ...config.define,
         global: 'globalThis',
       },
+      css: {
+        ...config.css,
+        modules: {
+          ...config.css?.modules,
+          localsConvention: 'camelCaseOnly',
+        },
+      },
       esbuild: {
         ...config.esbuild,
         jsx: 'automatic',
