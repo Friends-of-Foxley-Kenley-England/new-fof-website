@@ -1,3 +1,15 @@
+// custom typefaces
+import "typeface-montserrat";
+import "typeface-merriweather";
+// normalize CSS across browsers
+import "../src/normalize.css";
+// custom CSS styles
+import "../src/style.variables.css";
+import "../src/style.css";
+
+// Highlighting for code blocks
+import "prismjs/themes/prism.css";
+
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
   parameters: {
@@ -8,42 +20,42 @@ const preview = {
       },
     },
     actions: {
-      argTypesRegex: '^on[A-Z].*',
+      argTypesRegex: "^on[A-Z].*",
     },
     backgrounds: {
-      default: 'light',
+      default: "light",
       values: [
         {
-          name: 'light',
-          value: '#ffffff',
+          name: "light",
+          value: "#ffffff",
         },
         {
-          name: 'dark',
-          value: '#333333',
+          name: "dark",
+          value: "#333333",
         },
       ],
     },
     viewport: {
       viewports: {
         mobile: {
-          name: 'Mobile',
+          name: "Mobile",
           styles: {
-            width: '375px',
-            height: '667px',
+            width: "375px",
+            height: "667px",
           },
         },
         tablet: {
-          name: 'Tablet',
+          name: "Tablet",
           styles: {
-            width: '768px',
-            height: '1024px',
+            width: "768px",
+            height: "1024px",
           },
         },
         desktop: {
-          name: 'Desktop',
+          name: "Desktop",
           styles: {
-            width: '1200px',
-            height: '800px',
+            width: "1200px",
+            height: "800px",
           },
         },
       },
