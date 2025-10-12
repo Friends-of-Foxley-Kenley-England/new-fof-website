@@ -12,7 +12,12 @@ const config = {
   },
 
   // Static assets configuration
-  staticDirs: ["../src/images"],
+  staticDirs: [
+    {
+      from: "../src/images",
+      to: process.env.NODE_ENV === "production" ? "/new-fof-website" : "/",
+    },
+  ],
 
   // Vite configuration
   viteFinal: config => {
