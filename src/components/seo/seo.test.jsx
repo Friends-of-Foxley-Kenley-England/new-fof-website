@@ -13,6 +13,25 @@ jest.mock("../../hooks/use-site-metadata", () => ({
 }));
 
 describe("Seo", () => {
+  beforeAll(() => {
+    jest.spyOn(console, "error").mockImplementation(message => {
+      // Suppress expected DOM nesting warnings for <html> and <head> elements
+      // These are valid in Gatsby's Head API context but trigger warnings in test environment
+      if (
+        typeof message === "string" &&
+        message.includes("validateDOMNesting")
+      ) {
+        return;
+      }
+
+      console.warn(message);
+    });
+  });
+
+  afterAll(() => {
+    console.error.mockRestore();
+  });
+
   it("renders default title when no title prop provided", () => {
     const { container } = render(<Seo />);
     const title = container.querySelector("title");
@@ -31,7 +50,10 @@ describe("Seo", () => {
     const { container } = render(<Seo />);
     const descriptionMeta = container.querySelector('meta[name="description"]');
 
-    expect(descriptionMeta).toHaveAttribute("content", "Default site description");
+    expect(descriptionMeta).toHaveAttribute(
+      "content",
+      "Default site description",
+    );
   });
 
   it("renders custom description when provided", () => {
