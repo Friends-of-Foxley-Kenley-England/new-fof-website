@@ -51,7 +51,8 @@ export const StaticImage = ({
   ...props
 }) => {
   // Convert Gatsby image path to static path served by Storybook
-  const basePath = process.env.NODE_ENV === "production" ? "/new-fof-website" : "";
+  const basePath =
+    process.env.NODE_ENV === "storybook" ? "/new-fof-website" : "";
   const staticSrc = basePath + src.replace(/^.*images/, "");
 
   // Mimic Gatsby's wrapper structure
@@ -77,8 +78,7 @@ export const StaticImage = ({
     <div
       className={className}
       style={wrapperStyle}
-      data-gatsby-image-wrapper=""
-    >
+      data-gatsby-image-wrapper="">
       <img
         src={staticSrc}
         alt={alt}
