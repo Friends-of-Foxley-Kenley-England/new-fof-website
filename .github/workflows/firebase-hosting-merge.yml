@@ -22,7 +22,7 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "yarn"
 
-      - run: yarn install --immutable --immutable-cache
+      - run: yarn install --immutable
 
       - run: yarn build
         env:
@@ -51,7 +51,7 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "yarn"
 
-      - run: yarn install --immutable --immutable-cache
+      - run: yarn install --immutable
 
       - run: yarn build
         env:
