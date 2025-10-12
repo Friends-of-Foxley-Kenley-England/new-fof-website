@@ -29,3 +29,5 @@ jobs:
           build_command: yarn build-storybook
           path: storybook-static
           checkout: false
+        env:
+          NODE_ENV: production
