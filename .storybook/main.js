@@ -1,4 +1,5 @@
 const React = require("react");
+const webpack = require("webpack");
 
 module.exports = {
   // You will want to change this to wherever your Stories will live
@@ -25,39 +26,40 @@ module.exports = {
       }
     });
 
-    // Remove existing CSS rules and add custom ones with camelCase support
-    config.module.rules = config.module.rules.filter(rule => {
-      if (!rule.test) return true;
-      const testString = rule.test.toString();
-      // Remove CSS-related rules
-      return !testString.includes(".css");
+    // Find and modify Storybook's CSS rule to enable camelCase for modules
+    config.module.rules.forEach((rule, index) => {
+      // Look for the CSS rule
+      if (rule.test && rule.test.toString().includes(".css")) {
+        const use = rule.use;
+        if (Array.isArray(use)) {
+          use.forEach(loaderConfig => {
+            if (
+              typeof loaderConfig === "object" &&
+              loaderConfig.loader &&
+              loaderConfig.loader.includes("css-loader")
+            ) {
+              // Ensure options exist
+              if (!loaderConfig.options) {
+                loaderConfig.options = {};
+              }
+              // Enable CSS modules with camelCase
+              loaderConfig.options.modules = {
+                auto: true, // Auto-enable for .module.css files
+                exportLocalsConvention: "camelCase",
+                localIdentName: "[name]__[local]--[hash:base64:5]",
+              };
+            }
+          });
+        }
+      }
     });
 
-    // Add CSS module rule with camelCase (for .module.css files)
-    config.module.rules.push({
-      test: /\.module\.css$/,
-      use: [
-        "style-loader",
-        {
-          loader: "css-loader",
-          options: {
-            modules: {
-              auto: true,
-              exportLocalsConvention: "camelCase",
-              namedExport: false,
-            },
-            importLoaders: 1,
-          },
-        },
-      ],
-    });
-
-    // Add regular CSS rule (for non-module .css files)
-    config.module.rules.push({
-      test: /\.css$/,
-      exclude: /\.module\.css$/,
-      use: ["style-loader", "css-loader"],
-    });
+    // Provide process global for Gatsby code
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        process: "process/browser",
+      }),
+    );
 
     // Use correct react-dom depending on React version.
     if (parseInt(React.version) <= 18) {
