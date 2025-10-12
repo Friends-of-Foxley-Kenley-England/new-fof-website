@@ -25,7 +25,9 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "find-unused-deps": "depcheck"
   },
   "packageManager": "yarn@3.2.0",
