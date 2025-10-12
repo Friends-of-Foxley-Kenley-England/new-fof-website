@@ -76,7 +76,8 @@ export const StaticImage = ({
     <div
       className={className}
       style={wrapperStyle}
-      data-gatsby-image-wrapper="">
+      data-gatsby-image-wrapper=""
+    >
       <img
         src={staticSrc}
         alt={alt}

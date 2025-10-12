@@ -1,1 +1,1 @@
-export { default } from './seo.jsx';
+export { default } from "./seo.jsx";

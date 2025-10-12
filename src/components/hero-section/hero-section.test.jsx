@@ -16,5 +16,4 @@ describe("HeroSection", () => {
     const heading = getByRole("heading", { level: 1 });
     expect(heading).toHaveTextContent("Friends of Foxley");
   });
-
 });

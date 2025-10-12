@@ -1,1 +1,1 @@
-export { default } from './deprecated-seo-component.jsx';
+export { default } from "./deprecated-seo-component.jsx";

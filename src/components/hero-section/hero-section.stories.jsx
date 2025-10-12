@@ -1,12 +1,12 @@
-import HeroSection from './hero-section';
+import HeroSection from "./hero-section";
 
 export default {
-  title: 'Components/HeroSection',
+  title: "Components/HeroSection",
   component: HeroSection,
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export const Default = {

@@ -12,7 +12,8 @@ const ExternalLink = ({ href, children, "aria-label": ariaLabel, ...rest }) => {
       rel="noopener noreferrer"
       aria-label={accessibleLabel}
       title={accessibleLabel || "Opens in new tab"}
-      {...rest}>
+      {...rest}
+    >
       {children}
     </a>
   );

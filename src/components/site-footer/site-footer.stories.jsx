@@ -19,7 +19,8 @@ export const Default = {
         flexDirection: "column",
         marginTop: "0px",
         backgroundColor: "var(--color-white)",
-      }}>
+      }}
+    >
       <div style={{ flex: 1, padding: "var(--spacing-5)" }}>
         <h1>Heading</h1>
         <p>

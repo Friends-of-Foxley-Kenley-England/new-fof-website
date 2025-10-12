@@ -53,7 +53,8 @@ export function Head() {
           id="reshepe-webvitals"
           async
           data-api-key={reshepeApiKey}
-          src="https://cdn.jsdelivr.net/npm/@reshepe-web-vitals/js/dist/index.global.js"></script>
+          src="https://cdn.jsdelivr.net/npm/@reshepe-web-vitals/js/dist/index.global.js"
+        ></script>
 
         <Seo />
       </>

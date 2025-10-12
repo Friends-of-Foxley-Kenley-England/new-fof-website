@@ -33,16 +33,16 @@ src/
 ### Basic Component Test
 
 ```jsx
-import React from "react"
-import { render, screen } from "@testing-library/react"
-import MyComponent from "../MyComponent"
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import MyComponent from "../MyComponent";
 
 describe("MyComponent", () => {
   it("renders correctly", () => {
-    render(<MyComponent />)
-    expect(screen.getByText("Expected Text")).toBeInTheDocument()
-  })
-})
+    render(<MyComponent />);
+    expect(screen.getByText("Expected Text")).toBeInTheDocument();
+  });
+});
 ```
 
 ### Testing Components with Gatsby's useStaticQuery
@@ -50,53 +50,53 @@ describe("MyComponent", () => {
 For components that use Gatsby's `useStaticQuery`, you need to mock the query:
 
 ```jsx
-import React from "react"
-import { render, screen } from "@testing-library/react"
-import Bio from "../bio"
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import Bio from "../bio";
 
 describe("Bio", () => {
   beforeEach(() => {
-    const useStaticQuery = jest.spyOn(require("gatsby"), "useStaticQuery")
+    const useStaticQuery = jest.spyOn(require("gatsby"), "useStaticQuery");
     useStaticQuery.mockImplementation(() => ({
       site: {
         siteMetadata: {
           description: "Test description",
         },
       },
-    }))
-  })
+    }));
+  });
 
   afterEach(() => {
-    jest.restoreAllMocks()
-  })
+    jest.restoreAllMocks();
+  });
 
   it("renders the bio description", () => {
-    render(<Bio />)
-    expect(screen.getByText("Test description")).toBeInTheDocument()
-  })
-})
+    render(<Bio />);
+    expect(screen.getByText("Test description")).toBeInTheDocument();
+  });
+});
 ```
 
 ### Testing User Interactions
 
 ```jsx
-import React from "react"
-import { render, screen } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
-import Button from "../Button"
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import Button from "../Button";
 
 describe("Button", () => {
   it("calls onClick when clicked", async () => {
-    const user = userEvent.setup()
-    const handleClick = jest.fn()
-    
-    render(<Button onClick={handleClick}>Click me</Button>)
-    
-    await user.click(screen.getByText("Click me"))
-    
-    expect(handleClick).toHaveBeenCalledTimes(1)
-  })
-})
+    const user = userEvent.setup();
+    const handleClick = jest.fn();
+
+    render(<Button onClick={handleClick}>Click me</Button>);
+
+    await user.click(screen.getByText("Click me"));
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
 ```
 
 ## Configuration Files
@@ -134,6 +134,7 @@ See the [jest-dom documentation](https://github.com/testing-library/jest-dom) fo
 ### "Cannot find module" errors
 
 Make sure all dependencies are installed:
+
 ```bash
 yarn install
 ```

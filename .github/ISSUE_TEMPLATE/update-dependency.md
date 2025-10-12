@@ -1,10 +1,9 @@
 ---
 name: Update dependency
 about: General maintenance
-title: 'Update npm package: '
+title: "Update npm package: "
 labels: dependencies
-assignees: ''
-
+assignees: ""
 ---
 
 Any known breaking changes? Y/N

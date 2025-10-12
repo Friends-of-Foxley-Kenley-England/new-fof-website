@@ -28,7 +28,8 @@ export const WhiteGraphic = {
   },
   render: args => (
     <div
-      style={{ backgroundColor: "var(--color-dark-green)", padding: "3rem" }}>
+      style={{ backgroundColor: "var(--color-dark-green)", padding: "3rem" }}
+    >
       <p style={{ color: "white", fontSize: "1.2rem" }}>
         Note: the graphic is white, but the background colour can be whatever
         you like{" "}

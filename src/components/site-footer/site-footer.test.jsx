@@ -12,7 +12,7 @@ describe("SiteFooter", () => {
   it("renders the footer element", () => {
     const { container } = render(<SiteFooter />);
     const footer = container.querySelector("footer");
-    
+
     expect(footer).toBeInTheDocument();
   });
 

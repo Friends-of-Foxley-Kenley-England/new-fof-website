@@ -1,1 +1,1 @@
-export { default } from './site-footer.jsx';
+export { default } from "./site-footer.jsx";

@@ -1,1 +1,1 @@
-export { default } from './bio.jsx';
+export { default } from "./bio.jsx";

@@ -16,10 +16,11 @@ For user-friendly guides on how to manage workdays etc, go to the wiki: <https:/
 1.  Initial setup
 
     - Copy the `.env` file `cp .env.example .env`
-    - Set the missing config values in the`.env` file. 
+    - Set the missing config values in the`.env` file.
       - Login to contentful and create a new key
-            https://app.contentful.com/spaces/jnd8s5ezvg4b/api/keys
+        https://app.contentful.com/spaces/jnd8s5ezvg4b/api/keys
     - Run the following:
+
     ```shell
     corepack enable
     yarn install

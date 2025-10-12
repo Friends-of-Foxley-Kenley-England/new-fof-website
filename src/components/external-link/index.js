@@ -1,1 +1,1 @@
-export { default } from './external-link.jsx';
+export { default } from "./external-link.jsx";

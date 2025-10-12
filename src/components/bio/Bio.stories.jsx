@@ -1,12 +1,12 @@
-import Bio from './bio';
+import Bio from "./bio";
 
 export default {
-  title: 'Components/Bio',
+  title: "Components/Bio",
   component: Bio,
   parameters: {
-    layout: 'padded',
+    layout: "padded",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export const Default = {

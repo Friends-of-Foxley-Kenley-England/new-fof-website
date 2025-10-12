@@ -23,8 +23,8 @@ describe("FindUsOnFacebook", () => {
   it("renders a link to Facebook", () => {
     const { getByRole } = render(<FindUsOnFacebook />);
 
-      const link = getByRole("link");
-      
+    const link = getByRole("link");
+
     expect(link).toHaveAttribute(
       "href",
       "https://www.facebook.com/friendsoffoxley",
@@ -34,8 +34,8 @@ describe("FindUsOnFacebook", () => {
   it("has correct aria-label", () => {
     const { getByRole } = render(<FindUsOnFacebook />);
 
-      const link = getByRole("link");
-      
+    const link = getByRole("link");
+
     expect(link).toHaveAttribute(
       "aria-label",
       "Visit our Facebook page (opens in new tab)",

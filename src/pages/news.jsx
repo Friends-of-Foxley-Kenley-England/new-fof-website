@@ -29,7 +29,8 @@ const NewsIndex = ({ data, location }) => {
             className={style.postListItem}
             itemScope
             itemType="https://schema.org/Article"
-            id={post.id}>
+            id={post.id}
+          >
             <header>
               <h2>
                 <Link to={"/news/" + post.slug} itemProp="url">

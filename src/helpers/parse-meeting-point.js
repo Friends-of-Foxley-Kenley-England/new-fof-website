@@ -18,7 +18,7 @@ export const parseMeetingPoint = contentfulMeetingPoint => {
   if (!contentfulMeetingPoint) {
     return null;
   }
-  
+
   const whatThreeWords = contentfulMeetingPoint.split(" ")[0];
 
   const meetingPoint = locationMappings.find(
