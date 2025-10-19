@@ -3,6 +3,10 @@ on:
   pull_request:
     types: [opened, synchronize, ready_for_review, reopened]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   block-fixups:
     name: Fail if fixup or squash commits are found

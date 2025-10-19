@@ -9,6 +9,10 @@ on:
       - "!dependabot/**"
       - "!dependabot/npm_and_yarn/**"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   log_not_running:
     runs-on: ubuntu-latest

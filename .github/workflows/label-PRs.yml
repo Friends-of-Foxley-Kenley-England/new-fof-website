@@ -3,6 +3,10 @@ on:
   pull_request:
     types: [opened, synchronize, ready_for_review, reopened]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pull-requests: write
@@ -13,8 +17,8 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
-    - name: Label the PR based on changes made
-      uses: actions/labeler@v5.0.0
+      - name: Label the PR based on changes made
+        uses: actions/labeler@v5.0.0
 
   auto-assign-author:
     name: Auto assign PR
