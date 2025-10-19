@@ -1,0 +1,7 @@
+/**
+ * Mock for @contentful/live-preview/style.css
+ * Used in tests to avoid importing actual CSS
+ */
+
+module.exports = {
+}
