@@ -35,9 +35,14 @@ For user-friendly guides on how to manage workdays etc, go to the wiki: <https:/
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
+## ✨ Contentful Live Preview
+
+See content changes in real-time as you edit! Set `GATSBY_CONTENTFUL_PREVIEW_MODE=true` in your preview environment. [Full Setup Guide](./docs/contentful-live-preview.md)
+
 ## More docs:
 
 [Frameworks used in the project](./docs/development-frameworks.md)  
 [Deployment and hosting](./docs/deployment.md)  
 [Adding contentful content](./docs/adding-contentful-content.md)  
+[Contentful Live Preview Setup](./docs/contentful-live-preview.md)  
 [SSR](https://www.gatsbyjs.com/docs/how-to/rendering-options/using-server-side-rendering/)

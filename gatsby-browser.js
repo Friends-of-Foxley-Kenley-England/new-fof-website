@@ -9,3 +9,10 @@ import "./src/style.css";
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css";
+
+// Contentful Live Preview
+import { ContentfulLivePreviewProvider } from "./src/contexts/ContentfulLivePreviewProvider";
+
+export const wrapRootElement = ({ element }) => {
+  return <ContentfulLivePreviewProvider>{element}</ContentfulLivePreviewProvider>;
+};

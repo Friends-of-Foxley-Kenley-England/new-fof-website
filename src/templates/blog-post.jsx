@@ -6,10 +6,13 @@ import Seo from "../components/seo";
 import * as style from "./blog-post.module.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
+import { useContentfulLivePreview } from "../hooks/use-contentful-live-updates";
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.contentfulNews;
-  const { previous, next } = data;
+  // Enable live preview updates
+  const liveData = useContentfulLivePreview(data);
+  const post = liveData.contentfulNews;
+  const { previous, next } = liveData;
 
   return (
     // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
@@ -71,6 +74,14 @@ export const pageQuery = graphql`
   ) {
     contentfulNews(id: { eq: $id }) {
       id
+      contentful_id
+      sys {
+        contentType {
+          sys {
+            id
+          }
+        }
+      }
       title
       author
       createdAt(formatString: "Do MMMM YYYY")

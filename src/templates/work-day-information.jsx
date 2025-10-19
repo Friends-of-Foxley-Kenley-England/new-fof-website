@@ -8,10 +8,13 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 import * as style from "./work-day-information.module.css";
 import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
+import { useContentfulLivePreview } from "../hooks/use-contentful-live-updates";
 
 const WorkDayTemplate = ({ data, location }) => {
-  const post = data.contentfulWorkDay;
-  const { previous, next } = data;
+  // Enable live preview updates
+  const liveData = useContentfulLivePreview(data);
+  const post = liveData.contentfulWorkDay;
+  const { previous, next } = liveData;
   const meetingPoint = parseMeetingPoint(post.meetingPointWhat3words);
 
   const meetingPointWhatThreeWords = meetingPoint?.meetingPointWhatThreeWords;
@@ -97,6 +100,14 @@ export const pageQuery = graphql`
   ) {
     contentfulWorkDay(id: { eq: $id }) {
       id
+      contentful_id
+      sys {
+        contentType {
+          sys {
+            id
+          }
+        }
+      }
       title
       dateOfWorkday
       meetingTime
