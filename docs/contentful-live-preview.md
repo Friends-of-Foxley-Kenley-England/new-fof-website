@@ -9,6 +9,7 @@ Contentful Live Preview allows content editors to see changes in real-time as th
 ## Architecture
 
 This site uses a **two-domain approach**:
+
 - **Production domain**: Uses Contentful Delivery API (published content only)
 - **Preview domain**: Uses Contentful Preview API with live preview enabled (draft + published content with real-time updates)
 
@@ -17,6 +18,7 @@ This site uses a **two-domain approach**:
 ### 1. Configure Environment Variables
 
 **For Production Environment** (`.env` or deployment config):
+
 ```bash
 CONTENTFUL_SPACE_ID=your_space_id
 CONTENTFUL_ENVIRONMENT=master
@@ -25,6 +27,7 @@ CONTENTFUL_DELIVERY_TOKEN=your_delivery_token
 ```
 
 **For Preview Environment** (`.env.preview` or preview deployment config):
+
 ```bash
 CONTENTFUL_SPACE_ID=your_space_id
 CONTENTFUL_ENVIRONMENT=master
@@ -34,6 +37,7 @@ GATSBY_CONTENTFUL_PREVIEW_MODE=true
 ```
 
 **Getting your Preview Access Token:**
+
 1. Go to your Contentful space
 2. Navigate to Settings → API keys
 3. Create a new API key or use an existing one
@@ -48,23 +52,27 @@ In your Contentful space settings:
 2. Add content preview URLs for each content type:
 
 **For News entries:**
-   - **Name**: Preview Environment
-   - **URL**: `https://your-preview-domain.com/news/{entry.fields.slug}`
-   - **Content types**: News
+
+- **Name**: Preview Environment
+- **URL**: `https://your-preview-domain.com/news/{entry.fields.slug}`
+- **Content types**: News
 
 **For Work Day entries:**
-   - **Name**: Preview Environment
-   - **URL**: `https://your-preview-domain.com/work-days/{entry.fields.slug}`
-   - **Content types**: Work Day
+
+- **Name**: Preview Environment
+- **URL**: `https://your-preview-domain.com/work-days/{entry.fields.slug}`
+- **Content types**: Work Day
 
 **For local development:**
-   - **URL**: `http://localhost:8000/news/{entry.fields.slug}` (or `/work-days/...`)
+
+- **URL**: `http://localhost:8000/news/{entry.fields.slug}` (or `/work-days/...`)
 
 ### 3. Using Live Preview
 
 #### During Development:
 
 1. Set up your local environment with preview mode enabled:
+
    ```bash
    # In your .env file:
    CONTENTFUL_HOST=preview.contentful.com
@@ -73,6 +81,7 @@ In your Contentful space settings:
    ```
 
 2. Start your Gatsby development server:
+
    ```bash
    yarn develop
    ```
@@ -100,9 +109,11 @@ In your Contentful space settings:
 The implementation consists of several parts:
 
 ### 1. Context Provider (`ContentfulLivePreviewProvider.jsx`)
+
 Wraps the entire app and enables live preview features when `GATSBY_CONTENTFUL_PREVIEW_MODE=true` environment variable is set.
 
 ### 2. Custom Hook (`use-contentful-live-updates.js`)
+
 Provides a simple hook to enable live updates for any component:
 
 ```javascript
@@ -115,9 +126,11 @@ const MyComponent = ({ data }) => {
 ```
 
 ### 3. Updated Templates
+
 Both `blog-post.jsx` and `work-day-information.jsx` now support live preview.
 
 ### 4. GraphQL Queries
+
 Queries include `contentful_id` and `sys` fields required for live preview tracking.
 
 ## Troubleshooting
@@ -149,11 +162,13 @@ Queries include `contentful_id` and `sys` fields required for live preview track
 To add live preview support to a new template:
 
 1. Import the hook:
+
    ```javascript
    import { useContentfulLivePreview } from "../hooks/use-contentful-live-updates";
    ```
 
 2. Use it in your component:
+
    ```javascript
    const MyTemplate = ({ data }) => {
      const liveData = useContentfulLivePreview(data);
@@ -184,6 +199,10 @@ To add live preview support to a new template:
 - Production environment has zero overhead - preview code is inactive
 - Preview mode uses the Contentful Preview API, which has different rate limits than the Delivery API
 - The two-domain approach ensures production performance is never impacted by preview features
+
+## Testing
+
+Comprehensive unit and integration tests are included for all live preview functionality. See [Testing Contentful Live Preview](./testing-contentful-live-preview.md) for details.
 
 ## Resources
 
