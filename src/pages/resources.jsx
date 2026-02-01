@@ -22,7 +22,11 @@ const ResourcesIndex = ({ data, location }) => {
                 className={style.linkText}
                 key={resourceFile.id}
                 style={{ listStyleImage: `url(${icon})` }}>
-                <a href={resourceFile.url} className={style.linkText}>
+                <a
+                  href={resourceFile.url}
+                  className={style.linkText}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   {resourceFile.title}
                 </a>
               </li>
