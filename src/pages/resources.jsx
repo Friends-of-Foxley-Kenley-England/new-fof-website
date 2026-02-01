@@ -2,6 +2,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import * as style from "./resources.module.css";
 import Seo from "../components/seo";
+import { GetIconForFiletype } from "../helpers/get-icon-for-filetype";
 
 const ResourcesIndex = ({ data, location }) => {
   const resourcesPageData = data.allContentfulResourcesPage?.nodes?.[0] || {};
@@ -13,15 +14,14 @@ const ResourcesIndex = ({ data, location }) => {
       <p>{resourcesPageData?.subTitle}</p>
 
       <div className={style.fileListContainer}>
-        {/* https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awesome-icon */}
-        {/* <FontAwesomeIcon icon="fa-regular fa-file" /> */}
-        {/* <FontAwesomeIcon icon="fa-solid fa-file-image" /> */}
-        {/* <FontAwesomeIcon icon="fa-regular fa-file-lines" /> */}
-        {/* <FontAwesomeIcon icon="fa-solid fa-file-pdf" /> */}
-        <ul className={style.pdfFileList}>
+        <ul className={style.fileIconItem}>
           {resourcesPageData?.resourceFiles?.map(resourceFile => {
+            const icon = GetIconForFiletype(resourceFile.file?.contentType);
             return (
-              <li className={style.linkText} key={resourceFile.id}>
+              <li
+                className={style.linkText}
+                key={resourceFile.id}
+                style={{ listStyleImage: `url(${icon})` }}>
                 <a href={resourceFile.url} className={style.linkText}>
                   {resourceFile.title}
                 </a>

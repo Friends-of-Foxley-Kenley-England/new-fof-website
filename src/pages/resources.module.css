@@ -1,14 +1,10 @@
-.file-list-container {
-  padding-left: var(--spacing-6);
+.file-list-container ul li {
+  padding-left: unset;
+  margin-left: unset;
 }
 
-.pdf-file-list {
-  list-style-image: url("../images/PDF_32.png");
+.file-item-icon {
   list-style-position: outside;
-}
-
-.pdf-file-list li {
-  margin-bottom: var(--spacing-2);
 }
 
 .link-text {
@@ -22,12 +18,16 @@
     top: unset;
     position: unset;
     vertical-align: middle;
-    padding-bottom: var(--fontSize-3);
+    padding-bottom: var(--spacing-6);
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .file-list-container {
     padding-left: var(--spacing-8);
+  }
+
+  .file-list-container ul {
+    margin-left: var(--spacing-4);
   }
 }
