@@ -4,6 +4,83 @@
       "public": "public",
       "site": "friends-of-foxley-prod",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "redirects": [
+        {
+          "source": "/pages/history.html",
+          "destination": "/history",
+          "type": 301
+        },
+        {
+          "source": "/pages/the_trees_of_foxley_wood.html",
+          "destination": "/trees",
+          "type": 301
+        },
+        {
+          "source": "/pages/english_oak.html",
+          "destination": "/trees/english-oak",
+          "type": 301
+        },
+        {
+          "source": "/pages/contact.html",
+          "destination": "/contact",
+          "type": 301
+        },
+        {
+          "source": "/pages/latest_news.html",
+          "destination": "/news",
+          "type": 301
+        },
+        {
+          "source": "/pages/news.html",
+          "destination": "/news",
+          "type": 301
+        },
+        {
+          "source": "/pages/work_days.html",
+          "destination": "/work-days",
+          "type": 301
+        },
+        {
+          "source": "/pages/management_plan.html",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/images/content/Membership-Application.pdf",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/pages/surveys.html",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/pages/wood-products.html",
+          "destination": "/wood-products",
+          "type": 301
+        },
+        {
+          "source": "/pages/ancient_beech_tree.html",
+          "destination": "/trees/ancient-beech-tree-diversion",
+          "type": 301
+        },
+        {
+          "source": "/pages/gallery.html",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/pages/links_page.html",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/pages/woodland_day.html",
+          "destination": "/work-days",
+          "type": 301
+        }
+      ],
       "headers": [
         {
           "source": "**/*",
@@ -65,6 +142,83 @@
       "public": "public",
       "site": "friends-of-foxley-preview",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "redirects": [
+        {
+          "source": "/pages/history.html",
+          "destination": "/history",
+          "type": 301
+        },
+        {
+          "source": "/pages/the_trees_of_foxley_wood.html",
+          "destination": "/trees",
+          "type": 301
+        },
+        {
+          "source": "/pages/english_oak.html",
+          "destination": "/trees/english-oak",
+          "type": 301
+        },
+        {
+          "source": "/pages/contact.html",
+          "destination": "/contact",
+          "type": 301
+        },
+        {
+          "source": "/pages/latest_news.html",
+          "destination": "/news",
+          "type": 301
+        },
+        {
+          "source": "/pages/news.html",
+          "destination": "/news",
+          "type": 301
+        },
+        {
+          "source": "/pages/work_days.html",
+          "destination": "/work-days",
+          "type": 301
+        },
+        {
+          "source": "/pages/management_plan.html",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/images/content/Membership-Application.pdf",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/pages/surveys.html",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/pages/wood-products.html",
+          "destination": "/wood-products",
+          "type": 301
+        },
+        {
+          "source": "/pages/ancient_beech_tree.html",
+          "destination": "/trees/ancient-beech-tree-diversion",
+          "type": 301
+        },
+        {
+          "source": "/pages/gallery.html",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/pages/links_page.html",
+          "destination": "/resources",
+          "type": 301
+        },
+        {
+          "source": "/pages/woodland_day.html",
+          "destination": "/work-days",
+          "type": 301
+        }
+      ],
       "headers": [
         {
           "source": "**/*",
