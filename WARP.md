@@ -147,6 +147,7 @@ The `docs/` folder contains supplementary documentation for specific topics:
 - `adding-contentful-content.md` - Guide for managing Contentful content and media assets
 - `deployment.md` - Detailed deployment information for Firebase and Netlify hosting
 - `development-frameworks.md` - In-depth information about Gatsby, Contentful, and other frameworks used
+- `redirects.md` - Information about redirects
 - `web-vitals.md` - Web performance monitoring setup with Reshepe integration
 
 ## Content Management
