@@ -22,7 +22,7 @@ const WorkDayWidget = () => {
       <h3 className={style.workDaysWidgetTitle}>Recent work days</h3>
       {workdays.length > 0 ? (
         <ul className={style.workDaysList}>
-          {workdays.slice(0, 3).map(workday => (
+          {workdays.map(workday => (
             <li key={workday.slug}>
               <Link to={`/work-days/${workday.slug}`}>{workday.title}</Link>
             </li>
