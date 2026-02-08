@@ -8,6 +8,13 @@
 .global-wrapper {
   flex: 1;
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-5);
+}
+
+.standard-width-wrapper {
+  max-width: var(--maxWidth-wrapper);
+}
+
+.wide-width-wrapper {
+  max-width: unset;
 }

@@ -4,7 +4,12 @@ import SiteHeader from "../site-header";
 import SiteFooter from "../site-footer";
 import HeroSection from "../hero-section";
 
-const Layout = ({ location, children, showHeroSection = false }) => {
+const Layout = ({
+  location,
+  children,
+  showHeroSection = false,
+  useWideLayout = false,
+}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,7 +41,12 @@ const Layout = ({ location, children, showHeroSection = false }) => {
       )}
 
       <div className={style.globalWrapper} data-is-root-path={isRootPath}>
-        <main>{children}</main>
+        <main
+          className={
+            useWideLayout ? style.wideWidthWrapper : style.standardWidthWrapper
+          }>
+          {children}
+        </main>
       </div>
       <SiteFooter />
     </div>
