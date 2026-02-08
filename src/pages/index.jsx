@@ -50,23 +50,29 @@ const HomeIndex = ({ data, location }) => {
         </div>
 
         {/* Work Days Widget */}
-        <div className={style.workDaysWidget}>
-          {/* // style={{ float: "right", width: "300px", marginLeft: "40px" }}> */}
-          <h3 className={style.workDaysWidgetTitle}>Recent work days</h3>
-          {workdays.length > 0 ? (
-            <ul className={style.workDaysList}>
-              {workdays.slice(0, 3).map(workday => (
-                <li key={workday.slug}>
-                  <Link to={`/work-days/${workday.slug}`}>{workday.title}</Link>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No recent work days scheduled.</p>
-          )}
-          <p className={style.seeAllLink}>
-            <Link to="/work-days">See all work days →</Link>
-          </p>
+        <div
+          data-testid="work-days-widget-container"
+          className={style.workDaysWidgetContainer}>
+          <div data-testid="work-days-widget" className={style.workDaysWidget}>
+            {/* // style={{ float: "right", width: "300px", marginLeft: "40px" }}> */}
+            <h3 className={style.workDaysWidgetTitle}>Recent work days</h3>
+            {workdays.length > 0 ? (
+              <ul className={style.workDaysList}>
+                {workdays.slice(0, 3).map(workday => (
+                  <li key={workday.slug}>
+                    <Link to={`/work-days/${workday.slug}`}>
+                      {workday.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No recent work days scheduled.</p>
+            )}
+            <p className={style.seeAllLink}>
+              <Link to="/work-days">See all work days →</Link>
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

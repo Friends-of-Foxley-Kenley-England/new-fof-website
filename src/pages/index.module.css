@@ -2,7 +2,6 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .main-content {
@@ -12,16 +11,22 @@
 }
 
 /* Styling for the work days widget */
+.work-days-widget-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .work-days-widget {
-  align-content: center;
-  width: var(--maxWidth-md);
+  width: 100%;
+  max-width: var(--maxWidth-sm);
   border: 2px solid var(--color-primary);
   border-radius: 8px;
   padding: var(--spacing-4);
   background-color: var(--color-background);
 }
 
-.work-days-widget h3 {
+.work-days-widget-title {
   margin-top: 0;
   color: var(--color-primary);
   border-bottom: 1px solid var(--color-accent);
@@ -69,6 +74,10 @@
   }
 
   .work-days-widget-title {
-    font-size: var(--fontSize-3);
+    font-size: var(--fontSize-2);
+  }
+
+  .work-days-list li {
+    font-size: 0.9rem;
   }
 }
