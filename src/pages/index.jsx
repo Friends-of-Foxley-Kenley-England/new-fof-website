@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import * as style from "./index.module.css"; // We'll create this CSS module
+import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
 
 const HomeIndex = ({ data, location }) => {
