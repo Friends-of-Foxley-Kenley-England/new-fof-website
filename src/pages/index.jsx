@@ -1,19 +1,14 @@
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./index.module.css"; // We'll create this CSS module
+import WorkDayWidget from "../components/work-day-widget";
 
 const HomeIndex = ({ data, location }) => {
-  const workdays = data.allContentfulWorkDay?.nodes || [];
-
   return (
     <Layout location={location} showHeroSection useWideLayout>
       <div className={style.homeContainer}>
-        <div
-          data-testid="main-content"
-          className={style.mainContent}
-          // style={{ margin: "0 auto", maxWidth: "600px" }}
-        >
+        <div data-testid="main-content" className={style.mainContent}>
           <p>
             The Friends Of Foxley are a group of local people who work in
             partnership with Croydon Council to protect and manage the nature
@@ -49,30 +44,10 @@ const HomeIndex = ({ data, location }) => {
           </p>
         </div>
 
-        {/* Work Days Widget */}
         <div
           data-testid="work-days-widget-container"
           className={style.workDaysWidgetContainer}>
-          <div data-testid="work-days-widget" className={style.workDaysWidget}>
-            {/* // style={{ float: "right", width: "300px", marginLeft: "40px" }}> */}
-            <h3 className={style.workDaysWidgetTitle}>Recent work days</h3>
-            {workdays.length > 0 ? (
-              <ul className={style.workDaysList}>
-                {workdays.slice(0, 3).map(workday => (
-                  <li key={workday.slug}>
-                    <Link to={`/work-days/${workday.slug}`}>
-                      {workday.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>No recent work days scheduled.</p>
-            )}
-            <p className={style.seeAllLink}>
-              <Link to="/work-days">See all work days →</Link>
-            </p>
-          </div>
+          <WorkDayWidget />
         </div>
       </div>
     </Layout>
@@ -80,18 +55,6 @@ const HomeIndex = ({ data, location }) => {
 };
 
 export default HomeIndex;
-
-export const pageQuery = graphql`
-  {
-    allContentfulWorkDay(sort: { dateOfWorkday: DESC }, limit: 3) {
-      nodes {
-        slug
-        id
-        title
-      }
-    }
-  }
-`;
 
 export function Head() {
   const reshepeApiKey = process.env.GATSBY_RESHEPE_PUBLIC_KEY;
