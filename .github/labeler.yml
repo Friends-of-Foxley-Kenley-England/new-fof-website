@@ -19,3 +19,14 @@ dependencies:
           - "yarn.lock"
           - ".yarn/**/*"
           - ".yarnrc"
+
+storybook:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".storybook/**/*"
+          - "**/*.stories.*"
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.test.*"
