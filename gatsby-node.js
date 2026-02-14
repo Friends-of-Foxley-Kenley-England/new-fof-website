@@ -14,11 +14,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   //  sorted by date
   const result = await graphql(`
     {
-      allContentfulWorkDay {
+      allContentfulWorkDay (sort: { dateOfWorkday: DESC }, limit: 30 ) {
         nodes {
           slug
           createdAt
           id
+          dateOfWorkday
         }
       }
       allContentfulNews {
