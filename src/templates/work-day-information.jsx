@@ -15,15 +15,17 @@ const WorkDayTemplate = ({ data, location }) => {
   const meetingPoint = parseMeetingPoint(post.meetingPointWhat3words);
 
   const meetingPointWhatThreeWords = meetingPoint?.meetingPointWhatThreeWords;
-  const meetingPointDescription = meetingPoint?.meetingPointDescription;
+  const meetingPointDescription =
+    post?.meetingPointDescription ??
+    meetingPoint?.meetingPointDescription ??
+    "TBC";
 
   return (
     <Layout location={location}>
       <article
         className="blog-post"
         itemScope
-        itemType="https://schema.org/Article"
-      >
+        itemType="https://schema.org/Article">
         <header>
           <h1 itemProp="headline">{"Work day: " + post.title}</h1>
         </header>
@@ -65,8 +67,7 @@ const WorkDayTemplate = ({ data, location }) => {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
-          }}
-        >
+          }}>
           <li>
             {previous && (
               <Link to={"/work-days/" + previous.slug} rel="prev">
@@ -101,6 +102,7 @@ export const pageQuery = graphql`
       dateOfWorkday
       meetingTime
       meetingPointWhat3words
+      meetingPointDescription
       shortDescriptionOfWorkday
       workDayInformation {
         raw
