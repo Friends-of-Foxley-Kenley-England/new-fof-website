@@ -11,6 +11,17 @@
 
 For user-friendly guides on how to manage workdays etc, go to the wiki: <https://github.com/Friends-of-Foxley-Kenley-England/new-fof-website/wiki>
 
+## Prerquisites
+
+- If windows:
+  - use WSL to install/configure linux, and run the project from the WSL CLI. <https://code.visualstudio.com/docs/remote/wsl>
+- Use NVM to install the correct node version
+  - Install NVM https://www.nvmnode.com/
+  - Install node version for this project: `nvm use`
+  - Install VSCode extension to run it for you automatically: <https://marketplace.visualstudio.com/items?itemName=zqy233.vscode-nvmrc> OR update your bach/zsh/other profile file to add the command
+- <https://yarnpkg.com/getting-started/install>
+  - `npm install -g corepack`, after running this, you can use yarn
+
 ## 🚀 Quick start
 
 1.  Initial setup
