@@ -29,7 +29,8 @@ describe("Layout", () => {
       </Layout>,
     );
 
-    expect(getByText("Test content")).toBeInTheDocument();
+    const text = getByText("Test content");
+    expect(text).toBeInTheDocument();
   });
 
   it("renders header and footer", () => {
@@ -63,5 +64,16 @@ describe("Layout", () => {
 
     const heading = queryByRole("heading", { level: 1 });
     expect(heading).not.toBeInTheDocument();
+  });
+
+  it("renders children content with useWideLayout", () => {
+    const { getByText } = render(
+      <Layout location={{ pathname: "/" }} useWideLayout>
+        <p>Test content</p>
+      </Layout>,
+    );
+
+    const text = getByText("Test content");
+    expect(text).toBeInTheDocument();
   });
 });
