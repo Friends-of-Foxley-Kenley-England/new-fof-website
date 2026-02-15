@@ -21,8 +21,8 @@ const HistoryIndex = ({ location }) => {
         In 1867 the Lords of the Manor started selling off plots of land for
         building development and it was George Armstrong, a prosperous merchant
         and manufacturer of linseed oil cake, who purchased the Great Foxley
-        Estate in c1875 and built the large house "Foxley", later to be known as
-        Foxley Hall.
+        Estate in c1875 and built the large house &quote;Foxley&quote;, later to
+        be known as Foxley Hall.
       </p>
       <p>
         The estate was again sold in 1893 to Edward Densham, a tea merchant who,

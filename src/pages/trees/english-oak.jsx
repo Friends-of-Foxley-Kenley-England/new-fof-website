@@ -9,11 +9,11 @@ const EnglishOakTreeIndex = ({ location }) => {
       <p>
         The English Oak is native to most of Western Europe. It is found in
         mixed woodland throughout the UK and is most common in the South and
-        East. It’s an important feature of the English landscape, renowned for
-        its longevity and noted for its distinctive leaves and groups of acorns.
-        It is a long-lived tree with some examples over a thousand years old but
-        in woodland, where it can grow to over 40m, it usually has a lifespan of
-        about 300 years.
+        East. It&apos;s an important feature of the English landscape, renowned
+        for its longevity and noted for its distinctive leaves and groups of
+        acorns. It is a long-lived tree with some examples over a thousand years
+        old but in woodland, where it can grow to over 40m, it usually has a
+        lifespan of about 300 years.
       </p>
       <p>
         The leaves have 5-7 pairs of lobes, forming a typical wavy-edged
@@ -21,7 +21,7 @@ const EnglishOakTreeIndex = ({ location }) => {
         is closely related to the Sessile Oak (Quercus petraea). The leaves of
         the English Oak have very short or no stalk and the acorns long ones.
         The Sessile Oak is the opposite - its leaves have stalks but the acorns
-        don't. This is where the names pedunculate and sessile come from.
+        don&apost;t. This is where the names pedunculate and sessile come from.
       </p>
       <p>
         The English Oak is very important for wildlife: Numerous insects live on
@@ -40,9 +40,9 @@ const EnglishOakTreeIndex = ({ location }) => {
         Oaks produce one of the hardest and most durable timbers on the planet
         and the English Oak has always enjoyed a close association with the
         Royal Navy, whose ships were constructed from oak timbers until the
-        middle of the 19th century, earning the Navy the nickname ‘the Wooden
-        Walls of Old England’. Oak is still used in construction and to make
-        barrels for wine and spirits.
+        middle of the 19th century, earning the Navy the nickname &quote;the
+        Wooden Walls of Old England&quot;. Oak is still used in construction and
+        to make barrels for wine and spirits.
       </p>
       <h2>Oaks in Foxley Wood</h2>
       <p>
@@ -67,10 +67,12 @@ const EnglishOakTreeIndex = ({ location }) => {
       <h2>Fun Facts</h2>
       <ul>
         <li>Only 1 in 10,000 acorns grow up to be an oak tree</li>
-        <li>"The Royal Oak" is the third most popular pub name in the UK</li>
         <li>
-          There have been eight warships called HMS Royal Oak, and ‘Heart of
-          Oak’ is the official march of the Royal Navy
+          &quot;The Royal Oak&quot; is the third most popular pub name in the UK
+        </li>
+        <li>
+          There have been eight warships called HMS Royal Oak, and &quot;Heart
+          of Oak&quot; is the official march of the Royal Navy
         </li>
       </ul>
       <p></p>

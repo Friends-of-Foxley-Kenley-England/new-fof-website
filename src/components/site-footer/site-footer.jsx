@@ -14,8 +14,7 @@ const SiteFooter = () => (
       <ExternalLink
         href="https://www.gatsbyjs.com"
         className={style.footerLink}
-        aria-label="Visit Gatsby website"
-      >
+        aria-label="Visit Gatsby website">
         Gatsby
       </ExternalLink>
       {` `}
@@ -23,8 +22,7 @@ const SiteFooter = () => (
       <ExternalLink
         href="https://github.com/eloisetaylor5693"
         className={style.footerLink}
-        aria-label="Visit Eloise Taylor's GitHub profile"
-      >
+        aria-label="Visit Eloise Taylor's GitHub profile">
         Eloise Taylor
       </ExternalLink>
     </span>
