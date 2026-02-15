@@ -6,6 +6,28 @@ on:
       - "**"
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      deployments: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node version from .nvmrc
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Run lint
+        run: yarn lint
+
   build:
     runs-on: ubuntu-latest
     permissions:
@@ -28,9 +50,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
 
-      - run: yarn install --immutable
+      - name: Install dependencies
+        run: yarn install --immutable
 
-      - run: yarn build
+      - name: Run lint
+        run: yarn lint
+
+      - name: Run build
+        run: yarn build
         if: ${{ github.actor != 'dependabot[bot]' }}
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
