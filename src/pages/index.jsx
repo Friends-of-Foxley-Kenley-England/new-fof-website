@@ -4,7 +4,7 @@ import Seo from "../components/seo";
 import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
 
-const HomeIndex = ({ data, location }) => {
+const HomeIndex = ({ location }) => {
   return (
     <Layout location={location} showHeroSection useWideLayout>
       <div className={style.homeContainer}>
