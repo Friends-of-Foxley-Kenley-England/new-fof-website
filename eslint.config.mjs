@@ -20,5 +20,16 @@ export default defineConfig([
     extends: ["js/recommended"],
     languageOptions: { globals: globals.browser },
   },
-  pluginReact.configs.flat.recommended,
+  {
+    ...pluginReact.configs.flat.recommended,
+    rules: {
+      ...pluginReact.configs.flat.recommended.rules,
+
+      // I would be using typescript insted of using PropTypes
+      "react/prop-types": "off",
+
+      // gatsby ensures react is in scope
+      "react/react-in-jsx-scope": "off",
+    },
+  },
 ]);
