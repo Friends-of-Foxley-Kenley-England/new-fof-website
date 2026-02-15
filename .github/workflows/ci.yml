@@ -48,6 +48,8 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
+
     permissions:
       actions: read
       contents: read
@@ -76,7 +78,6 @@ jobs:
 
       - name: Run build
         run: yarn build
-        if: ${{ github.actor != 'dependabot[bot]' }}
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
