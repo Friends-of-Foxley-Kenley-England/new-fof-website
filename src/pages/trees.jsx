@@ -23,79 +23,70 @@ const TreesIndex = ({ location }) => {
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Beech"
-            aria-label="Visit Beech Wikipedia page"
-          >
+            aria-label="Visit Beech Wikipedia page">
             Beech
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Fraxinus"
-            aria-label="Visit Ash Wikipedia page"
-          >
+            aria-label="Visit Ash Wikipedia page">
             Ash
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Sycamore"
-            aria-label="Visit Sycamore tree Wikipedia page"
-          >
+            aria-label="Visit Sycamore tree Wikipedia page">
             Sycamore
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Juniper"
-            aria-label="Visit Juniper tree Wikipedia page"
-          >
+            aria-label="Visit Juniper tree Wikipedia page">
             Juniper
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Hazel"
-            aria-label="Visit Hazel tree Wikipedia page"
-          >
+            aria-label="Visit Hazel tree Wikipedia page">
             Hazel
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Yew"
-            aria-label="Visit Yew tree Wikipedia page"
-          >
+            aria-label="Visit Yew tree Wikipedia page">
             Yew
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Hornbeam"
-            aria-label="Visit Hornbeam tree Wikipedia page"
-          >
+            aria-label="Visit Hornbeam tree Wikipedia page">
             Hornbeam
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Whitebeam"
-            aria-label="Visit Whitebeam tree Wikipedia page"
-          >
+            aria-label="Visit Whitebeam tree Wikipedia page">
             Whitebeam
           </ExternalLink>
         </li>
         <li>
           <ExternalLink
             href="https://en.wikipedia.org/wiki/Holly"
-            aria-label="Visit Holly tree Wikipedia page"
-          >
+            aria-label="Visit Holly tree Wikipedia page">
             Holly
           </ExternalLink>
         </li>
       </ul>
 
       <p>
-        We've currently got a diversion around our{" "}
+        We&apos;ve currently got a diversion around our{" "}
         <Link to="ancient-beech-tree-diversion">Ancient Beech tree</Link>.
       </p>
     </Layout>

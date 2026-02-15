@@ -13,8 +13,8 @@ const AncientBeechTreeIndex = ({ data, location }) => {
       </h2>
 
       <p>
-        The Ancient Beech pollard on the lower path in Foxley Wood ["Mother
-        Beech", Tree ID No. 48125 in the Ancient Tree Inventory] has been a
+        The Ancient Beech pollard on the lower path in Foxley Wood [&quot;Mother
+        Beech&quot;, Tree ID No. 48125 in the Ancient Tree Inventory] has been a
         cause for concern to Croydon Council for some years, due to an area of
         basal decay not normally visible to passers-by as it is on the other
         side of the tree from the path. The condition of the tree has lead to a
@@ -54,25 +54,25 @@ const AncientBeechTreeIndex = ({ data, location }) => {
         bodes well for an extended old age. Beech do not normally live more than
         200-250 years, though pollarding can extend life by up to double the
         normal. The age of the tree was estimated 15 years ago [using the method
-        in the Forestry Commission Technical Information Note:- "Estimating the
-        Age of Large and Veteran Trees in Britain"] at 260 years, so now is
-        estimated as 275 years.
+        in the Forestry Commission Technical Information Note:- &quot;Estimating
+        the Age of Large and Veteran Trees in Britain&quot;] at 260 years, so
+        now is estimated as 275 years.
       </p>
       <p>
         Rather than remove the risk of harm to users of the wood by felling the
-        tree, its' extraordinary value as an ancient tree; the biodiversity of
-        the community of organisms to which it is a host, and an ecology in
+        tree, its&apos; extraordinary value as an ancient tree; the biodiversity
+        of the community of organisms to which it is a host, and an ecology in
         itself; its status as a local icon of the wood, and as a veteran tree
         registered on the national database; grant funding from the Mayor of
-        London’s Greener City Fund was applied for and won to create the path
-        diversion and install fencing. In later work, the existing rolled stone
-        path will also be removed and the soil around the tree will be improved
-        and decompacted by adding a mixture of composted leaf mould and charcoal
-        fines [biochar]. This is intended to improve the condition of the
-        rooting zone of the tree with natural materials to assist its defence
-        against the decay fungi. The path diversion surfacing work will be
-        carried out by a contractor, assisted by the Friends and by Croydon TCV
-        between the 5th and 16th of October. This will entail closure of the
+        London&apos;s Greener City Fund was applied for and won to create the
+        path diversion and install fencing. In later work, the existing rolled
+        stone path will also be removed and the soil around the tree will be
+        improved and decompacted by adding a mixture of composted leaf mould and
+        charcoal fines [biochar]. This is intended to improve the condition of
+        the rooting zone of the tree with natural materials to assist its
+        defence against the decay fungi. The path diversion surfacing work will
+        be carried out by a contractor, assisted by the Friends and by Croydon
+        TCV between the 5th and 16th of October. This will entail closure of the
         path from Woodland Way via the Picnic Glade to the Beech for the
         duration of the work.
       </p>
@@ -89,15 +89,15 @@ const AncientBeechTreeIndex = ({ data, location }) => {
       <p>
         It is understood and expected that restricting access to such a
         well-loved tree will be distressing to many users, some of whom have
-        described it to the Friends as "their" tree. So many people have engaged
-        closely with the bark, the trunk, climbed it and swung from the branch
-        swings, admired and revelled in its' glory, brought children to
-        experience its extraordinary character. But it is necessary to protect
-        the tree, and the users, who will at least still be able to see it, even
-        if at something of a distance, via vistas we will create through the
-        surrounding trees, and from re-sited benches, hopefully for many more
-        years to come. The only alternative at present is to fell it, and no-one
-        wants that...
+        described it to the Friends as &quot;their&quot; tree. So many people
+        have engaged closely with the bark, the trunk, climbed it and swung from
+        the branch swings, admired and revelled in its&apos; glory, brought
+        children to experience its extraordinary character. But it is necessary
+        to protect the tree, and the users, who will at least still be able to
+        see it, even if at something of a distance, via vistas we will create
+        through the surrounding trees, and from re-sited benches, hopefully for
+        many more years to come. The only alternative at present is to fell it,
+        and no-one wants that...
       </p>
       <p>
         If you have any concerns or questions, please contact the Friends of
@@ -108,8 +108,7 @@ const AncientBeechTreeIndex = ({ data, location }) => {
         , this website <a href="/">www.friendsoffoxley.co.uk</a> , or our{" "}
         <ExternalLink
           href={facebookLink}
-          aria-label="Visit Friends of Foxley Wood Facebook page"
-        >
+          aria-label="Visit Friends of Foxley Wood Facebook page">
           Facebook page [Friends of Foxley Wood]
         </ExternalLink>
         .
