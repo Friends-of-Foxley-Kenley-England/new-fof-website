@@ -21,6 +21,23 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   {
+    files: ["*.{js,mjs,cjs,jsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  {
+    files: ["__mocks__/**/*.{js,jsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        jest: "readonly",
+      },
+    },
+  },
+  {
     files: ["**/*.test.{js,jsx}", "**/*.spec.{js,jsx}"],
     languageOptions: {
       globals: {
@@ -33,6 +50,9 @@ export default defineConfig([
         beforeAll: "readonly",
         afterAll: "readonly",
         jest: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
       },
     },
   },
