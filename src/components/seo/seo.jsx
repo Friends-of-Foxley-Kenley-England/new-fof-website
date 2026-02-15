@@ -14,7 +14,7 @@ const Seo = ({ title, pathname: canonical, description, noIndex = false }) => {
     description: description || defaultDescription,
     locale,
     organisationName,
-    title: !!title ? `${title} | ${organisationName}` : defaultTitle,
+    title: title ? `${title} | ${organisationName}` : defaultTitle,
     url: `${siteUrl}${canonical || ``}`,
   };
 
