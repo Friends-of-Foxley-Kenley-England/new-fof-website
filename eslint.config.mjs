@@ -14,6 +14,10 @@ export default defineConfig([
     "public/**",
     "storybook-static/**",
   ]),
+
+  // ---------------------------------------------------
+  // 📦 Javascript (ES Modules)
+  // ---------------------------------------------------
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
     plugins: { js },
@@ -25,6 +29,10 @@ export default defineConfig([
       },
     },
   },
+
+  // ---------------------------------------------------
+  // 📦 CommonJS
+  // ---------------------------------------------------
   {
     files: ["*.{js,mjs,cjs,jsx}"],
     languageOptions: {
@@ -33,6 +41,10 @@ export default defineConfig([
       },
     },
   },
+
+  // ---------------------------------------------------
+  // 📦 CommonJS 
+  // ---------------------------------------------------
   {
     files: ["__mocks__/**/*.{js,jsx}"],
     languageOptions: {
@@ -42,6 +54,10 @@ export default defineConfig([
       },
     },
   },
+
+  // ---------------------------------------------------
+  // 📦 Jest
+  // ---------------------------------------------------
   {
     files: ["**/*.test.{js,jsx}", "**/*.spec.{js,jsx}"],
     languageOptions: {
@@ -61,6 +77,10 @@ export default defineConfig([
       },
     },
   },
+
+  // ---------------------------------------------------
+  // 📦 React
+  // ---------------------------------------------------
   {
     ...pluginReact.configs.flat.recommended,
     rules: {
