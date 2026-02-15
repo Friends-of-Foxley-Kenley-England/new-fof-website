@@ -92,5 +92,10 @@ export default defineConfig([
       // gatsby ensures react is in scope
       "react/react-in-jsx-scope": "off",
     },
+    settings: {
+      react: {
+        version: "18",
+      },
+    },
   },
 ]);
