@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
+import process from "process";
 
 const HomeIndex = ({ location }) => {
   return (
