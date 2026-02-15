@@ -26,6 +26,7 @@ const NewsIndex = ({ data, location }) => {
 
         return (
           <article
+            key={post.id}
             className={style.postListItem}
             itemScope
             itemType="https://schema.org/Article"
