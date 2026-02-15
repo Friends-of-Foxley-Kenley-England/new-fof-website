@@ -18,7 +18,12 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,jsx}"],
     plugins: { js },
     extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        __PATH_PREFIX__: "readonly",
+      },
+    },
   },
   {
     files: ["*.{js,mjs,cjs,jsx}"],
