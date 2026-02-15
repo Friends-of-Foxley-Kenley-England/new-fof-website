@@ -94,7 +94,7 @@
     "playwright": "^1.56.0",
     "prettier": "3.8.1",
     "react-test-renderer": "^19.2.4",
-    "storybook": "^9.1.10",
+    "storybook": "^9.1.17",
     "vitest": "^3.2.4"
   }
 }
