@@ -1,4 +1,4 @@
-const MapPin = ({ size = 24, color = "#ff3b30" }) => (
+const MapPin = ({ size = 45, color = "#ff3b30" }) => (
   <svg
     width={size}
     height={size}
