@@ -4,6 +4,8 @@ import Seo from "../components/seo";
 import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
 import process from "process";
+import Map from "../components/map";
+import ExternalLink from "../components/external-link";
 
 const HomeIndex = ({ location }) => {
   return (
@@ -41,8 +43,21 @@ const HomeIndex = ({ location }) => {
             download our membership form.
           </p>
           <p>
-            <Link to="/wood-products">Wood products</Link>: excellent value
+            Contact us for excellent value{" "}
+            <Link to="/wood-products">Wood products</Link>
           </p>
+
+          <div className={style.mapContainer}>
+            <h2>Where is Foxley Woods?</h2>
+            <p>
+              Foxley Woods is located on the Purley/Kenley borders in Surrey.
+              See the map below or click this link to open it in{" "}
+              <ExternalLink href="https://maps.app.goo.gl/zC71Bqt1gh9x9B9i9">
+                Google Maps
+              </ExternalLink>
+            </p>
+            <Map />
+          </div>
         </div>
 
         <div
