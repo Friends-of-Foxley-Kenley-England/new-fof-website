@@ -23,6 +23,9 @@ const config = {
         ...config.define,
         global: "globalThis",
         __PATH_PREFIX__: JSON.stringify(""),
+        "process.env.GATSBY_MAPLIBRE_API_KEY": JSON.stringify(
+          process.env.GATSBY_MAPLIBRE_API_KEY || "",
+        ),
       },
       css: {
         ...config.css,
