@@ -1,5 +1,4 @@
-// import MapLibre from "react-map-gl/maplibre";
-// import * as MapLibre from "react-map-gl/maplibre";
+import { memo } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import MapPin from "./map-pin";
 import {
@@ -7,23 +6,18 @@ import {
   Marker,
   NavigationControl,
 } from "react-map-gl/maplibre";
-import process from "process";
+import { centreOfFoxleyWood } from "../../helpers/parse-meeting-point";
+import * as style from "./map.module.css";
 
-// const centreOfFoxleyWood = {
-//   longitude: -0.1171026,
-//   latitude: 51.3306235,
-// };
-
-// 51.325829, -0.111118
-const centreOfFoxleyWood = {
-  //   longitude: -0.1082655,
-  //   latitude: 51.3273661,
-  longitude: -0.111118,
-  latitude: 51.325829,
-};
-
-const Map = () => {
-  const mapTilerKey = process?.env?.GATSBY_MAPLIBRE_API_KEY;
+const Map = ({
+  pinColour = "red",
+  markerLatitude = centreOfFoxleyWood.latitude,
+  markerLongitude = centreOfFoxleyWood.longitude,
+  minZoom = 10,
+  maxZoom = 17,
+  zoom = 12,
+}) => {
+  const mapTilerKey = process.env.GATSBY_MAPLIBRE_API_KEY;
 
   if (!mapTilerKey) {
     console.error(
@@ -34,26 +28,29 @@ const Map = () => {
 
   const mapTilerMap = `https://api.maptiler.com/maps/streets/style.json?key=${mapTilerKey}`;
   return (
-    <MapLibre
-      initialViewState={{
-        ...centreOfFoxleyWood,
-        zoom: 12,
-      }}
-      minZoom={10}
-      maxZoom={16}
-      reuseMaps={true}
-      zoomControl={true}
-      style={{ width: "100%", height: 400 }}
-      mapStyle={mapTilerMap}>
-      <Marker
-        longitude={centreOfFoxleyWood.longitude}
-        latitude={centreOfFoxleyWood.latitude}
-        anchor="bottom">
-        <MapPin color="red" />
-      </Marker>
-      <NavigationControl />
-    </MapLibre>
+    <div className={style.mapContainer}>
+      <MapLibre
+        initialViewState={{
+          longitude: markerLongitude,
+          latitude: markerLatitude,
+          zoom,
+        }}
+        minZoom={minZoom}
+        maxZoom={maxZoom}
+        reuseMaps={true}
+        zoomControl={true}
+        style={{ width: "100%", height: 400 }}
+        mapStyle={mapTilerMap}>
+        <Marker
+          longitude={markerLongitude || centreOfFoxleyWood.longitude}
+          latitude={markerLatitude || centreOfFoxleyWood.latitude}
+          anchor="bottom">
+          <MapPin color={pinColour} />
+        </Marker>
+        <NavigationControl />
+      </MapLibre>
+    </div>
   );
 };
 
-export default Map;
+export default memo(Map);

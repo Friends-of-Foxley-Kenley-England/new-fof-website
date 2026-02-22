@@ -3,7 +3,6 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
-import process from "process";
 import Map from "../components/map";
 import ExternalLink from "../components/external-link";
 
@@ -56,7 +55,8 @@ const HomeIndex = ({ location }) => {
                 Google Maps
               </ExternalLink>
             </p>
-            <Map />
+
+            <Map zoom={13} />
           </div>
         </div>
 

@@ -1,4 +1,9 @@
-const locationMappings = [
+export const centreOfFoxleyWood = {
+  longitude: -0.111118,
+  latitude: 51.325829,
+};
+
+export const locationMappings = [
   {
     latitude: 51.326099,
     longitude: -0.110349,
