@@ -2,12 +2,11 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Map from "./map";
 import { centreOfFoxleyWood } from "../../helpers/parse-meeting-point";
+import process from "process";
 
 jest.mock("react-map-gl/maplibre", () => ({
   Map: jest.fn(({ children }) => <div data-testid="maplibre">{children}</div>),
-  Marker: jest.fn(({ children }) => (
-    <div data-testid="marker">{children}</div>
-  )),
+  Marker: jest.fn(({ children }) => <div data-testid="marker">{children}</div>),
   NavigationControl: jest.fn(() => <div data-testid="navigation-control" />),
 }));
 

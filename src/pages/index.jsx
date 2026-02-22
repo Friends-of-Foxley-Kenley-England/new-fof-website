@@ -5,6 +5,7 @@ import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
 import Map from "../components/map";
 import ExternalLink from "../components/external-link";
+import process from "process";
 
 const HomeIndex = ({ location }) => {
   return (

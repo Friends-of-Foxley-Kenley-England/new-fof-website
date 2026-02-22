@@ -8,6 +8,7 @@ import {
 } from "react-map-gl/maplibre";
 import { centreOfFoxleyWood } from "../../helpers/parse-meeting-point";
 import * as style from "./map.module.css";
+import process from "process";
 
 const Map = ({
   pinColour = "red",
