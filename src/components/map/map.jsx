@@ -7,6 +7,7 @@ import {
   Marker,
   NavigationControl,
 } from "react-map-gl/maplibre";
+import process from "process";
 
 // const centreOfFoxleyWood = {
 //   longitude: -0.1171026,
@@ -22,11 +23,20 @@ const centreOfFoxleyWood = {
 };
 
 const Map = () => {
+  const mapTilerKey = process?.env?.GATSBY_MAPLIBRE_API_KEY;
+
+  if (!mapTilerKey) {
+    console.error(
+      "GATSBY_MAPLIBRE_API_KEY is not defined, so didn't load the map",
+    );
+    return null;
+  }
+
+  const mapTilerMap = `https://api.maptiler.com/maps/streets/style.json?key=${mapTilerKey}`;
   return (
     <MapLibre
       initialViewState={{
         ...centreOfFoxleyWood,
-
         zoom: 12,
       }}
       minZoom={10}
@@ -34,7 +44,7 @@ const Map = () => {
       reuseMaps={true}
       zoomControl={true}
       style={{ width: "100%", height: 400 }}
-      mapStyle="https://api.maptiler.com/maps/streets/style.json?key=fgW3kC6fuhUS7Y08vzoJ">
+      mapStyle={mapTilerMap}>
       <Marker
         longitude={centreOfFoxleyWood.longitude}
         latitude={centreOfFoxleyWood.latitude}

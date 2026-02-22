@@ -39,8 +39,9 @@ jobs:
 
       - run: yarn build
         env:
-          CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
+          CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
+          GATSBY_MAPLIBRE_API_KEY: "${{ secrets.GATSBY_MAPLIBRE_API_KEY }}"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
