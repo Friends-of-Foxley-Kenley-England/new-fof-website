@@ -32,10 +32,9 @@ describe("parseMeetingPoint", () => {
     ({ contentfulMeetingPoint, expectedW3w, expectedDescription }) => {
       const result = parseMeetingPoint(contentfulMeetingPoint);
 
-      expect(result).toEqual({
-        meetingPointWhatThreeWords: expectedW3w,
-        meetingPointDescription: expectedDescription,
-      });
+      expect(result).toBeDefined();
+      expect(result.meetingPointWhatThreeWords).toBe(expectedW3w);
+      expect(result.meetingPointDescription).toBe(expectedDescription);
     },
   );
 });
