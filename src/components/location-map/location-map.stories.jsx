@@ -1,4 +1,4 @@
-import Map from "./map";
+import LocationMap from "./location-map";
 import {
   centreOfFoxleyWood,
   locationMappings,
@@ -9,8 +9,8 @@ const meetingPointTwo = locationMappings[1];
 const meetingPointThree = locationMappings[2];
 
 export default {
-  title: "Components/Map",
-  component: Map,
+  title: "Components/LocationMap",
+  component: LocationMap,
   tags: ["autodocs"],
   argTypes: {
     pinColour: {

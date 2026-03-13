@@ -7,10 +7,10 @@ import {
   NavigationControl,
 } from "react-map-gl/maplibre";
 import { centreOfFoxleyWood } from "../../helpers/parse-meeting-point";
-import * as style from "./map.module.css";
+import * as style from "./location-map.module.css";
 import process from "process";
 
-const Map = ({
+const LocationMap = ({
   pinColour = "red",
   markerLatitude = centreOfFoxleyWood.latitude,
   markerLongitude = centreOfFoxleyWood.longitude,
@@ -41,6 +41,7 @@ const Map = ({
           maxZoom={maxZoom}
           reuseMaps={true}
           zoomControl={true}
+          style={{ width: "100%", height: "100%" }}
           mapStyle={mapTilerMap}>
           <Marker
             longitude={markerLongitude || centreOfFoxleyWood.longitude}
@@ -55,4 +56,4 @@ const Map = ({
   );
 };
 
-export default memo(Map);
+export default memo(LocationMap);

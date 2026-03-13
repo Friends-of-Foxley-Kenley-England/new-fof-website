@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Map from "./map";
+import LocationMap from "./location-map";
 import { centreOfFoxleyWood } from "../../helpers/parse-meeting-point";
 import process from "process";
 
@@ -15,7 +15,7 @@ const {
   Marker: MockMarker,
 } = require("react-map-gl/maplibre");
 
-describe("Map", () => {
+describe("LocationMap", () => {
   const originalEnv = process.env;
 
   beforeEach(() => {
@@ -33,7 +33,7 @@ describe("Map", () => {
     delete process.env.GATSBY_MAPLIBRE_API_KEY;
     const consoleSpy = jest.spyOn(console, "error").mockImplementation();
 
-    const { container } = render(<Map />);
+    const { container } = render(<LocationMap />);
 
     expect(container.innerHTML).toBe("");
     expect(consoleSpy).toHaveBeenCalledWith(
@@ -42,13 +42,13 @@ describe("Map", () => {
   });
 
   it("renders the map container when API key is set", () => {
-    const { getByTestId } = render(<Map />);
+    const { getByTestId } = render(<LocationMap />);
 
     expect(getByTestId("maplibre")).toBeInTheDocument();
   });
 
   it("uses centre of Foxley Wood as default coordinates", () => {
-    render(<Map />);
+    render(<LocationMap />);
 
     const mapProps = MockMapLibre.mock.calls[0][0];
     expect(mapProps.initialViewState).toEqual({
@@ -59,7 +59,7 @@ describe("Map", () => {
   });
 
   it("passes custom coordinates to the map and marker", () => {
-    render(<Map markerLatitude={51.5} markerLongitude={-0.1} />);
+    render(<LocationMap markerLatitude={51.5} markerLongitude={-0.1} />);
 
     const mapProps = MockMapLibre.mock.calls[0][0];
     expect(mapProps.initialViewState.latitude).toBe(51.5);
@@ -71,7 +71,7 @@ describe("Map", () => {
   });
 
   it("passes zoom configuration to the map", () => {
-    render(<Map minZoom={8} maxZoom={15} zoom={14} />);
+    render(<LocationMap minZoom={8} maxZoom={15} zoom={14} />);
 
     const mapProps = MockMapLibre.mock.calls[0][0];
     expect(mapProps.minZoom).toBe(8);
@@ -80,27 +80,27 @@ describe("Map", () => {
   });
 
   it("renders the pin with default red colour", () => {
-    const { container } = render(<Map />);
+    const { container } = render(<LocationMap />);
 
     const pin = container.querySelector("svg path");
     expect(pin).toHaveAttribute("fill", "red");
   });
 
   it("renders the pin with a custom colour", () => {
-    const { container } = render(<Map pinColour="blue" />);
+    const { container } = render(<LocationMap pinColour="blue" />);
 
     const pin = container.querySelector("svg path");
     expect(pin).toHaveAttribute("fill", "blue");
   });
 
   it("renders the navigation control", () => {
-    const { getByTestId } = render(<Map />);
+    const { getByTestId } = render(<LocationMap />);
 
     expect(getByTestId("navigation-control")).toBeInTheDocument();
   });
 
   it("constructs the correct MapTiler style URL", () => {
-    render(<Map />);
+    render(<LocationMap />);
 
     const mapProps = MockMapLibre.mock.calls[0][0];
     expect(mapProps.mapStyle).toBe(

@@ -1,4 +1,4 @@
-import * as style from "./map.module.css";
+import * as style from "./location-map.module.css";
 
 const MapLoadingState = () => {
   return (

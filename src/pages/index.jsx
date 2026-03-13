@@ -6,9 +6,9 @@ import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
 import ExternalLink from "../components/external-link";
 import process from "process";
-import MapLoadingState from "../components/map/map-loading-state";
+import MapLoadingState from "../components/location-map/map-loading-state";
 
-const LazyMap = lazy(() => import("../components/map"));
+const LazyMap = lazy(() => import("../components/location-map"));
 
 const HomeIndex = ({ location }) => {
   const [showMap, setShowMap] = useState(false);
