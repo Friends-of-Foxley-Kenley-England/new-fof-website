@@ -1,13 +1,22 @@
+import { lazy, Suspense, useState, useEffect } from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
-import Map from "../components/map";
 import ExternalLink from "../components/external-link";
 import process from "process";
+import MapLoadingState from "../components/map/map-loading-state";
+
+const LazyMap = lazy(() => import("../components/map"));
 
 const HomeIndex = ({ location }) => {
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    setShowMap(true);
+  }, []);
+
   return (
     <Layout location={location} showHeroSection useWideLayout>
       <div className={style.homeContainer}>
@@ -56,7 +65,13 @@ const HomeIndex = ({ location }) => {
             </ExternalLink>
           </p>
 
-          <Map zoom={13} />
+          {showMap ? (
+            <Suspense fallback={<MapLoadingState />}>
+              <LazyMap zoom={13} />
+            </Suspense>
+          ) : (
+            <MapLoadingState />
+          )}
         </div>
 
         <div

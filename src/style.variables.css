@@ -25,11 +25,11 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "Segoe UI",system-ui, -apple-system, BlinkMacSystemFont,
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-sans:
+    "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fontFamily-serif: "Georgia", Cambria, "Times New Roman", Times, serif;
   --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -66,4 +66,5 @@
   --color-nav-accent: #333;
   --color-nav-link: white;
   --color-white: rgb(241, 240, 240);
+  --color-light-yellow: #faebc7;
 }

@@ -29,27 +29,28 @@ const Map = ({
 
   const mapTilerMap = `https://api.maptiler.com/maps/streets/style.json?key=${mapTilerKey}`;
   return (
-    <div className={style.mapContainer}>
-      <MapLibre
-        initialViewState={{
-          longitude: markerLongitude,
-          latitude: markerLatitude,
-          zoom,
-        }}
-        minZoom={minZoom}
-        maxZoom={maxZoom}
-        reuseMaps={true}
-        zoomControl={true}
-        style={{ width: "100%", height: 400 }}
-        mapStyle={mapTilerMap}>
-        <Marker
-          longitude={markerLongitude || centreOfFoxleyWood.longitude}
-          latitude={markerLatitude || centreOfFoxleyWood.latitude}
-          anchor="bottom">
-          <MapPin color={pinColour} />
-        </Marker>
-        <NavigationControl />
-      </MapLibre>
+    <div className={style.mapContainerPadding}>
+      <div className={style.mapContainerDimensions}>
+        <MapLibre
+          initialViewState={{
+            longitude: markerLongitude,
+            latitude: markerLatitude,
+            zoom,
+          }}
+          minZoom={minZoom}
+          maxZoom={maxZoom}
+          reuseMaps={true}
+          zoomControl={true}
+          mapStyle={mapTilerMap}>
+          <Marker
+            longitude={markerLongitude || centreOfFoxleyWood.longitude}
+            latitude={markerLatitude || centreOfFoxleyWood.latitude}
+            anchor="bottom">
+            <MapPin color={pinColour} />
+          </Marker>
+          <NavigationControl />
+        </MapLibre>
+      </div>
     </div>
   );
 };
