@@ -8,6 +8,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 import * as style from "./work-day-information.module.css";
 import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
+import LocationMap from "../components/location-map/location-map";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
@@ -52,6 +53,15 @@ const WorkDayTemplate = ({ data, location }) => {
               rel="noopener noreferrer"
             />
           )}
+
+          {meetingPoint && (
+            <LocationMap
+              pinColour="blue"
+              markerLatitude={meetingPoint.latitude}
+              markerLongitude={meetingPoint.longitude}
+              zoom={15}
+            />
+          )}
         </section>
 
         <footer className={style.footer}>
@@ -59,6 +69,7 @@ const WorkDayTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
+
       <nav className="blog-post-nav">
         <ul
           style={{

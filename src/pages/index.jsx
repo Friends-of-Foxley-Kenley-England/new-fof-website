@@ -1,11 +1,22 @@
+import { lazy, Suspense, useState, useEffect } from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./index.module.css";
 import WorkDayWidget from "../components/work-day-widget";
+import ExternalLink from "../components/external-link";
 import process from "process";
+import MapLoadingState from "../components/location-map/map-loading-state";
+
+const LazyMap = lazy(() => import("../components/location-map"));
 
 const HomeIndex = ({ location }) => {
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    setShowMap(true);
+  }, []);
+
   return (
     <Layout location={location} showHeroSection useWideLayout>
       <div className={style.homeContainer}>
@@ -41,8 +52,26 @@ const HomeIndex = ({ location }) => {
             download our membership form.
           </p>
           <p>
-            <Link to="/wood-products">Wood products</Link>: excellent value
+            Contact us for excellent value{" "}
+            <Link to="/wood-products">Wood products</Link>
           </p>
+
+          <h2>Where is Foxley Woods?</h2>
+          <p>
+            Foxley Woods is located on the Purley/Kenley borders in Surrey. See
+            the map below or view in{" "}
+            <ExternalLink href="https://maps.app.goo.gl/zC71Bqt1gh9x9B9i9">
+              Google Maps
+            </ExternalLink>
+          </p>
+
+          {showMap ? (
+            <Suspense fallback={<MapLoadingState />}>
+              <LazyMap zoom={13} />
+            </Suspense>
+          ) : (
+            <MapLoadingState />
+          )}
         </div>
 
         <div

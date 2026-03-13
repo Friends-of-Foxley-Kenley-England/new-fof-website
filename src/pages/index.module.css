@@ -15,6 +15,14 @@
   justify-content: center;
 }
 
+.map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light-yellow);
+  min-height: 400px;
+}
+
 @media screen and (min-width: 950px) {
   .home-container {
     display: grid;

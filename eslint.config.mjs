@@ -26,6 +26,7 @@ export default defineConfig([
       globals: {
         ...globals.browser,
         __PATH_PREFIX__: "readonly",
+        process: "readonly",
       },
     },
   },

@@ -36,3 +36,4 @@ jobs:
           checkout: false
         env:
           NODE_ENV: storybook
+          GATSBY_MAPLIBRE_API_KEY: "${{ secrets.GATSBY_MAPLIBRE_API_KEY }}"
