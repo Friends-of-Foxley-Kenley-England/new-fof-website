@@ -1,0 +1,134 @@
+.location-info {
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.what3words-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.what3words-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-light-yellow);
+  border: 2px solid var(--color-primary);
+  border-radius: 0.375rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.what3words-link:hover,
+.what3words-link:focus {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(14, 70, 48, 0.2);
+}
+
+.what3words-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.what3words-text {
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 2px solid var(--color-primary);
+  border-radius: 0.375rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.copy-button:hover,
+.copy-button:focus {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(14, 70, 48, 0.2);
+}
+
+.copy-button:active {
+  transform: translateY(0);
+}
+
+.button-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.button-text {
+  min-width: 3.5rem;
+  text-align: left;
+}
+
+.directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.directions-link:hover,
+.directions-link:focus {
+  background-color: var(--color-dark-green);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(14, 70, 48, 0.3);
+}
+
+.directions-link:active {
+  transform: translateY(0);
+}
+
+.directions-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .what3words-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .what3words-link,
+  .copy-button {
+    justify-content: center;
+  }
+
+  .directions-link {
+    justify-content: center;
+    width: 100%;
+  }
+}

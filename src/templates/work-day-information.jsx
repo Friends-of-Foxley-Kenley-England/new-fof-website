@@ -3,12 +3,12 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { What3wordsAddress } from "@what3words/react-components";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 import * as style from "./work-day-information.module.css";
 import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
 import LocationMap from "../components/location-map/location-map";
+import LocationInfo from "../components/location-info";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
@@ -42,25 +42,26 @@ const WorkDayTemplate = ({ data, location }) => {
           <p>{post.meetingTime}</p>
 
           <h2 itemProp="headline">Location</h2>
-          <p className={style.description}>{meetingPointDescription}</p>
-
-          {meetingPointWhatThreeWords && (
-            <What3wordsAddress
-              words={meetingPointWhatThreeWords}
-              icon-color="#0e4630"
-              text-color="#0e4630"
-              tooltip-location={meetingPointDescription}
-              rel="noopener noreferrer"
-            />
-          )}
 
           {meetingPoint && (
-            <LocationMap
-              pinColour="blue"
-              markerLatitude={meetingPoint.latitude}
-              markerLongitude={meetingPoint.longitude}
-              zoom={15}
-            />
+            <>
+              <LocationInfo
+                description={meetingPointDescription}
+                what3words={meetingPointWhatThreeWords}
+                latitude={meetingPoint.latitude}
+                longitude={meetingPoint.longitude}
+              />
+              <LocationMap
+                pinColour="blue"
+                markerLatitude={meetingPoint.latitude}
+                markerLongitude={meetingPoint.longitude}
+                zoom={15}
+              />
+            </>
+          )}
+
+          {!meetingPoint && (
+            <p className={style.description}>{meetingPointDescription}</p>
           )}
         </section>
 
