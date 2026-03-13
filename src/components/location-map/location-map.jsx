@@ -39,8 +39,6 @@ const LocationMap = ({
           minZoom={minZoom}
           maxZoom={maxZoom}
           reuseMaps={true}
-          zoomControl={true}
-          style={{ width: "100%", height: "100%" }}
           mapStyle={mapTilerMap}>
           <Marker
             longitude={markerLongitude || centreOfFoxleyWood.longitude}
