@@ -12413,7 +12413,7 @@ __metadata:
     react-helmet: 6.1.0
     react-map-gl: ^8.1.0
     react-test-renderer: ^19.2.4
-    storybook: ^9.1.10
+    storybook: ^9.1.19
     typeface-merriweather: 1.1.13
     typeface-montserrat: 1.1.13
     vitest: ^3.2.4
@@ -21582,9 +21582,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^9.1.10":
-  version: 9.1.10
-  resolution: "storybook@npm:9.1.10"
+"storybook@npm:^9.1.19":
+  version: 9.1.20
+  resolution: "storybook@npm:9.1.20"
   dependencies:
     "@storybook/global": ^5.0.0
     "@testing-library/jest-dom": ^6.6.3
@@ -21605,7 +21605,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./bin/index.cjs
-  checksum: 16c1519fdc59ac00e1cc4f6dabb5b4d2362af95dd94fae49ce240894290373cfdb607433bce075dea6e128a55431871318ed9a2098efd9d960d9a2ac344c48fb
+  checksum: a6e6d5353ab6eff6e5c1051254d7767e3b84e4934930455968350981c404c48992753c3fcababb6639a25d4add9e1851305b2c7f149c89c47782fe1a0de9804f
   languageName: node
   linkType: hard
 
