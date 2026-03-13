@@ -41,8 +41,8 @@ const LocationMap = ({
           reuseMaps={true}
           mapStyle={mapTilerMap}>
           <Marker
-            longitude={markerLongitude || centreOfFoxleyWood.longitude}
-            latitude={markerLatitude || centreOfFoxleyWood.latitude}
+            longitude={markerLongitude}
+            latitude={markerLatitude}
             anchor="bottom">
             <MapPin color={pinColour} />
           </Marker>
