@@ -59,7 +59,7 @@ const HomeIndex = ({ location }) => {
           <h2>Where is Foxley Woods?</h2>
           <p>
             Foxley Woods is located on the Purley/Kenley borders in Surrey. See
-            the map below or click this link to open it in{" "}
+            the map below or view in{" "}
             <ExternalLink href="https://maps.app.goo.gl/zC71Bqt1gh9x9B9i9">
               Google Maps
             </ExternalLink>
