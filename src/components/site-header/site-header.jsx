@@ -9,8 +9,16 @@ const isActive = ({ isCurrent }) => {
 
 const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header>
-    <nav id="navbar" className={style.navigationBar}>
-      <label htmlFor="hamburger" aria-label="Toggle navigation menu">
+    <nav
+      id="navbar"
+      className={style.navigationBar}
+      aria-label="Main navigation">
+      <label
+        htmlFor="hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMenuOpen} // You'd need to track this state
+        tabIndex="0" // Make it keyboard focusable
+      >
         &#9776;
       </label>
       <input type="checkbox" id="hamburger" aria-controls="navlinks" />
