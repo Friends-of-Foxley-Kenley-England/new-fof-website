@@ -4,8 +4,8 @@ We're using the following frameworks:
 
 - [Gatsby](#gatsby) - for the UI
 - [Contentful](#contentful) - headless CMS for the content on some pages
-- [What3Words](https://www.npmjs.com/package/@what3words/react-components) - for locations in the woods
-  - note: we're not using the what3words api for auto-suggest/anything else, just for the component to show the locations using the w3w branding eg `///loves.final.needed`
+- [What3Words](https://map.what3words.com/) - for locations in the woods
+  - A local styled link component displays addresses such as `///loves.final.needed` and links to their maps. No what3words package or API is used.
 - [Prettier](https://prettier.io/) - formatting code in uniform way
 
 ## Gatsby
