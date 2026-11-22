@@ -1,0 +1,21 @@
+.address {
+  display: inline-block;
+  padding-top: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
+  color: var(--color-darker-green);
+  font-size: 1.5rem;
+  font-weight: var(--fontWeight-normal);
+  line-height: var(--lineHeight-normal);
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.address:hover,
+.address:focus-visible {
+  text-decoration: underline;
+}
+
+.address:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}

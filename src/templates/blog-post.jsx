@@ -12,7 +12,6 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data;
 
   return (
-    // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
     <Layout location={location}>
       <article
         className="blog-post"
