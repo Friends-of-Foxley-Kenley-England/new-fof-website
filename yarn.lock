@@ -4589,7 +4589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mapbox/jsonlint-lines-primitives@npm:^2.0.3":
+"@mapbox/jsonlint-lines-primitives@npm:^2.0.2":
   version: 2.0.3
   resolution: "@mapbox/jsonlint-lines-primitives@npm:2.0.3"
   checksum: 4a8b40b15581607af1b1ad09841edcbc67f8be22ad28b1902c9071431e2d080e50fc5a12791f7a85e11b07613ccc04f215ebae1eef662231d307a11656ca0e66
@@ -4610,7 +4610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mapbox/tiny-sdf@npm:^2.3.0":
+"@mapbox/tiny-sdf@npm:^2.1.0":
   version: 2.3.0
   resolution: "@mapbox/tiny-sdf@npm:2.3.0"
   checksum: 631b78bcef390435026a6268282b2271f01b009138f805b43189cea05889a81e7b65393ca98af405c03ce1916437fc61a60e19139868522b2fe5851de54cfa47
@@ -4631,18 +4631,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mapbox/vector-tile@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@mapbox/vector-tile@npm:3.0.0"
+"@mapbox/vector-tile@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "@mapbox/vector-tile@npm:2.0.5"
   dependencies:
     "@mapbox/point-geometry": ~1.1.0
     "@types/geojson": ^7946.0.16
-    pbf: ^5.0.0
-  checksum: dc233cc2b0a5b3023b8447ca6d2bd090297ba3eb583cf96076ecb811f30a59094abc2dfc67ffe17995fc82ab9e66a815ff68f04e98378a5df1c1df3e92af20bd
+    pbf: ^4.0.2
+  checksum: f014ab787090925282fefcb484ebb344887996d0db67ec18aa042eba4e47799ab2b24daba5bdaff1758dddc5ba9107a5d14cb850674845d7b33b61a8ca3b1ca3
   languageName: node
   linkType: hard
 
-"@maplibre/geojson-vt@npm:^6.3.1":
+"@mapbox/whoots-js@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@mapbox/whoots-js@npm:3.1.0"
+  checksum: c1837c04effd205b207f441356d952eae7e8aad6c58f7c4900de50318c2147cf175936fc9434f20dfa409f9e6a78ec604d61e70c1c20572db0cc7655fbb65f50
+  languageName: node
+  linkType: hard
+
+"@maplibre/geojson-vt@npm:^6.1.0":
   version: 6.3.3
   resolution: "@maplibre/geojson-vt@npm:6.3.3"
   dependencies:
@@ -4669,11 +4676,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@maplibre/maplibre-gl-style-spec@npm:^26.8.0":
-  version: 26.9.0
-  resolution: "@maplibre/maplibre-gl-style-spec@npm:26.9.0"
+"@maplibre/maplibre-gl-style-spec@npm:^24.8.1":
+  version: 24.10.0
+  resolution: "@maplibre/maplibre-gl-style-spec@npm:24.10.0"
   dependencies:
-    "@mapbox/jsonlint-lines-primitives": ^2.0.3
+    "@mapbox/jsonlint-lines-primitives": ~2.0.2
     "@mapbox/unitbezier": ^1.0.0
     json-stringify-pretty-compact: ^4.0.0
     minimist: ^1.2.8
@@ -4683,11 +4690,11 @@ __metadata:
     gl-style-format: dist/gl-style-format.mjs
     gl-style-migrate: dist/gl-style-migrate.mjs
     gl-style-validate: dist/gl-style-validate.mjs
-  checksum: 4b91a16c23a3aee6fdfd25a0cceb36e338df82de4881d907875e711339b5931645401a974b6ba03ce3f2d39b99d4c3d2c002c9d0b9f15f7da351e6da6aced84e
+  checksum: 9a82d54f5e4db6ad39d0d083580d8d978e8d78ce957ff981d147cfd5e08f79d36b923a3ec7ae800bc255da6e80645cdf49bcc648eb727997f31d49adf8b7f505
   languageName: node
   linkType: hard
 
-"@maplibre/mlt@npm:^1.3.0":
+"@maplibre/mlt@npm:^1.1.8":
   version: 1.3.0
   resolution: "@maplibre/mlt@npm:1.3.0"
   dependencies:
@@ -4696,7 +4703,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@maplibre/vt-pbf@npm:^4.3.3":
+"@maplibre/vt-pbf@npm:^4.3.0":
   version: 4.3.3
   resolution: "@maplibre/vt-pbf@npm:4.3.3"
   dependencies:
@@ -8456,15 +8463,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bidi-js@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "bidi-js@npm:1.1.0"
-  dependencies:
-    require-from-string: ^2.0.2
-  checksum: 2dba916f1e3a10da9f48673dc7f6e836162059edc9df66d057fe8e0b1fa116fc70413854744af754f8204e8b838d38e087505019d00695a80bda8d86d98b39c0
-  languageName: node
-  linkType: hard
-
 "big.js@npm:^5.2.2":
   version: 5.2.2
   resolution: "big.js@npm:5.2.2"
@@ -10629,7 +10627,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"earcut@npm:^3.2.4":
+"earcut@npm:^3.0.2":
   version: 3.2.4
   resolution: "earcut@npm:3.2.4"
   checksum: 9e9f55f219e8ce14dba1cd095fc94aac1836d4cd242846069b667517182b0f45ec6c185bccf6974d967f1ba32a25e504c9ca0760b9931175d30b48804145b4d9
@@ -12575,7 +12573,7 @@ __metadata:
     identity-obj-proxy: ^3.0.0
     jest: ^30.2.0
     jest-environment-jsdom: ^30.2.0
-    maplibre-gl: ^6.4.1
+    maplibre-gl: ^5.18.0
     playwright: ^1.56.0
     prettier: 3.8.1
     prismjs: 1.30.0
@@ -16423,7 +16421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kdbush@npm:^4.1.0":
+"kdbush@npm:^4.0.2, kdbush@npm:^4.1.0":
   version: 4.1.0
   resolution: "kdbush@npm:4.1.0"
   checksum: 41966f5a853b1206157aeb75f6d971ddfd6711d5ef6b5a9798cf682c70b15d5596685e6075fa75d5af56294bfaabd77589ef261c812e5c36524c151e5fecddec
@@ -17135,30 +17133,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maplibre-gl@npm:^6.4.1":
-  version: 6.19.0
-  resolution: "maplibre-gl@npm:6.19.0"
+"maplibre-gl@npm:^5.18.0":
+  version: 5.24.1
+  resolution: "maplibre-gl@npm:5.24.1"
   dependencies:
+    "@mapbox/jsonlint-lines-primitives": ^2.0.2
     "@mapbox/point-geometry": ^1.1.0
-    "@mapbox/tiny-sdf": ^2.3.0
-    "@mapbox/unitbezier": ^1.0.0
-    "@mapbox/vector-tile": ^3.0.0
-    "@maplibre/geojson-vt": ^6.3.1
-    "@maplibre/maplibre-gl-style-spec": ^26.8.0
-    "@maplibre/mlt": ^1.3.0
-    "@maplibre/vt-pbf": ^4.3.3
+    "@mapbox/tiny-sdf": ^2.1.0
+    "@mapbox/unitbezier": ^0.0.1
+    "@mapbox/vector-tile": ^2.0.4
+    "@mapbox/whoots-js": ^3.1.0
+    "@maplibre/geojson-vt": ^6.1.0
+    "@maplibre/maplibre-gl-style-spec": ^24.8.1
+    "@maplibre/mlt": ^1.1.8
+    "@maplibre/vt-pbf": ^4.3.0
     "@types/geojson": ^7946.0.16
-    bidi-js: ^1.1.0
-    earcut: ^3.2.4
+    earcut: ^3.0.2
     gl-matrix: ^3.4.4
-    kdbush: ^4.1.0
+    kdbush: ^4.0.2
     murmurhash-js: ^1.0.0
-    pbf: ^5.1.2
+    pbf: ^4.0.1
     potpack: ^2.1.0
     quickselect: ^3.0.0
     tinyqueue: ^3.0.0
-    zustand: ^5.1.0
-  checksum: 8d5f9ad80d6ef56d865a8906faf74fe2cd81dd257df6d4eee66efbc1be10eb2aaf6a00d580de9dca8913be72d311b6662a32c79e2e10987573cc7cd0b28bb767
+  checksum: d2f6ec2eb41af4b227a150194b203b13a34867ea900d3e940b3b67b332fc3e22e4031ad5bd44a2bd9890c48c3253e48d08376f74aa26ee9ad92638294edcf11a
   languageName: node
   linkType: hard
 
@@ -18942,7 +18940,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pbf@npm:^5.0.0, pbf@npm:^5.1.2":
+"pbf@npm:^4.0.1, pbf@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "pbf@npm:4.0.2"
+  dependencies:
+    resolve-protobuf-schema: ^2.1.0
+  bin:
+    pbf: bin/pbf
+  checksum: c14c78fa6ad552680fdebfa32f0e41b70e140b332195a652c8643c979fe9f360270742236171a34fa1585808358f1290b018bc006132b795b14332f833f7c6f1
+  languageName: node
+  linkType: hard
+
+"pbf@npm:^5.1.2":
   version: 5.2.0
   resolution: "pbf@npm:5.2.0"
   dependencies:
@@ -19661,7 +19670,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protocol-buffers-schema@npm:^3.6.1":
+"protocol-buffers-schema@npm:^3.3.1, protocol-buffers-schema@npm:^3.6.1":
   version: 3.6.1
   resolution: "protocol-buffers-schema@npm:3.6.1"
   checksum: 7bd608f6784fda2657f6ec60ef845adaaa196511f3241ed0f95d4a752cc923e799c8df7409e6601a53944aa954f84effcadf1f01925eb642f267d8204713cc61
@@ -20538,6 +20547,15 @@ __metadata:
   version: 5.0.0
   resolution: "resolve-from@npm:5.0.0"
   checksum: 4ceeb9113e1b1372d0cd969f3468fa042daa1dd9527b1b6bb88acb6ab55d8b9cd65dbf18819f9f9ddf0db804990901dcdaade80a215e7b2c23daae38e64f5bdf
+  languageName: node
+  linkType: hard
+
+"resolve-protobuf-schema@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "resolve-protobuf-schema@npm:2.1.0"
+  dependencies:
+    protocol-buffers-schema: ^3.3.1
+  checksum: 88fffab2a3757888884a36f9aa4e24be5186b01820a8c26297dc1ce406b9daf776594926bdf524c2c8e8e5b0aba8ac48362b6584cdecc9a7083215ebca01c599
   languageName: node
   linkType: hard
 
@@ -24638,27 +24656,6 @@ __metadata:
     read: ^1.0.7
     strip-ansi: ^5.2.0
   checksum: e1e60a859b21af5897501b3e12ff2c811b39f7b376e32ee8de0056bcfe7e64609c08dc265e33d7b6c20f81d07f987eb1be1dad8780473461a437828828995a79
-  languageName: node
-  linkType: hard
-
-"zustand@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "zustand@npm:5.1.0"
-  peerDependencies:
-    "@types/react": ">=18.0.0"
-    immer: ">=9.0.6"
-    react: ">=18.0.0"
-    use-sync-external-store: ">=1.2.0"
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    immer:
-      optional: true
-    react:
-      optional: true
-    use-sync-external-store:
-      optional: true
-  checksum: c2fc54e4a8c4292508a67179f4cea198efa8ecd3b634e0ef384f78d3e15519fc27ed44052d8128c5f331b340d566b2a6c0747222951bc63bf891397354c7a61f
   languageName: node
   linkType: hard
 

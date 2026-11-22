@@ -56,7 +56,7 @@
     "gatsby-source-filesystem": "5.16.0",
     "gatsby-transformer-remark": "6.16.0",
     "gatsby-transformer-sharp": "5.16.0",
-    "maplibre-gl": "^6.4.1",
+    "maplibre-gl": "^5.18.0",
     "prismjs": "1.30.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
