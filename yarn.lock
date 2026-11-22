@@ -5607,15 +5607,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/core@npm:^2.13.0":
-  version: 2.14.2
-  resolution: "@stencil/core@npm:2.14.2"
-  bin:
-    stencil: bin/stencil
-  checksum: 9c6345da4d155096c685c2e3176cd3e6d67e46bd27cab4278c94ca69bdd66a46bb2d58c60f2c5529b69bc7ee0a70d10ebea9026b94efdbe8964352349c75843c
-  languageName: node
-  linkType: hard
-
 "@storybook/addon-a11y@npm:^9.1.10":
   version: 9.1.10
   resolution: "@storybook/addon-a11y@npm:9.1.10"
@@ -6978,40 +6969,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@what3words/api@npm:^3.3.6":
-  version: 3.3.6
-  resolution: "@what3words/api@npm:3.3.6"
-  dependencies:
-    axios: ^0.21.1
-  checksum: 9aee2bd1f8593d825045565846239cd6b675bff0e048d3e38c46f1f83a6f74d4a427b676768bbb71940dc3e89014ebec4f63764f2b53969560544a52d8a01b6c
-  languageName: node
-  linkType: hard
-
-"@what3words/javascript-components@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "@what3words/javascript-components@npm:4.0.5"
-  dependencies:
-    "@stencil/core": ^2.13.0
-    "@what3words/api": ^3.3.6
-    axios: ^0.21.1
-    querystring: ^0.2.1
-    uuid: ^8.3.2
-  checksum: b4fcff01d152c4d69b4d206af7250af086436234be9fa5a14a4d1c3864f3368f58785ae94e7e6a5a77d20219774a23474bb785d60951e963952b82185b284b57
-  languageName: node
-  linkType: hard
-
-"@what3words/react-components@npm:4.0.5":
-  version: 4.0.5
-  resolution: "@what3words/react-components@npm:4.0.5"
-  dependencies:
-    "@what3words/javascript-components": ^4.0.5
-  peerDependencies:
-    react: ^16.7.0
-    react-dom: ^16.7.0
-  checksum: d483b7c69b6aaaeaaf4211143d46c0f42861b38a1dce66e3a5daa180ce714bfcba1bd2fe18a57fc045a971bf1b54c1edb692be807ef6032ffbeb74d65ae4ae64
-  languageName: node
-  linkType: hard
-
 "@xtuc/ieee754@npm:^1.2.0":
   version: 1.2.0
   resolution: "@xtuc/ieee754@npm:1.2.0"
@@ -7799,15 +7756,6 @@ __metadata:
   version: 4.11.0
   resolution: "axe-core@npm:4.11.0"
   checksum: 57b0d7206d4dd63a1127b8ad6e173417857a3de43717cbb03561e75e2ff85765a228a7588fde4c828dbf179ef25f263ad98535656701e78def8f29a9524be866
-  languageName: node
-  linkType: hard
-
-"axios@npm:^0.21.1":
-  version: 0.21.4
-  resolution: "axios@npm:0.21.4"
-  dependencies:
-    follow-redirects: ^1.14.0
-  checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
   languageName: node
   linkType: hard
 
@@ -12229,16 +12177,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0":
-  version: 1.14.9
-  resolution: "follow-redirects@npm:1.14.9"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: f5982e0eb481818642492d3ca35a86989c98af1128b8e1a62911a3410621bc15d2b079e8170b35b19d3bdee770b73ed431a257ed86195af773771145baa57845
-  languageName: node
-  linkType: hard
-
 "follow-redirects@npm:^1.15.6":
   version: 1.15.9
   resolution: "follow-redirects@npm:1.15.9"
@@ -12376,7 +12314,6 @@ __metadata:
     "@testing-library/user-event": ^14.6.1
     "@vitest/browser": ^3.2.4
     "@vitest/coverage-v8": ^3.2.4
-    "@what3words/react-components": 4.0.5
     babel-jest: ^30.2.0
     babel-preset-gatsby: ^3.16.0
     depcheck: ^1.4.7
@@ -19513,13 +19450,6 @@ __metadata:
     split-on-first: ^1.0.0
     strict-uri-encode: ^2.0.0
   checksum: f2c7347578fa0f3fd4eaace506470cb4e9dc52d409a7ddbd613f614b9a594d750877e193b5d5e843c7477b3b295b857ec328903c943957adc41a3efb6c929449
-  languageName: node
-  linkType: hard
-
-"querystring@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "querystring@npm:0.2.1"
-  checksum: 7b83b45d641e75fd39cd6625ddfd44e7618e741c61e95281b57bbae8fde0afcc12cf851924559e5cc1ef9baa3b1e06e22b164ea1397d65dd94b801f678d9c8ce
   languageName: node
   linkType: hard
 

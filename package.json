@@ -39,7 +39,6 @@
     "node": "22.x"
   },
   "dependencies": {
-    "@what3words/react-components": "4.0.5",
     "dotenv": "17.3.1",
     "gatsby": "5.16.1",
     "gatsby-plugin-image": "3.16.0",
