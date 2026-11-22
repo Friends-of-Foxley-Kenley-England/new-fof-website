@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { What3wordsAddress } from "@what3words/react-components";
+import What3wordsAddress from "../components/what3words-address";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 import * as style from "./work-day-information.module.css";
@@ -47,10 +47,7 @@ const WorkDayTemplate = ({ data, location }) => {
           {meetingPointWhatThreeWords && (
             <What3wordsAddress
               words={meetingPointWhatThreeWords}
-              icon-color="#0e4630"
-              text-color="#0e4630"
-              tooltip-location={meetingPointDescription}
-              rel="noopener noreferrer"
+              description={meetingPointDescription}
             />
           )}
 
